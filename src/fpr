@@ -1,5 +1,3 @@
-#!/bin/bash
-
 function memasukkan_jalur_ke_file_zip(){
         while true; do
                 read -p "Masukkan jalur ke file ZIP: " fz
@@ -49,11 +47,15 @@ function memasukkan_jalur_ke_file_wordlist(){
         done
 }
 
-function file_zip_hashcat(){
-        if cat "${nama_file_hash}" | grep -o "$pkzip"; then
-                echo "ini pkzip"
-        elif cat "${nama_file_hash}" | grep -o "$zip"; then
-                echo "ini zip"
+function memulihkan_kata_sandi_file_zip_dengan_hashcat(){
+        if grep -o "pkzip" "${nama_file_hash}" >> /dev/null 2>&1; then
+                mode=17220 # PKZIP (Compressed Multi-File) 
+                clear
+                hashcat -a 0 -m "${mode}" "${nama_file_hash}" "${fw}"
+        elif grep -o "zip2" "${nama_file_hash}" >> /dev/null 2>&1; then
+                mode=13600 # WinZip
+                clear
+                hashcat -a 0 -m "${mode}" "${nama_file_wordlist}" "${fw}"
         fi
 }
 
@@ -61,7 +63,7 @@ function memulihkan_kata_sandi_file_zip(){
         memasukkan_jalur_ke_file_zip
         ekstrak_hash_dari_file_zip
         memasukkan_jalur_ke_file_wordlist
-        file_zip_hashcat
+        memulihkan_kata_sandi_file_zip_dengan_hashcat
 }
 
 memulihkan_kata_sandi_file_zip
