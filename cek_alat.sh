@@ -3,16 +3,16 @@
 # file ini merupakan salah satu file dari projek FPR
 
 h="\e[1;32m" # hijau
-k="\e[1;33m" # kuning
+m="\e[1;31m" # merah 
+b="\e[1;34m" # biru
 r="\e[0m"
 
 clear
 echo -e "${h}******************** Selamat datang ********************${r}"
 echo -e "${k}Program ini hanya untuk tujuan edukasi dan pembelajaran.${r}"
 echo ""
-echo "Mari kita periksa apakah Anda sudah menginstal alat-alat yang dibutuhkan oleh skrip ini."
-echo ""
-sleep 3
+echo -e "${b}Mari kita periksa apakah Anda sudah menginstal alat-alat yang dibutuhkan oleh skrip ini.${r}"
+read -p "Tekan [Enter] untuk melangkah..."
 
 # daftar alat penting
 dap=(
