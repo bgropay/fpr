@@ -3,8 +3,8 @@
 # # file ini merupakan salah satu file dari projek FPR
 
 # variabel warna 
-cm="\e[0;32m" # cyan muda
-ct="\e[1;32m" # cyan terang 
+cm="\e[0;36m" # cyan muda
+ct="\e[1;36m" # cyan terang 
 mt="\e[1;31m" # merah terang
 kt="\e[1;33m" # kuning terang 
 bt="\e[0;34m" # biru terang 
