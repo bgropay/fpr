@@ -19,6 +19,9 @@ while true; do
     echo "----------"
     for menu in "${daftar_menu[@]}"; do
         echo "${c}. ${menu}"
+        if [[ "${c}" -eq 5 ]]; then
+            echo "----------"
+        fi
         ((c++))
     done
     read -p ""
