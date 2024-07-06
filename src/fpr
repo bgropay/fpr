@@ -58,11 +58,11 @@ function memulihkan_kata_sandi_file_zip_dengan_hashcat(){
         if grep -o "pkzip" "${nama_file_hash}" >> /dev/null 2>&1; then
                 format='PKZIP' # PKZIP  
                 clear
-                john --format="${format}" --wordlsit="${fw}" "${nama_file_hash}" 
+                john --format="${format}" --wordlist="${fw}" "${nama_file_hash}" 
         elif grep -o "zip2" "${nama_file_hash}" >> /dev/null 2>&1; then
                 format='ZIP'
                 clear
-                john --format="${format}" --wordlsit="${fw}" "${nama_file_hash}"
+                john --format="${format}" --wordlist="${fw}" "${nama_file_hash}"
         fi
 }
 
