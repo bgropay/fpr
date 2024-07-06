@@ -1,4 +1,6 @@
 #!/bin/bash
+# [cek_file.sh]
+# file ini merupakan salah satu file dari projek FPR
 
 clear
 echo "******************** Selamat datang ********************"
