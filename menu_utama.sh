@@ -27,6 +27,7 @@ daftar_menu=(
 c=1
 
 while true; do
+    clear
     echo -e "${cm}******************** Menu utama FPR ********************${r}"
     echo ""
     echo -e "${ct}Pilih opsi dari menu:${r}"
