@@ -2,6 +2,8 @@
 # [fpr.shfile ini merupakan salah satu file dari projek FPR
 
 kt="\e[1;33m"
+bt="\e[1;34m"
+pt="\e[1;37m"
 r="\e[0m"
 
 if [[ $(id -u) -ne 0 ]]; then
@@ -9,26 +11,6 @@ if [[ $(id -u) -ne 0 ]]; then
     exit 1
 fi
 
-# garis yang jelas
-function gyj(){
-    printf "\r"
-}
-
-# animasi karakter 
-karakter="/-\|"
-
-# ngulang selama 5 detik 
-berakhir=$((SECONDS+7))
-while [[ "${SECONDS}" -lt "${berakhir}" ]]; do
-    for (( i=0; i<${#karakter}; i++ )); do
-        # menampilkan teks loading 
-        printf "[*] Memulai FPR %c " "${karakter:$i:1}"
-        # menunggu selama 0.1 detik 
-        sleep 0.1
-        # memanggil fungsi garis yang jelas 
-        gyj
-    done
-done
-
-# Final message after animation
-echo "Process completed."
+echo -e "${bt}[*] ${pt}Memulai FPR...${r}"
+# menunggu selama 0.1 detik 
+sleep 5
