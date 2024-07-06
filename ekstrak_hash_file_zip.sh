@@ -53,6 +53,7 @@ while true; do
                         fi
                 fi
             done
+            break
             ;;
         2)
             bash menu_utama.sh
