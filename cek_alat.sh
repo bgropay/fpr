@@ -67,13 +67,13 @@ for ao in "${dao[@]}"; do
         elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/rar2john" ]]; then
             echo -e "${r}rar2john ... ${mt}Error${r}"
             aobt+=("${ao}")
-        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/7z2john" ]]; then
+        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/7z2john.pl" ]]; then
             echo -e "${r}7z2john ... ${mt}Error${r}"
             aobt+=("${ao}")
-        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/pdf2john" ]]; then
+        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/pdf2john.pl" ]]; then
             echo -e "${r}pdf2john ... ${mt}Error${r}"
             aobt+=("${ao}")
-        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/office2john" ]]; then
+        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/office2john.py" ]]; then
             echo -e "${r}office2john ... ${mt}Error${r}"
             aobt+=("${ao}")
         fi
@@ -84,13 +84,13 @@ for ao in "${dao[@]}"; do
         elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/rar2john" ]]; then
             echo -e "${r}rar2john ... ${ht}OK${r}"
             aobt+=("${ao}")
-        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/7z2john" ]]; then
+        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/7z2john.pl" ]]; then
             echo -e "${r}7z2john ... ${ht}OK${r}"
             aobt+=("${ao}")
-        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/pdf2john" ]]; then
+        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/pdf2john.pl" ]]; then
             echo -e "${r}pdf2john ... ${ht}OK${r}"
             aobt+=("${ao}")
-        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/office2john" ]]; then
+        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/office2john.py" ]]; then
             echo -e "${r}office2john ... ${ht}OK${r}"
             aobt+=("${ao}")
         fi
