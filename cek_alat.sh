@@ -1,20 +1,28 @@
 #!/bin/bash
+
+echo "******************** Selamat datang ********************"
+echo "Program ini hanya untuk tujuan edukasi dan pembelajaran."
+echo ""
+echo "Mari kita periksa apakah Anda sudah menginstal alat-alat yang dibutuhkan oleh skrip ini."
+echo ""
+sleep 3
+
 daftar_alat=(
-    "zip2john"
     "john"
+    "zip2john"
 )
 
 alat_belum_terinstal=()
 
 for alat in "${daftar_alat[@]}"; do
-    echo "[*] Mengecek alat ${alat}..."
+    echo "${alat}..."
     if ! command -v "${alat}" >/dev/null 2>&1; then
         sleep 5
         echo "[-] Alat ${alat} belum terinstal."
         alat_belum_terinstal+=("${alat}")
     else
         sleep 3
-        echo "[+] Alat ${alat} sudah terinstal."
+        echo "${alat}...OK"
     fi
 done
 
