@@ -1,2 +1,67 @@
 #!/bin/bash
-#
+
+function memasukkan_jalur_ke_file_zip(){
+        while true; do
+                read -p "Masukkan jalur ke file ZIP: " fz
+                # Memastikan file ZIP yang diberikan ada
+                if [[ ! -f "${fz}" ]]; then
+                        echo "[-] File ZIP '${fz}' tidak ditemukan."
+                        continue
+                else
+                        if [[ "${fz##*.}" != "zip" ]]; then
+                                echo "[-] File '${fz}' bukan file ZIP."
+                                continue
+                        else
+                                echo "[+] File ZIP '${fz}' ditemukan."
+                                break
+                        fi
+                fi
+        done
+}
+function ekstrak_hash_dari_file_zip(){
+        echo "[*] Mengekstrak hash dari file ZIP '${fz}'..."
+        sleep 3
+
+        # Menggunakan zip2john dan cut dalam satu baris perintah untuk ekstraksi hash
+        hash=$(zip2john "${fz}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
+        nama_file_hash="${fz}_hash.txt"
+        echo "${hash}" > "${nama_file_hash}"
+
+        # Memeriksa apakah hash berhasil dibuat
+        if [[ -z "${nama_file_hash}" ]]; then
+            echo "[-] Gagal mengekstrak hash dari file ZIP '${fz}'."
+            exit 1
+        else
+                echo "[+] Berhasil mengekstrak hash dari file ZIP '${fz}'."
+        fi
+}
+
+function memasukkan_jalur_ke_file_wordlist(){
+        while true; do
+                read -p "Masukkan jalur ke file wordlist: " fw
+                if [[ ! -f "${fw}" ]]; then
+                        echo "[-] File wordlist '${fw}' tidak ditemukan."
+                        continue
+                else
+                        echo "[+] File wordlist '${fw}' ditemukan."
+                        break
+                fi
+        done
+}
+
+function file_zip_hashcat(){
+        if cat "${nama_file_hash}" | grep -o "$pkzip"; then
+                echo "ini pkzip"
+        elif cat "${nama_file_hash}" | grep -o "$zip"; then
+                echo "ini zip"
+        fi
+}
+
+function memulihkan_kata_sandi_file_zip(){
+        memasukkan_jalur_ke_file_zip
+        ekstrak_hash_dari_file_zip
+        memasukkan_jalur_ke_file_wordlist
+        file_zip_hashcat
+}
+
+memulihkan_kata_sandi_file_zip
