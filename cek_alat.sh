@@ -42,6 +42,8 @@ for ap in "${dap[@]}"; do
     fi
 done
 
+echo ""
+
 # cek alat opsional
 echo "Alat opsional: memeriksa..."
 sleep 0.5
