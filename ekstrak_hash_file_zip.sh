@@ -27,7 +27,7 @@ while true; do
     echo -e "${bt}----------${r}"
     for menu in "${daftar_menu[@]}"; do
         echo "${c}. ${menu}"
-        if [[ "${c}" -eq 2 ]]; then
+        if [[ "${c}" -eq 1 ]]; then
             echo -e "${bt}----------${r}"
         elif [[ "${c}" -eq 2 ]]; then
             echo -e "${bt}----------${r}"
