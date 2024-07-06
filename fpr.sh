@@ -19,7 +19,7 @@ sleep 5
 fca="cek_alat.sh"
 
 if [[ ! -f "${fca}" ]]; then
-    echo ""
+    echo -e "${kt}File '${fca}' tidak ditemukan.${r}"
     exit 1
 else
     bash "${fca}"
