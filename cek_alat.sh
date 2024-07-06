@@ -17,7 +17,7 @@ alat_belum_terinstal=()
 
 for alat in "${daftar_alat[@]}"; do
     if ! command -v "${alat}" >/dev/null 2>&1; then
-        echo "[-] ${alat} ... Error"
+        echo "${alat} ... Error"
         alat_belum_terinstal+=("${alat}")
     else
         echo "${alat}...OK"
