@@ -78,5 +78,15 @@ else
     echo ""
     echo -e "${kt}Semua alat yang diperlukan oleh script ini sudah terinstal. Script ini bisa dijalankan.${r}"
     read -p "Tekan [Enter] untuk melanjutkan..."
-    # Tempatkan kode untuk menjalankan program Anda di sini
+    # file menu_utama.sh
+    fmu="menu_utama.sh"
+
+    # mengecek apakah file cek_alat.sh ada atau tidak 
+    if [[ ! -f "${fmu}" ]]; then
+        echo -e "${kt}Script ini tidak bisa dijalankan karena file '${fmu}' tidak ditemukan.${r}"
+        exit 1
+    else
+        # menjalankan file cek_alat.sh
+        bash "${fmu}"
+    fi
 fi
