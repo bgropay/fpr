@@ -42,5 +42,10 @@ while true; do
         fi
         ((c++))
     done
-    read -p ""
+    read -p "" mu
+    case "${mu}" in
+        1)
+            bash ekstrak_hash_file_zip.sh
+            ;;
+    esac
 done
