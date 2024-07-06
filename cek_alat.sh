@@ -55,7 +55,7 @@ for ao in "${dao[@]}"; do
     fi
 done
 
-if [[ "${#apbt[@]}" -ne 0 ]] && [[ "${#aobt[@]}" -ne 0 ]]; then
+if [[ "${#apbt[@]}" -ne 0 && "${#aobt[@]}" -ne 0 ]]; then
     echo "Script ini tidak bisa dijalankan karena ada beberapa alat yang belum terinstal."
     exit 1
 else
