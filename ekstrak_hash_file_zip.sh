@@ -3,8 +3,8 @@
 # # file ini merupakan salah satu file dari projek FPR
 
 # variabel warna 
-cm="\e[0;36m" # cyan muda
-ct="\e[1;36m" # cyan terang 
+hm="\e[0;32m" # hijau muda
+ht="\e[1;32m" # hijau terang 
 mt="\e[1;31m" # merah terang
 kt="\e[1;33m" # kuning terang 
 bt="\e[0;34m" # biru terang 
@@ -21,9 +21,9 @@ c=1
 while true; do
     c=1
     clear
-    echo -e "${cm}******************** Menu Ekstrak Hash File ZIP ********************${r}"
+    echo -e "${hm}******************** Menu Ekstrak Hash File ZIP ********************${r}"
     echo ""
-    echo -e "${ct}Pilih opsi dari menu:${r}"
+    echo -e "${ht}Pilih opsi dari menu:${r}"
     echo -e "${bt}----------${r}"
     for menu in "${daftar_menu[@]}"; do
         echo "${c}. ${menu}"
@@ -49,7 +49,7 @@ while true; do
                                 echo -e "${kt}File '${fz}' bukan file ZIP.${r}"
                                 continue
                         else
-                                echo -e "${ct}File ZIP '${fz}' ditemukan.${r}"
+                                echo -e "${ht}File ZIP '${fz}' ditemukan.${r}"
                                 break
                         fi
                 fi
@@ -66,8 +66,8 @@ while true; do
                 echo -e "${kt}Gagal mengekstrak hash dari file ZIP '${fz}'.${r}"
                 exit 1
             else
-                echo -e "${ct}Berhasil mengekstrak hash dari file ZIP '${fz}'.${r}"
-                echo -e "${ct}Hash disimpan di dalam file '${nama_file_hash}'.${r}"
+                echo -e "${ht}Berhasil mengekstrak hash dari file ZIP '${fz}'.${r}"
+                echo -e "${ht}Hash disimpan di dalam file '${nama_file_hash}'.${r}"
             fi
             read -p "Tekan [Enter] untuk melanjutkan..."
             break
