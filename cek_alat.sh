@@ -2,7 +2,7 @@
 # [cek_alat.sh]
 # file ini merupakan salah satu file dari projek FPR
 
-h="\e[1;32n" # hijau
+h="\e[1;32m" # hijau
 k="\e[1;33m" # kuning
 r="\e[0m"
 
