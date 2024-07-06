@@ -13,6 +13,7 @@ echo -e "${m}Program ini hanya untuk tujuan edukasi dan pembelajaran.${r}"
 echo ""
 echo -e "${b}Mari kita periksa apakah Anda sudah menginstal alat-alat yang dibutuhkan oleh skrip ini.${r}"
 read -p $'\e[1;32mTekan [Enter] untuk melangkah...\e[0m'
+echo ""
 
 # daftar alat penting
 dap=(
@@ -37,7 +38,6 @@ aobt=()
 
 # cek alat penting 
 echo "Alat penting: memeriksa..."
-sleep 0.5
 for ap in "${dap[@]}"; do
     sleep 0.1
     if ! command -v "${ap}" >/dev/null 2>&1; then
@@ -52,7 +52,6 @@ echo ""
 
 # cek alat opsional
 echo "Alat opsional: memeriksa..."
-sleep 0.5
 for ao in "${dao[@]}"; do
     sleep 0.1
     if ! command -v "${ao}" >/dev/null 2>&1; then
