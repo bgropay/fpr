@@ -60,7 +60,6 @@ while true; do
             echo -e "${bt}Mengekstrak hash dari file ZIP '${fz}'...${r}"
             sleep 3
             hash=$(zip2john "${fz}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
-            nama_file_hash="${fz}_hash.txt"
             echo "${hash}" > "${nama_file_hash}"
             # Memeriksa apakah hash berhasil dibuat
             if [[ -z "${nama_file_hash}" ]]; then
@@ -73,8 +72,18 @@ while true; do
             break
             ;;
         2)
-            bash menu_utama.sh
-            break
+            # file menu_utama.sh
+            fmu="menu_utama.sh"
+
+            # mengecek apakah file cek_alat.sh ada atau tidak 
+            if [[ ! -f "${fmu}" ]]; then
+                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${fmu}' tidak ditemukan.${r}"
+                exit 1
+            else
+                # menjalankan file cek_alat.sh
+                bash "${fmu}"
+                break
+            fi
             ;;
     esac
 done
