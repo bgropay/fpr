@@ -21,17 +21,17 @@ echo ""
 
 # daftar alat penting
 dap=(
-    "/usr/share/john/run/john"
+    "/usr/share/JohnTheRipper/run/john"
     "/usr/share/hashcat/run/hashcat"
 )
 
 # daftar alat opsional
 dao=(
-    "/usr/share/john/run/zip2john"    # alat untuk mengekstrak hash file zip
-    "/usr/share/john/run/rar2john"    # alat untuk mengekstrak hash file rar
-    "/usr/share/john/run/7z2john"     # alat untuk mengekstrak hash file 7z
-    "/usr/share/john/run/pdf2john"    # alat untuk mengekstrak hash file pdf
-    "/usr/share/john/run/office2john" # alat untuk mengekstrak hash file office (docx, xlxs, pptx)
+    "/usr/share/JohnTheRipper/run/zip2john"    # alat untuk mengekstrak hash file zip
+    "/usr/share/JohnTheRipper/run/rar2john"    # alat untuk mengekstrak hash file rar
+    "/usr/share/JohnTheRipper/run/7z2john"     # alat untuk mengekstrak hash file 7z
+    "/usr/share/JohnTheRipper/run/pdf2john"    # alat untuk mengekstrak hash file pdf
+    "/usr/share/JohnTheRipper/run/office2john" # alat untuk mengekstrak hash file office (docx, xlxs, pptx)
 )
 
 # alat penting belum terinstal 
