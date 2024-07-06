@@ -61,36 +61,36 @@ echo -e "${bt}Alat opsional: memeriksa...${r}"
 for ao in "${dao[@]}"; do
     sleep 0.1
     if [[ ! -f "${ao}" ]]; then
-        if [[ "${ao}" == "/usr/share/john/run/zip2john" ]]; then
+        if [[ "${ao}" == "/usr/share/JohnTheRipper/run/zip2john" ]]; then
             echo -e "${r}zip2john ... ${mt}Error${r}"
             aobt+=("${ao}")
-        elif [[ "${ao}" == "/usr/share/john/run/rar2john" ]]; then
+        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/rar2john" ]]; then
             echo -e "${r}rar2john ... ${mt}Error${r}"
             aobt+=("${ao}")
-        elif [[ "${ao}" == "/usr/share/john/run/7z2john" ]]; then
+        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/7z2john" ]]; then
             echo -e "${r}7z2john ... ${mt}Error${r}"
             aobt+=("${ao}")
-        elif [[ "${ao}" == "/usr/share/john/run/pdf2john" ]]; then
+        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/pdf2john" ]]; then
             echo -e "${r}pdf2john ... ${mt}Error${r}"
             aobt+=("${ao}")
-        elif [[ "${ao}" == "/usr/share/john/run/office2john" ]]; then
+        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/office2john" ]]; then
             echo -e "${r}office2john ... ${mt}Error${r}"
             aobt+=("${ao}")
         fi
     else
-        if [[ "${ao}" == "/usr/share/john/run/zip2john" ]]; then
+        if [[ "${ao}" == "/usr/share/JohnTheRipper/run/zip2john" ]]; then
             echo -e "${r}zip2john ... ${ht}Ok${r}"
             aobt+=("${ao}")
-        elif [[ "${ao}" == "/usr/share/john/run/rar2john" ]]; then
+        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/rar2john" ]]; then
             echo -e "${r}rar2john ... ${ht}OK${r}"
             aobt+=("${ao}")
-        elif [[ "${ao}" == "/usr/share/john/run/7z2john" ]]; then
+        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/7z2john" ]]; then
             echo -e "${r}7z2john ... ${ht}OK${r}"
             aobt+=("${ao}")
-        elif [[ "${ao}" == "/usr/share/john/run/pdf2john" ]]; then
+        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/pdf2john" ]]; then
             echo -e "${r}pdf2john ... ${ht}OK${r}"
             aobt+=("${ao}")
-        elif [[ "${ao}" == "/usr/share/john/run/office2john" ]]; then
+        elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/office2john" ]]; then
             echo -e "${r}office2john ... ${ht}OK${r}"
             aobt+=("${ao}")
         fi
