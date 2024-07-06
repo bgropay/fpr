@@ -22,7 +22,7 @@ echo ""
 # daftar alat penting
 dap=(
     "/usr/share/JohnTheRipper/run/john"
-    "/usr/share/hashcat/run/hashcat"
+    # "/usr/share/hashcat/run/hashcat"
 )
 
 # daftar alat opsional
@@ -51,11 +51,11 @@ for ap in "${dap[@]}"; do
         fi
     else
         if [[ "${ap}" == "/usr/share/JohnTheRipper/run/john" ]]; then
-            echo -e "${r}john ... ${ct}OK${r}"
+            echo -e "${r}john ... ${ht}OK${r}"
             apbt+=("${ap}")
-        elif [[ "${ap}" == "/usr/share/hashcat/run/hashcat" ]]; then
-            echo -e "${r}hashcat ... ${ct}OK${r}"
-            apbt+=("${ap}")
+        #elif [[ "${ap}" == "/usr/share/hashcat/run/hashcat" ]]; then
+        #    echo -e "${r}hashcat ... ${ht}OK${r}"
+        #    apbt+=("${ap}")
         fi
     fi
 done
