@@ -34,4 +34,13 @@ while true; do
         ((c++))
     done
     read -p "" ehfz
+    case "${ehfz)" in
+        1)
+            break
+            ;;
+        2)
+            bash menu_utama.sh
+            break
+            ;;
+    esac
 done
