@@ -29,9 +29,9 @@ dap=(
 dao=(
     "/usr/share/JohnTheRipper/run/zip2john"    # alat untuk mengekstrak hash file zip
     "/usr/share/JohnTheRipper/run/rar2john"    # alat untuk mengekstrak hash file rar
-    "/usr/share/JohnTheRipper/run/7z2john"     # alat untuk mengekstrak hash file 7z
-    "/usr/share/JohnTheRipper/run/pdf2john"    # alat untuk mengekstrak hash file pdf
-    "/usr/share/JohnTheRipper/run/office2john" # alat untuk mengekstrak hash file office (docx, xlxs, pptx)
+    "/usr/share/JohnTheRipper/run/7z2john.pl"     # alat untuk mengekstrak hash file 7z
+    "/usr/share/JohnTheRipper/run/pdf2john.pl"    # alat untuk mengekstrak hash file pdf
+    "/usr/share/JohnTheRipper/run/office2john.py" # alat untuk mengekstrak hash file office (docx, xlxs, pptx)
 )
 
 # alat penting belum terinstal 
