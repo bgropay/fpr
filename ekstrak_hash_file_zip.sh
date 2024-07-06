@@ -67,6 +67,7 @@ while true; do
                 exit 1
             else
                 echo -e "${ct}Berhasil mengekstrak hash dari file ZIP '${fz}'.${r}"
+                echo -e "${ct}Hash disimpan di dalam file '${nama_file_hash}'.${r}"
             fi
             read -p "Tekan [Enter] untuk melanjutkan..."
             break
