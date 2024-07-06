@@ -34,11 +34,11 @@ while true; do
     for menu in "${daftar_menu[@]}"; do
         echo "${c}. ${menu}"
         if [[ "${c}" -eq 5 ]]; then
-            echo "----------"
+            echo -e "${bt}----------${r}"
         elif [[ "${c}" -eq 6 ]]; then
-            echo "----------"
+            echo -e "${bt}----------${r}"
         elif [[ "${c}" -eq 11 ]]; then
-            echo "----------"
+            echo -e "${bt}----------${r}"
         fi
         ((c++))
     done
