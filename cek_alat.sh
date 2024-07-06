@@ -13,7 +13,7 @@ echo -e "${hm}******************** Selamat datang ********************${r}"
 echo -e "${mt}Program ini hanya untuk tujuan edukasi dan pembelajaran.${r}"
 echo ""
 echo -e "${bm}Mari kita periksa apakah Anda sudah menginstal alat-alat yang dibutuhkan oleh skrip ini.${r}"
-read -p $'\e[0;32mTekan [Enter] untuk melangkah...\e[0m'
+read -p $'\e[0;32mTekan [Enter] untuk melanjutkan\e[0m...'
 echo ""
 
 # daftar alat penting
