@@ -17,7 +17,7 @@ alat_belum_terinstal=()
 
 for alat in "${daftar_alat[@]}"; do
     if ! command -v "${alat}" >/dev/null 2>&1; then
-        echo "[-] Alat ${alat} belum terinstal."
+        echo "[-] ${alat} ... Error"
         alat_belum_terinstal+=("${alat}")
     else
         echo "${alat}...OK"
@@ -25,10 +25,7 @@ for alat in "${daftar_alat[@]}"; do
 done
 
 if [ ${#alat_belum_terinstal[@]} -ne 0 ]; then
-    echo "Program tidak bisa dijalankan karena alat berikut belum terinstal:"
-    for alat in "${alat_belum_terinstal[@]}"; do
-        echo "- ${alat}"
-    done
+    echo "Script ini tidak bisa dijalankan karena ada beberapa alat yang belum terinstal."
     exit 1
 else
     echo "Semua alat sudah terinstal. Program bisa dijalankan."
