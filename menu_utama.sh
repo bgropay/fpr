@@ -17,11 +17,11 @@ daftar_menu=(
     "Ekstrak hash file PDF"
     "Ekstrak hash file Office (docx, xlsx, pptx)"
     "Buat wordlist dengan cupp"
-    "Memulihkan kata sandi file ZIP (Membutuhkan hash)"
-    "Memulihkan kata sandi file RAR (Membutuhkan hash)"
-    "Memulihkan kata sandi file 7z (Membutuhkan hash)"
-    "Memulihkan kata sandi file PDF (Membutuhkan hash)"
-    "Memulihkan kata sandi file Office (docx, xlsx, pptx) (Membutuhkan hash)"
+    "Memulihkan kata sandi file ZIP (Membutuhkan hash & wordlist)"
+    "Memulihkan kata sandi file RAR (Membutuhkan hash & wordlist)"
+    "Memulihkan kata sandi file 7z (Membutuhkan hash & wordlist)"
+    "Memulihkan kata sandi file PDF (Membutuhkan hash & wordlist)"
+    "Memulihkan kata sandi file Office (docx, xlsx, pptx) (Membutuhkan hash & wordlist)"
     "Keluar"
     )
 
