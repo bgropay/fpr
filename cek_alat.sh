@@ -67,6 +67,7 @@ elif [[ "${#aobt[@]}" -ne 0 ]]; then
     exit 1
 else
     echo ""
-    echo "Semua alat sudah terinstal. Program bisa dijalankan."
+    echo "Semua alat sudah terinstal. Script ini bisa dijalankan."
+    read -p "Tekan [Enter] untuk melanjutkan..."
     # Tempatkan kode untuk menjalankan program Anda di sini
 fi
