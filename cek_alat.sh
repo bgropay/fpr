@@ -14,7 +14,7 @@ echo -e "${hm}******************** Selamat datang ********************${r}"
 echo -e "${mt}Program ini hanya untuk tujuan edukasi dan pembelajaran.${r}"
 echo ""
 echo -e "${bm}Mari kita periksa apakah Anda sudah menginstal alat-alat yang dibutuhkan oleh skrip ini.${r}"
-read -p $'\e[0;32mTekan [Enter] untuk melanjutkan...\e[0m'
+read -p "Tekan [Enter] untuk melanjutkan..."
 echo ""
 
 # daftar alat penting
@@ -66,15 +66,15 @@ done
 
 if [[ "${#apbt[@]}" -ne 0 ]]; then
     echo ""
-    echo "Script ini tidak bisa dijalankan karena ada alat penting yang belum terinstal."
+    echo -e "${kt}Script ini tidak bisa dijalankan karena ada alat penting yang belum terinstal.${r}"
     exit 1
 elif [[ "${#aobt[@]}" -ne 0 ]]; then
     echo ""
-    echo "Script ini tidak bisa dijalankan karena ada alat opsional yang belum terinstal."
+    echo -e "${kt}Script ini tidak bisa dijalankan karena ada alat opsional yang belum terinstal.${r}"
     exit 1
 else
     echo ""
     echo -e "${kt}Semua alat yang diperlukan oleh script ini sudah terinstal. Script ini bisa dijalankan.${r}"
-    read -p $'\e[0;32mTekan [Enter] untuk melanjutkan...\e[0m'
+    read -p "Tekan [Enter] untuk melanjutkan..."
     # Tempatkan kode untuk menjalankan program Anda di sini
 fi
