@@ -5,12 +5,10 @@
 # Penggunaan..: bash zpr.sh
 
 function banner(){
-        clear
-        echo "**********************************"             
-        echo " Zip File Password Recovery "
-        echo " Author: bgropay "
-        echo " Homepage: github.com/bgropay/fpr "
-        echo "**********************************"
+        clear             
+        echo "Zip File Password Recovery "
+        echo "Author: bgropay "
+        echo "Homepage: github.com/bgropay/fpr "
         echo ""
 }
 
