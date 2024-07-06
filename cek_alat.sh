@@ -21,18 +21,17 @@ echo ""
 
 # daftar alat penting
 dap=(
-    "john"
-    "hashcat"
+    "/usr/share/john/run/john"
+    "/usr/share/hashcat/run/hashcat"
 )
 
 # daftar alat opsional
 dao=(
-    "zip2john"    # alat untuk mengekstrak hash file zip
-    "rar2john"    # alat untuk mengekstrak hash file rar
-    "7z2john"     # alat untuk mengekstrak hash file 7z
-    "pdf2john"    # alat untuk mengekstrak hash file pdf
-    "office2john" # alat untuk mengekstrak hash file office (docx, xlxs, pptx)
-    "cupp"
+    "/usr/share/john/run/zip2john"    # alat untuk mengekstrak hash file zip
+    "/usr/share/john/run/rar2john"    # alat untuk mengekstrak hash file rar
+    "/usr/share/john/run/7z2john"     # alat untuk mengekstrak hash file 7z
+    "/usr/share/john/run/pdf2john"    # alat untuk mengekstrak hash file pdf
+    "/usr/share/john/run/office2john" # alat untuk mengekstrak hash file office (docx, xlxs, pptx)
 )
 
 # alat penting belum terinstal 
@@ -45,9 +44,11 @@ aobt=()
 echo -e "${bt}Alat penting: memeriksa...${r}"
 for ap in "${dap[@]}"; do
     sleep 0.1
-    if ! command -v "${ap}" >/dev/null 2>&1; then
-        echo -e "${r}${ap} ... ${mt}Error${r}"
-        apbt+=("${ap}")
+    if [[ ! -f "${ap}" ]]; then
+        if [[ "${ap}" == "/usr/share/john/run/john" ]]; then
+            echo -e "${r}${ap} ... ${mt}Error${r}"
+            apbt+=("${ap}")
+        fi
     else
         echo -e "${r}${ap} ... ${ht}OK${r}"
     fi
@@ -59,7 +60,7 @@ echo ""
 echo -e "${bt}Alat opsional: memeriksa...${r}"
 for ao in "${dao[@]}"; do
     sleep 0.1
-    if ! command -v "${ao}" >/dev/null 2>&1; then
+    if [[ ! -f "${ao}" ]]; then
         echo -e "${r}${ao} ... ${mt}Error${r}"
         aobt+=("${ao}")
     else
