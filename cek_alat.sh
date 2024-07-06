@@ -3,8 +3,8 @@
 # file ini merupakan salah satu file dari projek FPR
 
 # variabel warna 
-cm="\e[0;36m" # cyan muda
-ct="\e[1;36m" # cyan terang 
+hm="\e[0;32m" # hijau muda
+ht="\e[1;32m" # hijau terang 
 ut="\e[1;35m" # ungu terang
 mt="\e[1;31m" # merah terang
 kt="\e[1;33m" # kuning terang 
@@ -12,7 +12,7 @@ bt="\e[1;34m" # biru terang
 r="\e[0m"
 
 clear
-echo -e "${cm}******************** Selamat datang ********************${r}"
+echo -e "${hm}******************** Selamat datang ********************${r}"
 echo -e "${ut}Program ini hanya untuk tujuan edukasi dan pembelajaran.${r}"
 echo ""
 echo -e "${bt}Mari kita periksa apakah Anda sudah menginstal alat-alat yang dibutuhkan oleh skrip ini.${r}"
@@ -32,6 +32,7 @@ dao=(
     "7z2john"     # alat untuk mengekstrak hash file 7z
     "pdf2john"    # alat untuk mengekstrak hash file pdf
     "office2john" # alat untuk mengekstrak hash file office (docx, xlxs, pptx)
+    "cupp"
 )
 
 # alat penting belum terinstal 
@@ -48,7 +49,7 @@ for ap in "${dap[@]}"; do
         echo -e "${r}${ap} ... ${mt}Error${r}"
         apbt+=("${ap}")
     else
-        echo -e "${r}${ap} ... ${ct}OK${r}"
+        echo -e "${r}${ap} ... ${ht}OK${r}"
     fi
 done
 
@@ -62,7 +63,7 @@ for ao in "${dao[@]}"; do
         echo -e "${r}${ao} ... ${mt}Error${r}"
         aobt+=("${ao}")
     else
-        echo -e "${r}${ao} ... ${ct}OK${r}"
+        echo -e "${r}${ao} ... ${ht}OK${r}"
     fi
 done
 
