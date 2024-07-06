@@ -6,14 +6,10 @@
 
 function banner(){
         clear
+        echo "----------------------------"             
+        echo " Zip File Password Recovery"
+        echo "----------------------------"
         echo ""
-        echo "d88888D d88888b d8888b  d8888b"
-        echo "YP  d8  88      88   8D 88   8D"
-        echo "   d8   88ooo   88oodDn 88oobY"
-        echo "  d8    88      88      88 8b"
-        echo " d8  db 88      88      88  88"
-        echo "d88888P YP      88      88   YD"
-        echo ""                                                                                
 }
 
 function memasukkan_jalur_ke_file_zip(){
