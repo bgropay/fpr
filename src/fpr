@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function memasukkan_jalur_ke_file_zip(){
         while true; do
                 read -p "Masukkan jalur ke file ZIP: " fz
@@ -17,6 +19,11 @@ function memasukkan_jalur_ke_file_zip(){
         done
 }
 function ekstrak_hash_dari_file_zip(){
+        if ! command -v zip2john >/dev/null 2>&1; then
+            echo "[-] Alat zip2john belum terinstal."
+            exit 1
+        fi
+
         echo "[*] Mengekstrak hash dari file ZIP '${fz}'..."
         sleep 3
 
