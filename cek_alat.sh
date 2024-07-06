@@ -46,7 +46,7 @@ for ap in "${dap[@]}"; do
     sleep 0.1
     if [[ ! -f "${ap}" ]]; then
         if [[ "${ap}" == "/usr/share/john/run/john" ]]; then
-            echo -e "${r}${ap} ... ${mt}Error${r}"
+            echo -e "${r}john ... ${mt}Error${r}"
             apbt+=("${ap}")
         fi
     else
