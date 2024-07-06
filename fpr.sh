@@ -1,5 +1,6 @@
 #!/bin/bash
-# [fpr.shfile ini merupakan salah satu file dari projek FPR
+# [fpr.sh]
+# file ini merupakan salah satu file dari projek FPR
 
 # variabel warna 
 kt="\e[1;33m"
