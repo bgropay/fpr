@@ -22,7 +22,7 @@ fca="cek_alat.sh"
 
 # mengecek apakah file cek_alat.sh ada atau tidak 
 if [[ ! -f "${fca}" ]]; then
-    echo -e "${kt} Script ini tidak bisa dijalankan karena file '${fca}' tidak ditemukan.${r}"
+    echo -e "${kt}Script ini tidak bisa dijalankan karena file '${fca}' tidak ditemukan.${r}"
     exit 1
 else
     # menjalankan file cek_alat.sh
