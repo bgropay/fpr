@@ -37,7 +37,22 @@ while true; do
     read -p "" ehfz
     case "${ehfz}" in
         1)
-            break
+            while true; do
+                read -p "Masukkan jalur ke file ZIP: " fz
+                # Memastikan file ZIP yang diberikan ada
+                if [[ ! -f "${fz}" ]]; then
+                        echo "File ZIP '${fz}' tidak ditemukan."
+                        continue
+                else
+                        if [[ "${fz##*.}" != "zip" ]]; then
+                                echo "File '${fz}' bukan file ZIP."
+                                continue
+                        else
+                                echo "File ZIP '${fz}' ditemukan."
+                                break
+                        fi
+                fi
+            done
             ;;
         2)
             bash menu_utama.sh
