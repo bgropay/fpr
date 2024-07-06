@@ -11,11 +11,16 @@ sleep 3
 daftar_alat=(
     "john"
     "zip2john"
+    "rar2john"
+    "7zip2john"
+    "pdf2john"
+    "office2john"
 )
 
 alat_belum_terinstal=()
 
 for alat in "${daftar_alat[@]}"; do
+    sleep 0.1
     if ! command -v "${alat}" >/dev/null 2>&1; then
         echo "${alat} ... Error"
         alat_belum_terinstal+=("${alat}")
