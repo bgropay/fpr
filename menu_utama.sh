@@ -2,6 +2,14 @@
 # [menu_utama.sh]
 # # file ini merupakan salah satu file dari projek FPR
 
+# variabel warna 
+hm="\e[0;32m" # hijau muda
+ht="\e[1;32m" # hijau terang 
+mt="\e[1;31m" # merah terang
+kt="\e[1;33m" # kuning terang 
+bm="\e[0;34m" # biru muda
+r="\e[0m"
+
 daftar_menu=(
     "Ekstrak hash file ZIP"
     "Ekstrak hash file RAR"
@@ -19,9 +27,9 @@ daftar_menu=(
 c=1
 
 while true; do
-    echo "******************** Menu utama FPR ********************"
+    echo -e "${hm}******************** Menu utama FPR ********************${r}"
     echo ""
-    echo "Pilih opsi dari menu:"
+    echo -e "${ht}Pilih opsi dari menu:${r}"
     echo "----------"
     for menu in "${daftar_menu[@]}"; do
         echo "${c}. ${menu}"
