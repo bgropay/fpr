@@ -21,7 +21,7 @@ c=1
 while true; do
     c=1
     clear
-    echo -e "${hm}******************** Menu Ekstrak Hash File ZIP ********************${r}"
+    echo -e "${hm}******************** Menu Ekstrak Hash File RAR ********************${r}"
     echo ""
     echo -e "${ht}Pilih opsi dari menu:${r}"
     echo -e "${bt}----------${r}"
