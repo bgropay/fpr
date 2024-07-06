@@ -6,9 +6,9 @@
 
 function banner(){
         clear             
-        echo "Zip File Password Recovery "
-        echo "Author: bgropay "
-        echo "Homepage: github.com/bgropay/fpr "
+        echo "Pemulih kata sandi file ZIP"
+        echo "Pembuat: bgropay "
+        echo "Github: github.com/bgropay/fpr "
         echo ""
 }
 
@@ -32,11 +32,6 @@ function memasukkan_jalur_ke_file_zip(){
         done
 }
 function ekstrak_hash_dari_file_zip(){
-        if ! command -v zip2john >/dev/null 2>&1; then
-            echo "[-] Alat zip2john belum terinstal."
-            exit 1
-        fi
-
         echo "[*] Mengekstrak hash dari file ZIP '${fz}'..."
         sleep 3
 
