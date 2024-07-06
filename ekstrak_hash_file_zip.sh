@@ -41,14 +41,14 @@ while true; do
                 read -p "Masukkan jalur ke file ZIP: " fz
                 # Memastikan file ZIP yang diberikan ada
                 if [[ ! -f "${fz}" ]]; then
-                        echo "File ZIP '${fz}' tidak ditemukan."
+                        echo -e "${kt}File ZIP '${fz}' tidak ditemukan.${r}"
                         continue
                 else
                         if [[ "${fz##*.}" != "zip" ]]; then
-                                echo "File '${fz}' bukan file ZIP."
+                                echo -e "${kt}File '${fz}' bukan file ZIP.${r}"
                                 continue
                         else
-                                echo "File ZIP '${fz}' ditemukan."
+                                echo -e "${ct}File ZIP '${fz}' ditemukan.${r}"
                                 break
                         fi
                 fi
