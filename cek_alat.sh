@@ -8,7 +8,7 @@ r="\e[0m"
 
 clear
 echo -e "${h}******************** Selamat datang ********************${r}"
-echo "Program ini hanya untuk tujuan edukasi dan pembelajaran."
+echo -e "${k}Program ini hanya untuk tujuan edukasi dan pembelajaran.${r}"
 echo ""
 echo "Mari kita periksa apakah Anda sudah menginstal alat-alat yang dibutuhkan oleh skrip ini."
 echo ""
