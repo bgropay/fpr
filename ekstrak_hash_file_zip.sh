@@ -53,6 +53,20 @@ while true; do
                         fi
                 fi
             done
+            echo ""
+            echo -e "${bt}Mengekstrak hash dari file ZIP '${fz}'...${r}"
+            sleep 3
+            hash=$(zip2john "${fz}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
+            nama_file_hash="${fz}_hash.txt"
+            echo "${hash}" > "${nama_file_hash}"
+            # Memeriksa apakah hash berhasil dibuat
+            if [[ -z "${nama_file_hash}" ]]; then
+                echo -e "${kt}Gagal mengekstrak hash dari file ZIP '${fz}'.${r}"
+                exit 1
+            else
+                echo -e "${ct}Berhasil mengekstrak hash dari file ZIP '${fz}'.${r}"
+            fi
+            read -p "Tekan [Enter] untuk melanjutkan..."
             break
             ;;
         2)
