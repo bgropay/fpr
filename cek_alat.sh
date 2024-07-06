@@ -49,7 +49,7 @@ for ao in "${dao[@]}"; do
     sleep 0.1
     if ! command -v "${ao}" >/dev/null 2>&1; then
         echo "${ao} ... Error"
-        apbt+=("${ao}")
+        aobt+=("${ao}")
     else
         echo "${ao}...OK"
     fi
