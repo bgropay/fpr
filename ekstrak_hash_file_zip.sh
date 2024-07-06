@@ -34,7 +34,7 @@ while true; do
         ((c++))
     done
     read -p "" ehfz
-    case "${ehfz)" in
+    case "${ehfz}" in
         1)
             break
             ;;
