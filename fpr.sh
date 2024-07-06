@@ -13,7 +13,7 @@ if [[ $(id -u) -ne 0 ]]; then
 fi
 
 echo -e "${bt}[*] ${pt}Memulai FPR...${r}"
-# menunggu selama 0.1 detik 
+# menunggu selama 5 detik 
 sleep 5
 
 # file cek_alat.sh
