@@ -13,7 +13,7 @@ echo -e "${hm}******************** Selamat datang ********************${r}"
 echo -e "${mt}Program ini hanya untuk tujuan edukasi dan pembelajaran.${r}"
 echo ""
 echo -e "${bm}Mari kita periksa apakah Anda sudah menginstal alat-alat yang dibutuhkan oleh skrip ini.${r}"
-read -p $'\e[0;32mTekan [Enter] untuk melanjutkan\e[0m...'
+read -p $'\e[0;32mTekan [Enter] untuk melanjutkan...\e[0m'
 echo ""
 
 # daftar alat penting
@@ -38,14 +38,14 @@ apbt=()
 aobt=()
 
 # cek alat penting 
-echo "Alat penting: memeriksa..."
+echo -e "${bm}Alat penting: memeriksa...${r}"
 for ap in "${dap[@]}"; do
     sleep 0.1
     if ! command -v "${ap}" >/dev/null 2>&1; then
-        echo "${ap} ... Error"
+        echo -e "${r}${ap}... ${mt}Error${r}"
         apbt+=("${ap}")
     else
-        echo "${ap}...OK"
+        echo -e "${r}${ap}...${ht}OK${r}"
     fi
 done
 
