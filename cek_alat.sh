@@ -53,7 +53,7 @@ for ap in "${dap[@]}"; do
         if [[ "${ap}" == "/usr/share/JohnTheRipper/run/john" ]]; then
             echo -e "${r}john ... ${ct}OK${r}"
             apbt+=("${ap}")
-        if [[ "${ap}" == "/usr/share/hashcat/run/hashcat" ]]; then
+        elif [[ "${ap}" == "/usr/share/hashcat/run/hashcat" ]]; then
             echo -e "${r}hashcat ... ${ct}OK${r}"
             apbt+=("${ap}")
         fi
