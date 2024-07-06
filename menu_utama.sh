@@ -22,6 +22,7 @@ daftar_menu=(
     "Memulihkan kata sandi file 7z (Membutuhkan hash)"
     "Memulihkan kata sandi file PDF (Membutuhkan hash)"
     "Memulihkan kata sandi file Office (docx, xlsx, pptx) (Membutuhkan hash)"
+    "Keluar"
     )
 
 c=1
@@ -40,6 +41,8 @@ while true; do
         elif [[ "${c}" -eq 6 ]]; then
             echo -e "${bt}----------${r}"
         elif [[ "${c}" -eq 11 ]]; then
+            echo -e "${bt}----------${r}"
+        elif [[ "${c}" -eq 12 ]]; then
             echo -e "${bt}----------${r}"
         fi
         ((c++))
