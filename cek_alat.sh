@@ -3,18 +3,18 @@
 # file ini merupakan salah satu file dari projek FPR
 
 # variabel warna 
-hm="\e[0;32m" # hijau muda
-ht="\e[1;32m" # hijau terang 
-mt="\e[1;31m" # merah terang
+cm="\e[0;36m" # cyan muda
+ct="\e[1;36m" # cyan terang 
+ut="\e[1;35m" # ungu terang
 kt="\e[1;33m" # kuning terang 
-bm="\e[0;34m" # biru muda
+bt="\e[1;34m" # biru terang 
 r="\e[0m"
 
 clear
-echo -e "${hm}******************** Selamat datang ********************${r}"
-echo -e "${mt}Program ini hanya untuk tujuan edukasi dan pembelajaran.${r}"
+echo -e "${cm}******************** Selamat datang ********************${r}"
+echo -e "${ut}Program ini hanya untuk tujuan edukasi dan pembelajaran.${r}"
 echo ""
-echo -e "${bm}Mari kita periksa apakah Anda sudah menginstal alat-alat yang dibutuhkan oleh skrip ini.${r}"
+echo -e "${bt}Mari kita periksa apakah Anda sudah menginstal alat-alat yang dibutuhkan oleh skrip ini.${r}"
 read -p "Tekan [Enter] untuk melanjutkan..."
 echo ""
 
@@ -40,28 +40,28 @@ apbt=()
 aobt=()
 
 # cek alat penting 
-echo -e "${bm}Alat penting: memeriksa...${r}"
+echo -e "${bt}Alat penting: memeriksa...${r}"
 for ap in "${dap[@]}"; do
     sleep 0.1
     if ! command -v "${ap}" >/dev/null 2>&1; then
         echo -e "${r}${ap} ... ${mt}Error${r}"
         apbt+=("${ap}")
     else
-        echo -e "${r}${ap} ... ${ht}OK${r}"
+        echo -e "${r}${ap} ... ${ct}OK${r}"
     fi
 done
 
 echo ""
 
 # cek alat opsional
-echo -e "${bm}Alat opsional: memeriksa...${r}"
+echo -e "${bt}Alat opsional: memeriksa...${r}"
 for ao in "${dao[@]}"; do
     sleep 0.1
     if ! command -v "${ao}" >/dev/null 2>&1; then
         echo -e "${r}${ao} ... ${mt}Error${r}"
         aobt+=("${ao}")
     else
-        echo -e "${r}${ao} ... ${ht}OK${r}"
+        echo -e "${r}${ao} ... ${ct}OK${r}"
     fi
 done
 
