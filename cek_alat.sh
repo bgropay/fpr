@@ -2,17 +2,18 @@
 # [cek_alat.sh]
 # file ini merupakan salah satu file dari projek FPR
 
-h="\e[1;32m" # hijau
-m="\e[1;31m" # merah 
-b="\e[1;34m" # biru
+hm="\e[0;32m" # hijau muda
+ht="\e[1;32m" # hijau terang 
+mt="\e[1;31m" # merah terang
+bm="\e[0;34m" # biru muda
 r="\e[0m"
 
 clear
-echo -e "${h}******************** Selamat datang ********************${r}"
-echo -e "${m}Program ini hanya untuk tujuan edukasi dan pembelajaran.${r}"
+echo -e "${hm}******************** Selamat datang ********************${r}"
+echo -e "${mt}Program ini hanya untuk tujuan edukasi dan pembelajaran.${r}"
 echo ""
-echo -e "${b}Mari kita periksa apakah Anda sudah menginstal alat-alat yang dibutuhkan oleh skrip ini.${r}"
-read -p $'\e[1;32mTekan [Enter] untuk melangkah...\e[0m'
+echo -e "${bm}Mari kita periksa apakah Anda sudah menginstal alat-alat yang dibutuhkan oleh skrip ini.${r}"
+read -p $'\e[0;32mTekan [Enter] untuk melangkah...\e[0m'
 echo ""
 
 # daftar alat penting
