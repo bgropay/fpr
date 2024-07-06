@@ -2,8 +2,12 @@
 # [cek_alat.sh]
 # file ini merupakan salah satu file dari projek FPR
 
+h="\e[1;32n" # hijau
+k="\e[1;33m" # kuning
+r="\e[0m"
+
 clear
-echo "******************** Selamat datang ********************"
+echo -e "${h}******************** Selamat datang ********************${r}"
 echo "Program ini hanya untuk tujuan edukasi dan pembelajaran."
 echo ""
 echo "Mari kita periksa apakah Anda sudah menginstal alat-alat yang dibutuhkan oleh skrip ini."
