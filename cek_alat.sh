@@ -1,5 +1,5 @@
 #!/bin/bash
-# [cek_file.sh]
+# [cek_alat.sh]
 # file ini merupakan salah satu file dari projek FPR
 
 clear
