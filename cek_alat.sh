@@ -1,5 +1,6 @@
 #!/bin/bash
 
+clear
 echo "******************** Selamat datang ********************"
 echo "Program ini hanya untuk tujuan edukasi dan pembelajaran."
 echo ""
@@ -15,13 +16,10 @@ daftar_alat=(
 alat_belum_terinstal=()
 
 for alat in "${daftar_alat[@]}"; do
-    echo "${alat}..."
     if ! command -v "${alat}" >/dev/null 2>&1; then
-        sleep 5
         echo "[-] Alat ${alat} belum terinstal."
         alat_belum_terinstal+=("${alat}")
     else
-        sleep 3
         echo "${alat}...OK"
     fi
 done
