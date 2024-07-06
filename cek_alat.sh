@@ -101,23 +101,25 @@ if [[ "${#apbt[@]}" -ne 0 ]]; then
     echo ""
     echo -e "${kt}Script ini tidak bisa dijalankan karena ada alat penting yang belum terinstal.${r}"
     exit 1
-elif [[ "${#aobt[@]}" -ne 0 ]]; then
+fi
+
+if [[ "${#aobt[@]}" -ne 0 ]]; then
     echo ""
     echo -e "${kt}Script ini tidak bisa dijalankan karena ada alat opsional yang belum terinstal.${r}"
     exit 1
-else
-    echo ""
-    echo -e "${kt}Semua alat yang diperlukan oleh script ini sudah terinstal. Script ini bisa dijalankan.${r}"
-    read -p "Tekan [Enter] untuk melanjutkan..."
-    # file menu_utama.sh
-    fmu="menu_utama.sh"
+fi
 
-    # mengecek apakah file cek_alat.sh ada atau tidak 
-    if [[ ! -f "${fmu}" ]]; then
-        echo -e "${kt}Script ini tidak bisa dijalankan karena file '${fmu}' tidak ditemukan.${r}"
-        exit 1
-    else
-        # menjalankan file cek_alat.sh
-        bash "${fmu}"
-    fi
+echo ""
+echo -e "${kt}Semua alat yang diperlukan oleh script ini sudah terinstal. Script ini bisa dijalankan.${r}"
+read -p "Tekan [Enter] untuk melanjutkan..."
+# file menu_utama.sh
+fmu="menu_utama.sh"
+
+# mengecek apakah file cek_alat.sh ada atau tidak 
+if [[ ! -f "${fmu}" ]]; then
+    echo -e "${kt}Script ini tidak bisa dijalankan karena file '${fmu}' tidak ditemukan.${r}"
+    exit 1
+else
+    # menjalankan file cek_alat.sh
+    bash "${fmu}"
 fi
