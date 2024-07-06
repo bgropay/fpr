@@ -30,7 +30,7 @@ while true; do
     echo -e "${cm}******************** Menu utama FPR ********************${r}"
     echo ""
     echo -e "${ct}Pilih opsi dari menu:${r}"
-    echo "----------"
+    echo -e "${bt}----------${r}"
     for menu in "${daftar_menu[@]}"; do
         echo "${c}. ${menu}"
         if [[ "${c}" -eq 5 ]]; then
