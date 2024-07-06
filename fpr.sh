@@ -1,2 +1,4 @@
 #!/bin/bash
-# [fpr.sh]
+# [fpr.shfile ini merupakan salah satu file dari projek FPR
+
+
