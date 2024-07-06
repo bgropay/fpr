@@ -18,7 +18,7 @@ dap=(
 dao=(
     "zip2john"
     "rar2john"
-    "7zip2john"
+    "7z2john"
     "pdf2john"
     "office2john"
 )
