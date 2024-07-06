@@ -42,7 +42,7 @@ echo -e "${bm}Alat penting: memeriksa...${r}"
 for ap in "${dap[@]}"; do
     sleep 0.1
     if ! command -v "${ap}" >/dev/null 2>&1; then
-        echo -e "${r}${ap}... ${mt}Error${r}"
+        echo -e "${r}${ap}...${mt}Error${r}"
         apbt+=("${ap}")
     else
         echo -e "${r}${ap}...${ht}OK${r}"
@@ -52,14 +52,14 @@ done
 echo ""
 
 # cek alat opsional
-echo "Alat opsional: memeriksa..."
+echo -e "${bm}Alat opsional: memeriksa...${r}"
 for ao in "${dao[@]}"; do
     sleep 0.1
     if ! command -v "${ao}" >/dev/null 2>&1; then
-        echo "${ao} ... Error"
+        echo -e "${r}${ao}...${mt}Error${r}"
         aobt+=("${ao}")
     else
-        echo "${ao}...OK"
+        echo -e "${r}${ao}...${ht}OK${r}"
     fi
 done
 
