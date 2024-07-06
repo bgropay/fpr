@@ -16,11 +16,11 @@ dap=(
 
 # daftar alat opsional
 dao=(
-    "zip2john"
-    "rar2john"
-    "7z2john"
-    "pdf2john"
-    "office2john"
+    "zip2john"    # alat untuk mengekstrak hash file zip
+    "rar2john"    # alat untuk mengekstrak hash file rar
+    "7z2john"     # alat untuk mengekstrak hash file 7z
+    "pdf2john"    # alat untuk mengekstrak hash file pdf
+    "office2john" # alat untuk mengekstrak hash file office (docx, xlxs, pptx)
 )
 
 # alat penting belum terinstal 
@@ -67,7 +67,7 @@ elif [[ "${#aobt[@]}" -ne 0 ]]; then
     exit 1
 else
     echo ""
-    echo "Semua alat sudah terinstal. Script ini bisa dijalankan."
+    echo "Semua alat yang diperlukan oleh script ini sudah terinstal. Script ini bisa dijalankan."
     read -p "Tekan [Enter] untuk melanjutkan..."
     # Tempatkan kode untuk menjalankan program Anda di sini
 fi
