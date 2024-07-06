@@ -56,13 +56,13 @@ function memasukkan_jalur_ke_file_wordlist(){
 
 function memulihkan_kata_sandi_file_zip_dengan_hashcat(){
         if grep -o "pkzip" "${nama_file_hash}" >> /dev/null 2>&1; then
-                mode=17220 # PKZIP (Compressed Multi-File) 
+                format='PKZIP' # PKZIP  
                 clear
-                hashcat -a 0 -m "${mode}" "${nama_file_hash}" "${fw}"
+                john --format="${format}" --wordlsit="${fw}" "${nama_file_hash}" 
         elif grep -o "zip2" "${nama_file_hash}" >> /dev/null 2>&1; then
-                mode=13600 # WinZip
+                format='ZIP'
                 clear
-                hashcat -a 0 -m "${mode}" "${nama_file_wordlist}" "${fw}"
+                john --format="${format}" --wordlsit="${fw}" "${nama_file_hash}"
         fi
 }
 
