@@ -8,8 +8,14 @@ echo "Mari kita periksa apakah Anda sudah menginstal alat-alat yang dibutuhkan o
 echo ""
 sleep 3
 
-daftar_alat=(
+# daftar alat penting
+dap=(
     "john"
+    "hashcat"
+)
+
+# daftar alat opsional
+dao=(
     "zip2john"
     "rar2john"
     "7zip2john"
@@ -17,19 +23,39 @@ daftar_alat=(
     "office2john"
 )
 
-alat_belum_terinstal=()
+# alat penting belum terinstal 
+apbt=()
 
-for alat in "${daftar_alat[@]}"; do
+# alat opsional belum terinstal 
+aobt=()
+
+# cek alat penting 
+echo "Alat penting: memeriksa..."
+sleep 0.5
+for ap in "${dap[@]}"; do
     sleep 0.1
-    if ! command -v "${alat}" >/dev/null 2>&1; then
-        echo "${alat} ... Error"
-        alat_belum_terinstal+=("${alat}")
+    if ! command -v "${ap}" >/dev/null 2>&1; then
+        echo "${ap} ... Error"
+        apbt+=("${ap}")
     else
-        echo "${alat}...OK"
+        echo "${ap}...OK"
     fi
 done
 
-if [ ${#alat_belum_terinstal[@]} -ne 0 ]; then
+# cek alat opsional
+echo "Alat opsional: memeriksa..."
+sleep 0.5
+for ao in "${dao[@]}"; do
+    sleep 0.1
+    if ! command -v "${ao}" >/dev/null 2>&1; then
+        echo "${ao} ... Error"
+        apbt+=("${ao}")
+    else
+        echo "${ao}...OK"
+    fi
+done
+
+if [[ "${#apbt[@]}" -ne 0 ]] && [[ "${#aobt[@]}" -ne 0 ]]; then
     echo "Script ini tidak bisa dijalankan karena ada beberapa alat yang belum terinstal."
     exit 1
 else
