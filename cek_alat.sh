@@ -6,6 +6,7 @@
 cm="\e[0;36m" # cyan muda
 ct="\e[1;36m" # cyan terang 
 ut="\e[1;35m" # ungu terang
+mt="\e[1;31m" # merah terang
 kt="\e[1;33m" # kuning terang 
 bt="\e[1;34m" # biru terang 
 r="\e[0m"
