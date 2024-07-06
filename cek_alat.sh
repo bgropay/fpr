@@ -9,10 +9,10 @@ r="\e[0m"
 
 clear
 echo -e "${h}******************** Selamat datang ********************${r}"
-echo -e "${k}Program ini hanya untuk tujuan edukasi dan pembelajaran.${r}"
+echo -e "${m}Program ini hanya untuk tujuan edukasi dan pembelajaran.${r}"
 echo ""
 echo -e "${b}Mari kita periksa apakah Anda sudah menginstal alat-alat yang dibutuhkan oleh skrip ini.${r}"
-read -p "Tekan [Enter] untuk melangkah..."
+read -p $'\e[1;32mTekan [Enter] untuk melangkah...\e[0m'
 
 # daftar alat penting
 dap=(
