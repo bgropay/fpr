@@ -2,6 +2,7 @@
 # [cek_alat.sh]
 # file ini merupakan salah satu file dari projek FPR
 
+# variabel warna 
 hm="\e[0;32m" # hijau muda
 ht="\e[1;32m" # hijau terang 
 mt="\e[1;31m" # merah terang
