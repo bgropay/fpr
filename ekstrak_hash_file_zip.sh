@@ -19,6 +19,7 @@ daftar_menu=(
 c=1
 
 while true; do
+    c=1
     clear
     echo -e "${cm}******************** Menu Ekstrak Hash File ZIP ********************${r}"
     echo ""
