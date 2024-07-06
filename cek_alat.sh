@@ -58,12 +58,15 @@ for ao in "${dao[@]}"; do
 done
 
 if [[ "${#apbt[@]}" -ne 0 ]]; then
+    echo ""
     echo "Script ini tidak bisa dijalankan karena ada alat penting yang belum terinstal."
     exit 1
 elif [[ "${#aobt[@]}" -ne 0 ]]; then
+    echo ""
     echo "Script ini tidak bisa dijalankan karena ada alat opsional yang belum terinstal."
     exit 1
 else
+    echo ""
     echo "Semua alat sudah terinstal. Program bisa dijalankan."
     # Tempatkan kode untuk menjalankan program Anda di sini
 fi
