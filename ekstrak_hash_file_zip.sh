@@ -39,7 +39,7 @@ while true; do
         1)
             echo ""
             while true; do
-                read -p "Masukkan jalur ke file ZIP: " fz
+                read -p "Masukkan nama file ZIP: " fz
                 # Memastikan file ZIP yang diberikan ada
                 if [[ ! -f "${fz}" ]]; then
                         echo -e "${kt}File ZIP '${fz}' tidak ditemukan.${r}"
@@ -55,7 +55,7 @@ while true; do
                 fi
             done
             echo ""
-            read -p "Masukkan jalur untuk menyimpan file hash: " nama_file_hash
+            read -p "Masukkan nama file untuk menyimpan hash file ZIP: " nama_file_hash
             echo ""
             echo -e "${bt}Mengekstrak hash dari file ZIP '${fz}'...${r}"
             sleep 3
