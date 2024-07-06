@@ -14,3 +14,13 @@ fi
 echo -e "${bt}[*] ${pt}Memulai FPR...${r}"
 # menunggu selama 0.1 detik 
 sleep 5
+
+# file cek alat
+fca="cek_alat.sh"
+
+if [[ ! -f "${fca}" ]]; then
+    echo ""
+    exit 1
+else
+    bash "${fca}"
+fi
