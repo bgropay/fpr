@@ -6,9 +6,11 @@
 
 function banner(){
         clear
-        echo "----------------------------"             
-        echo " Zip File Password Recovery"
-        echo "----------------------------"
+        echo "**********************************"             
+        echo " Zip File Password Recovery "
+        echo " Author: bgropay "
+        echo " Homepage: github.com/bgropay/fpr "
+        echo "**********************************"
         echo ""
 }
 
