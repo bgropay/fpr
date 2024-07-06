@@ -3,11 +3,11 @@
 # # file ini merupakan salah satu file dari projek FPR
 
 # variabel warna 
-hm="\e[0;32m" # hijau muda
-ht="\e[1;32m" # hijau terang 
+cm="\e[0;32m" # cyan muda
+ct="\e[1;32m" # cyan terang 
 mt="\e[1;31m" # merah terang
 kt="\e[1;33m" # kuning terang 
-bm="\e[0;34m" # biru muda
+bt="\e[0;34m" # biru terang 
 r="\e[0m"
 
 daftar_menu=(
@@ -27,9 +27,9 @@ daftar_menu=(
 c=1
 
 while true; do
-    echo -e "${hm}******************** Menu utama FPR ********************${r}"
+    echo -e "${cm}******************** Menu utama FPR ********************${r}"
     echo ""
-    echo -e "${ht}Pilih opsi dari menu:${r}"
+    echo -e "${ct}Pilih opsi dari menu:${r}"
     echo "----------"
     for menu in "${daftar_menu[@]}"; do
         echo "${c}. ${menu}"
