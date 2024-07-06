@@ -1,4 +1,8 @@
 #!/bin/bash
+# Judul.......: zpr
+# Deskripsi:..: ZIP file password recovery
+# Pembuat.....: bgropay
+# Penggunaan..: bash zpr.sh
 
 function memasukkan_jalur_ke_file_zip(){
         while true; do
