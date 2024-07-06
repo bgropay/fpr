@@ -21,4 +21,5 @@ while true; do
         echo "${c}. ${menu}"
         ((c++))
     done
+    read -p ""
 done
