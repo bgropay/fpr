@@ -46,6 +46,7 @@ while true; do
                         if [[ ! -f "${mehf}" ]]; then
                                 echo ""
                                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mehf}' tidak ditemukan.${r}"
+                                read -p "Tekan [Enter] untuk melanjutkan..."
                                 exit 1
                         else
                                 bash "${mehf}"
@@ -56,6 +57,7 @@ while true; do
                         if [[ ! -f "${mbdks}" ]]; then
                                 echo ""
                                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mbdks}' tidak ditemukan.${r}"
+                                read -p "Tekan [Enter] untuk melanjutkan..."
                                 exit 1
                         else
                                 bash "${mbdks}"
@@ -67,7 +69,7 @@ while true; do
                         if [[ ! -f "${mpksf}" ]]; then
                                 echo ""
                                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mpksf}' tidak ditemukan.${r}"
-                                read -p ""
+                                read -p "Tekan [Enter] untuk melanjutkan..."
                                 exit 1
                         else
                                 bash "${mpksf}"
