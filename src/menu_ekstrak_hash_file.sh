@@ -1,5 +1,5 @@
 #!/bin/bash
-# [menu_ekstrak_hash.sh]
+# [menu_ekstrak_hash_file.sh]
 # # file ini merupakan salah satu file dari projek FPR
 
 # variabel warna 
@@ -25,7 +25,7 @@ c=1
 while true; do
         c=1
         clear
-        echo -e "${hm}******************** Menu Ekstrak Hash  ********************${r}"
+        echo -e "${hm}******************** Menu Ekstrak Hash File ********************${r}"
         echo ""
         echo -e "${ht}Pilih opsi dari menu:${r}"
         echo -e "${bt}----------${r}"
@@ -37,8 +37,8 @@ while true; do
                 ((c++))
         done
         # menu ekstrak hash
-        read -p "" meh
-        case "${meh}" in
+        read -p "" mehf
+        case "${mehf}" in
                 1)
                         ehfz="src/ekstrak_hash/ekstrak_hash_file_zip.sh"
                         if [[ ! -f "${ehfz}" ]]; then
