@@ -7,7 +7,7 @@
 dependensi_john=(
     "libcrypt1"
     "libcrypt1-dev"
-    "libgomp-1"
+    "libgomp1"
     "cmake"
     "bison"
     "flex"
