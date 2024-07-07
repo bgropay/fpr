@@ -109,7 +109,7 @@ echo ""
 echo -e "${kt}Semua alat yang diperlukan oleh script ini sudah terinstal. Script ini bisa dijalankan.${r}"
 read -p "Tekan [Enter] untuk melanjutkan..."
 # file menu_utama.sh
-fmu="menu_utama.sh"
+fmu="src/menu_utama.sh"
 
 # mengecek apakah file cek_alat.sh ada atau tidak 
 if [[ ! -f "${fmu}" ]]; then
