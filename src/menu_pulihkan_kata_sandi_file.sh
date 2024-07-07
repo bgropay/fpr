@@ -88,9 +88,6 @@ while true; do
                                         echo ""
                                         echo -e "${mt}[-] ${pt}Kata sandi gagal dipulihkan.${r}"
                                 fi
-                        else
-                                echo "Gagal menampilkan kata sandi yang berhasil di-crack"
-                                exit 1
                         fi
                         echo ""
                         read -p "Tekan [Enter] untuk melanjutkan..."
@@ -125,7 +122,24 @@ while true; do
                         echo -e "${hm}******************** Pulihkan Kata Sandi File RAR ********************${r}"
                         echo ""
                         /usr/share/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fhr}"
-                        /usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fhr}"
+                        kata_sandi=$(/usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fhr}")
+                        if [ $? -eq 0 ]; then
+                                echo "${kata_sandi}"
+                                # Mengambil baris pertama dari output
+                                baris_pertama=$(echo "${kata_sandi}" | head -n 1)
+    
+                                # Memeriksa apakah baris pertama mengandung pemisah ':'
+                                if [[ "${baris_pertama}" == *:* ]]; then
+                                        # Menampilkan teks di sebelah kanan pemisah ':'
+                                        echo ""
+                                        echo -e "${ht}[+] ${pt}Kata sandi berhasil dipulihkan.${r}"
+                                        echo -e "${ht}[+] ${pt}Kata sandi: ${ht}${baris_pertama#*:}${r}"
+                                else
+                                        echo ""
+                                        echo -e "${mt}[-] ${pt}Kata sandi gagal dipulihkan.${r}"
+                                fi
+                        fi
+                        echo ""
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         break
                         ;;
