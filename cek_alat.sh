@@ -51,7 +51,6 @@ for ap in "${dap[@]}"; do
     else
         if [[ "${ap}" == "/usr/share/JohnTheRipper/run/john" ]]; then
             echo -e "${r}john ... ${ht}OK${r}"
-            apbt+=("${ap}")
         fi
     fi
 done
@@ -82,19 +81,14 @@ for ao in "${dao[@]}"; do
     else
         if [[ "${ao}" == "/usr/share/JohnTheRipper/run/zip2john" ]]; then
             echo -e "${r}zip2john ... ${ht}Ok${r}"
-            aobt+=("${ao}")
         elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/rar2john" ]]; then
             echo -e "${r}rar2john ... ${ht}OK${r}"
-            aobt+=("${ao}")
         elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/7z2john.pl" ]]; then
             echo -e "${r}7z2john ... ${ht}OK${r}"
-            aobt+=("${ao}")
         elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/pdf2john.pl" ]]; then
             echo -e "${r}pdf2john ... ${ht}OK${r}"
-            aobt+=("${ao}")
         elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/office2john.py" ]]; then
             echo -e "${r}office2john ... ${ht}OK${r}"
-            aobt+=("${ao}")
         fi
     fi
 done
