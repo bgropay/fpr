@@ -74,6 +74,7 @@ while true; do
                                 echo -e "${ht}Berhasil mengekstrak hash dari file ZIP '${fz}'.${r}"
                                 echo -e "${ht}Hash disimpan di dalam file '${nama_file_hash}'.${r}"
                         fi
+                        echo ""
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         break
                         ;;
@@ -110,6 +111,7 @@ while true; do
                                 echo -e "${ht}Berhasil mengekstrak hash dari file RAR '${fr}'.${r}"
                                 echo -e "${ht}Hash disimpan di dalam file '${nama_file_hash}'.${r}"
                         fi
+                        echo ""
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         break
                         ;;
@@ -146,6 +148,7 @@ while true; do
                                 echo -e "${ht}Berhasil mengekstrak hash dari file 7z '${f7}'.${r}"
                                 echo -e "${ht}Hash disimpan di dalam file '${nama_file_hash}'.${r}"
                         fi
+                        echo ""
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         break
                         ;;
@@ -182,6 +185,7 @@ while true; do
                                 echo -e "${ht}Berhasil mengekstrak hash dari file PDF '${fp}'.${r}"
                                 echo -e "${ht}Hash disimpan di dalam file '${nama_file_hash}'.${r}"
                         fi
+                        echo ""
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         break
                         ;;
@@ -218,6 +222,7 @@ while true; do
                                 echo -e "${ht}Berhasil mengekstrak hash dari file Office '${fo}'.${r}"
                                 echo -e "${ht}Hash disimpan di dalam file '${nama_file_hash}'.${r}"
                         fi
+                        echo ""
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         break
                         ;;
@@ -226,6 +231,7 @@ while true; do
                         if [[ ! -f "${fmu}" ]]; then
                                 echo ""
                                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${fmu}' tidak ditemukan.${r}"
+                                echo ""
                                 read -p "Tekan [Enter] untuk keluar..."
                                 exit 1
                         else
@@ -236,6 +242,7 @@ while true; do
                 *)
                         echo ""
                         echo -e "${kt}Menu '${mehf}' tidak tersedia. Silahkan pilih menu yang tersedia.${r}"
+                        echo ""
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         continue 
         esac
