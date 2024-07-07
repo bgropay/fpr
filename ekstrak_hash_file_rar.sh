@@ -40,7 +40,7 @@ while true; do
             echo ""
             while true; do
                 read -p "Masukkan nama file RAR: " fr
-                # Memastikan file ZIP yang diberikan ada
+                # Memastikan file RAR yang diberikan ada
                 if [[ ! -f "${fr}" ]]; then
                         echo -e "${kt}File RAR '${fr}' tidak ditemukan.${r}"
                         continue
