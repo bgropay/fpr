@@ -33,6 +33,8 @@ while true; do
                 echo "${c}. ${menu}"
                 if [[ "${c}" -eq 5 ]]; then
                         echo -e "${bt}----------${r}"
+                elif [[ "${c}" -eq 6 ]]; then
+                        echo -e "${bt}----------${r}"
                 fi
                 ((c++))
         done
