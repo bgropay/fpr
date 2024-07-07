@@ -31,6 +31,7 @@ dao=(
         "/usr/share/JohnTheRipper/run/7z2john.pl"     # alat untuk mengekstrak hash file 7z
         "/usr/share/JohnTheRipper/run/pdf2john.pl"    # alat untuk mengekstrak hash file pdf
         "/usr/share/JohnTheRipper/run/office2john.py" # alat untuk mengekstrak hash file office (docx, xlxs, pptx)
+        "/usr/share/cupp/cupp.py"
 )
 
 # alat penting belum terinstal 
@@ -77,6 +78,9 @@ for ao in "${dao[@]}"; do
             elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/office2john.py" ]]; then
                 echo -e "${r}office2john ... ${mt}Error${r}"
                 aobt+=("${ao}")
+            elif [[ "${ao}" == "/usr/share/cupp/cupp.py" ]]; then
+                echo -e "${r}cupp ... ${mt}Error${r}"
+                aobt+=("${ao}")
             fi
         else
             if [[ "${ao}" == "/usr/share/JohnTheRipper/run/zip2john" ]]; then
@@ -89,6 +93,8 @@ for ao in "${dao[@]}"; do
                 echo -e "${r}pdf2john ... ${ht}OK${r}"
             elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/office2john.py" ]]; then
                 echo -e "${r}office2john ... ${ht}OK${r}"
+            elif [[ "${ao}" == "/usr/share/cupp/cupp.py" ]]; then
+                echo -e "${r}cupp ... ${ht}OK${r}"
             fi
         fi
 done
