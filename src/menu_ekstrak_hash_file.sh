@@ -222,8 +222,16 @@ while true; do
                         break
                         ;;
                 6)
-                        bash src/menu_utama.sh
-                        break
+                        fmu="src/menu_utama.sh"
+                        if [[ ! -f "${fmu}" ]]; then
+                                echo ""
+                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${fmu}' tidak ditemukan.${r}"
+                                read -p "Tekan [Enter] untuk melanjutkan..."
+                                exit 1
+                        else
+                                bash "${fmu}"
+                                break
+                        fi
                         ;;
                 *)
                         echo ""
