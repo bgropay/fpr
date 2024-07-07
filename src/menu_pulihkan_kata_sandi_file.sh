@@ -6,6 +6,7 @@
 hm="\e[0;32m" # hijau muda
 ht="\e[1;32m" # hijau terang 
 mt="\e[1;31m" # merah terang
+pt="\e[1;37m" # putih terang 
 kt="\e[1;33m" # kuning terang 
 bt="\e[0;34m" # biru terang 
 r="\e[0m"
@@ -81,8 +82,8 @@ while true; do
                                 if [[ "${baris_pertama}" == *:* ]]; then
                                         # Menampilkan teks di sebelah kanan pemisah ':'
                                         echo ""
-                                        echo "[+] Kata sandi berhasil dipulihkan."
-                                        echo "[+] Kata sandi: ${baris_pertama#*:}"
+                                        echo -e "${h}[+] ${p}Kata sandi berhasil dipulihkan.${r}"
+                                        echo -e "${h}[+] ${p}Kata sandi: ${h}${baris_pertama#*:}${r}"
                                 else
                                         echo "Baris pertama tidak mengandung pemisah ':'"
                                 fi
