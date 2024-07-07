@@ -66,6 +66,8 @@ while true; do
                                 fi
                         done
                         clear
+                        echo -e "${hm}******************** Pulihkan Kata Sandi File ZIP ********************${r}"
+                        echo ""
                         /usr/share/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fhz}"
                         /usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fhz}"
                         read -p "Tekan [Enter] untuk melanjutkan..."
