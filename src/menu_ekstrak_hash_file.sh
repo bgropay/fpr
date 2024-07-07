@@ -76,48 +76,148 @@ while true; do
                         break
                         ;;
                 2)
-                        # ekstrak hash file rar
-                        ehfr="src/ekstrak_hash/ekstrak_hash_file_rar.sh"
-                        if [[ ! -f "${ehfr}" ]]; then
-                                echo ""
-                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${ehfr}' tidak ditemukan.${r}"
+                        echo ""
+                        while true; do
+                                read -p "Masukkan nama file RAR: " fr
+                                # Memastikan file RAR yang diberikan ada
+                                if [[ ! -f "${fr}" ]]; then
+                                        echo -e "${kt}File RAR '${fr}' tidak ditemukan.${r}"
+                                        continue
+                                else
+                                        if [[ "${fr##*.}" != "rar" ]]; then
+                                                echo -e "${kt}File '${fr}' bukan file RAR.${r}"
+                                                continue
+                                        else
+                                                echo -e "${ht}File RAR '${fr}' ditemukan.${r}"
+                                                break
+                                        fi
+                                fi
+                        done
+                        echo ""
+                        read -p "Masukkan nama file untuk menyimpan hash file RAR: " nama_file_hash
+                        echo ""
+                        echo -e "${bt}Mengekstrak hash dari file RAR '${fr}'...${r}"
+                        sleep 3
+                        hash=$(/usr/share/JohnTheRipper/run/./rar2john "${fr}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
+                        echo "${hash}" > "${nama_file_hash}"
+                        # Memeriksa apakah hash berhasil dibuat
+                        if [[ -z "${nama_file_hash}" ]]; then
+                                echo -e "${kt}Gagal mengekstrak hash dari file RAR '${fr}'.${r}"
                                 exit 1
                         else
-                                bash "${ehfr}"
+                                echo -e "${ht}Berhasil mengekstrak hash dari file RAR '${fr}'.${r}"
+                                echo -e "${ht}Hash disimpan di dalam file '${nama_file_hash}'.${r}"
                         fi
+                        read -p "Tekan [Enter] untuk melanjutkan..."
+                        break
                         ;;
                 3)
-                        # ekstrak hash file 7z
-                        ehf7="src/ekstrak_hash/ekstrak_hash_file_7z.sh"
-                        if [[ ! -f "${ehf7}" ]]; then
-                                echo ""
-                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${ehf7}' tidak ditemukan.${r}"
+                        echo ""
+                        while true; do
+                                read -p "Masukkan nama file 7z: " f7
+                                # Memastikan file 7z yang diberikan ada
+                                if [[ ! -f "${f7}" ]]; then
+                                        echo -e "${kt}File 7z '${f7}' tidak ditemukan.${r}"
+                                        continue
+                                else
+                                        if [[ "${f7##*.}" != "7z" ]]; then
+                                                echo -e "${kt}File '${f7}' bukan file 7z.${r}"
+                                                continue
+                                        else
+                                                echo -e "${ht}File 7z '${f7}' ditemukan.${r}"
+                                                break
+                                        fi
+                                fi
+                        done
+                        echo ""
+                        read -p "Masukkan nama file untuk menyimpan hash file 7z: " nama_file_hash
+                        echo ""
+                        echo -e "${bt}Mengekstrak hash dari file 7z '${f7}'...${r}"
+                        sleep 3
+                        hash=$(/usr/share/JohnTheRipper/run/./7z2john "${f7}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
+                        echo "${hash}" > "${nama_file_hash}"
+                        # Memeriksa apakah hash berhasil dibuat
+                        if [[ -z "${nama_file_hash}" ]]; then
+                                echo -e "${kt}Gagal mengekstrak hash dari file 7z '${f7}'.${r}"
                                 exit 1
                         else
-                                bash "${ehf7}"
+                                echo -e "${ht}Berhasil mengekstrak hash dari file 7z '${f7}'.${r}"
+                                echo -e "${ht}Hash disimpan di dalam file '${nama_file_hash}'.${r}"
                         fi
+                        read -p "Tekan [Enter] untuk melanjutkan..."
+                        break
                         ;;
                 4)
-                        # ekstrak hash file pdf
-                        ehfp="src/ekstrak_hash/ekstrak_hash_file_pdf.sh"
-                        if [[ ! -f "${ehfp}" ]]; then
-                                echo ""
-                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${ehfp}' tidak ditemukan.${r}"
+                        echo ""
+                        while true; do
+                                read -p "Masukkan nama file PDF: " fp
+                                # Memastikan file PDF yang diberikan ada
+                                if [[ ! -f "${fp}" ]]; then
+                                        echo -e "${kt}File PDF '${fp}' tidak ditemukan.${r}"
+                                        continue
+                                else        
+                                        if [[ "${fp##*.}" != "pdf" ]]; then
+                                                echo -e "${kt}File '${fp}' bukan file PDF.${r}"
+                                                continue
+                                        else
+                                                echo -e "${ht}File PDF '${fp}' ditemukan.${r}"
+                                                break
+                                        fi
+                                fi
+                        done
+                        echo ""
+                        read -p "Masukkan nama file untuk menyimpan hash file PDF: " nama_file_hash
+                        echo ""
+                        echo -e "${bt}Mengekstrak hash dari file PDF '${fp}'...${r}"
+                        sleep 3
+                        hash=$(/usr/share/JohnTheRipper/run/./pdf2john.pl "${fp}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
+                        echo "${hash}" > "${nama_file_hash}"
+                        # Memeriksa apakah hash berhasil dibuat
+                        if [[ -z "${nama_file_hash}" ]]; then
+                                echo -e "${kt}Gagal mengekstrak hash dari file PDF '${fp}'.${r}"
                                 exit 1
                         else
-                                bash "${ehfp}"
+                                echo -e "${ht}Berhasil mengekstrak hash dari file PDF '${fp}'.${r}"
+                                echo -e "${ht}Hash disimpan di dalam file '${nama_file_hash}'.${r}"
                         fi
+                        read -p "Tekan [Enter] untuk melanjutkan..."
+                        break
                         ;;
                 5)
-                        # ekstrak hash file office 
-                        ehfo="src/ekstrak_hash/ekstrak_hash_file_office.sh"
-                        if [[ ! -f "${ehfo}" ]]; then
-                                echo""
-                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${ehfo}' tidak ditemukan.${r}"
+                        echo ""
+                        while true; do
+                                read -p "Masukkan nama file Office: " fo
+                                # Memastikan file Office yang diberikan ada
+                                if [[ ! -f "${fo}" ]]; then
+                                        echo -e "${kt}File Office '${fo}' tidak ditemukan.${r}"
+                                        continue
+                                else
+                                        if [[ "${fo##*.}" != "docx" && "${fo##*.}" != "xlsx" && "${fo##*.}" != "pptx" ]]; then
+                                                echo -e "${kt}File '${fo}' bukan file Office.${r}"
+                                                continue
+                                        else
+                                                echo -e "${ht}File Office '${fo}' ditemukan.${r}"
+                                                break
+                                        fi
+                                fi
+                        done
+                        echo ""
+                        read -p "Masukkan nama file untuk menyimpan hash file Office: " nama_file_hash
+                        echo ""
+                        echo -e "${bt}Mengekstrak hash dari file Office '${fo}'...${r}"
+                        sleep 3
+                        hash=$(/usr/share/JohnTheRipper/run/./office2john.py "${fo}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
+                        echo "${hash}" > "${nama_file_hash}"
+                        # Memeriksa apakah hash berhasil dibuat
+                        if [[ -z "${nama_file_hash}" ]]; then
+                                echo -e "${kt}Gagal mengekstrak hash dari file Office '${fo}'.${r}"
                                 exit 1
                         else
-                                bash "${ehfo}"
+                                echo -e "${ht}Berhasil mengekstrak hash dari file Office '${fo}'.${r}"
+                                echo -e "${ht}Hash disimpan di dalam file '${nama_file_hash}'.${r}"
                         fi
+                        read -p "Tekan [Enter] untuk melanjutkan..."
+                        break
                         ;;
         esac
 done
