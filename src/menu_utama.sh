@@ -67,6 +67,7 @@ while true; do
                         if [[ ! -f "${mpksf}" ]]; then
                                 echo ""
                                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mpksf}' tidak ditemukan.${r}"
+                                read -p ""
                                 exit 1
                         else
                                 bash "${mpksf}"
