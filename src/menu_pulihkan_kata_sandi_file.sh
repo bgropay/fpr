@@ -71,15 +71,16 @@ while true; do
                         echo -e "${hm}******************** Pulihkan Kata Sandi File ZIP ********************${r}"
                         echo ""
                         /usr/share/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fhz}"
-                        OUTPUT=$(/usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fhz}")
+                        kata_sandi=$(/usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fhz}")
                         if [ $? -eq 0 ]; then
                                 # Mengambil baris pertama dari output
-                                FIRST_LINE=$(echo "$OUTPUT" | head -n 1)
+                                baris_pertama=$(echo "${kata_sandi}" | head -n 1)
     
                                 # Memeriksa apakah baris pertama mengandung pemisah ':'
-                                if [[ "$FIRST_LINE" == *:* ]]; then
+                                if [[ "${baris_pertama}" == *:* ]]; then
                                         # Menampilkan teks di sebelah kanan pemisah ':'
-                                        echo "${FIRST_LINE#*:}"
+                                        echo ""
+                                        echo "Kata sandi ditemukan: ${baris_pertama#*:}"
                                 else
                                         echo "Baris pertama tidak mengandung pemisah ':'"
                                 fi
