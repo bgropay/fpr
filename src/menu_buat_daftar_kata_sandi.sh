@@ -47,6 +47,7 @@ while true; do
                         if [[ ! -f "${fmu}" ]]; then
                                 echo ""
                                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${fmu}' tidak ditemukan.${r}"
+                                echo ""
                                 read -p "Tekan [Enter] untuk keluar..."
                                 exit 1
                         else
@@ -57,6 +58,7 @@ while true; do
                 *)
                         echo ""
                         echo -e "${kt}Menu '${mbdksf}' tidak tersedia. Silahkan pilih menu yang tersedia.${r}"
+                        echo ""
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         continue 
                         ;;
