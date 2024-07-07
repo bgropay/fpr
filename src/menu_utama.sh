@@ -50,15 +50,21 @@ while true; do
     read -p "" mu
     case "${mu}" in
         1)
-            # ekstrak hash file zip
-            bash ekstrak_hash/ekstrak_hash_file_zip.sh
+            ehfz="ekstrak_hash/ekstrak_hash_file_zip.sh"
+            if [[ ! -f "${ehfz}" ]]; then
+                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${ehfz}' tidak ditemukan.${r}"
+                exit 1
+            else
+                # ekstrak hash file zip
+                bash "${ehfz}"
+            fi
             ;;
         2)
             # ekstrak hash file rar
             bash ekstrak_hash/ekstrak_hash_file_rar.sh
             ;;
         3)
-            # ekstrak hash file 7z
+            # ekstrak  hash file 7z
             bash ekstrak_hash/ekstrak_hash_file_7z.sh
             ;;
         4)
