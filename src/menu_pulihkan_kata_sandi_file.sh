@@ -218,10 +218,12 @@ while true; do
                                 bash "${fmu}"
                                 break
                         fi
+                        ;;
                 *)
                         echo ""
                         echo -e "${kt}Menu '${mpksf}' tidak tersedia. Silahkan pilih menu yang tersedia.${r}"
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         continue 
+                        ;;
         esac
 done
