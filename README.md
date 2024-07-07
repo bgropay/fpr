@@ -3,5 +3,5 @@
 FPR</h1>
 
 <p align="center">
-  <span>File Password Recovery yang sebagian besar didasarkan pada <a href="https://www.openwall.com/john/">John The Ripper</a> dan <a href="https://hashcat.net/hashcat/">Hashcat</a>.</span>
+  <span>File Password Recovery yang sebagian besar didasarkan pada <a href="https://www.openwall.com/john/">John The Ripper</a>.</span>
 </p>
