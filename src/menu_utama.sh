@@ -50,7 +50,7 @@ while true; do
     read -p "" mu
     case "${mu}" in
         1)
-            ehfz="ekstrak_hash/ekstrak_hash_file_zip.sh"
+            ehfz="src/ekstrak_hash/ekstrak_hash_file_zip.sh"
             if [[ ! -f "${ehfz}" ]]; then
                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${ehfz}' tidak ditemukan.${r}"
                 exit 1
