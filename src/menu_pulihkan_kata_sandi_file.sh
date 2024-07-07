@@ -212,7 +212,7 @@ while true; do
                         if [[ ! -f "${fmu}" ]]; then
                                 echo ""
                                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${fmu}' tidak ditemukan.${r}"
-                                read -p "Tekan [Enter] untuk melanjutkan..."
+                                read -p "Tekan [Enter] untuk keluar..."
                                 exit 1
                         else
                                 bash "${fmu}"
