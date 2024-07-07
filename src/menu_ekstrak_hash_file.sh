@@ -40,15 +40,40 @@ while true; do
         read -p "" mehf
         case "${mehf}" in
                 1)
-                        ehfz="src/ekstrak_hash/ekstrak_hash_file_zip.sh"
-                        if [[ ! -f "${ehfz}" ]]; then
-                                echo ""
-                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${ehfz}' tidak ditemukan.${r}"
+                        echo ""
+                        while true; do
+                                read -p "Masukkan nama file ZIP: " fz
+                                # Memastikan file ZIP yang diberikan ada
+                                if [[ ! -f "${fz}" ]]; then
+                                        echo -e "${kt}File ZIP '${fz}' tidak ditemukan.${r}"
+                                        continue
+                                else
+                                        if [[ "${fz##*.}" != "zip" ]]; then
+                                                echo -e "${kt}File '${fz}' bukan file ZIP.${r}"
+                                                continue
+                                        else
+                                                echo -e "${ht}File ZIP '${fz}' ditemukan.${r}"
+                                                break
+                                        fi
+                                fi
+                        done
+                        echo ""
+                        read -p "Masukkan nama file untuk menyimpan hash file ZIP: " nama_file_hash
+                        echo ""
+                        echo -e "${bt}Mengekstrak hash dari file ZIP '${fz}'...${r}"
+                        sleep 3
+                        hash=$(/usr/share/JohnTheRipper/run/./zip2john "${fz}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
+                        echo "${hash}" > "${nama_file_hash}"
+                        # Memeriksa apakah hash berhasil dibuat
+                        if [[ -z "${nama_file_hash}" ]]; then
+                                echo -e "${kt}Gagal mengekstrak hash dari file ZIP '${fz}'.${r}"
                                 exit 1
                         else
-                                # ekstrak hash file zip
-                                bash "${ehfz}"
+                                echo -e "${ht}Berhasil mengekstrak hash dari file ZIP '${fz}'.${r}"
+                                echo -e "${ht}Hash disimpan di dalam file '${nama_file_hash}'.${r}"
                         fi
+                        read -p "Tekan [Enter] untuk melanjutkan..."
+                        break
                         ;;
                 2)
                         # ekstrak hash file rar
