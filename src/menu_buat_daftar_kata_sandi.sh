@@ -13,7 +13,6 @@ r="\e[0m"
 
 daftar_menu=(
         "Buat daftar kata sandi (Wordlist) dengan cupp"
-        "Buat daftar kata sandi (Wordlist) dengan bopscrk"
         "Kembali ke menu utama"
 )
 
@@ -30,8 +29,6 @@ while true; do
                 echo "${c}. ${menu}"
                 if [[ "${c}" -eq 2 ]]; then
                         echo -e "${bt}----------${r}"
-                elif [[ "${c}" -eq 3 ]]; then
-                        echo -e "${bt}----------${r}"
                 fi
                 ((c++))
         done
@@ -44,9 +41,7 @@ while true; do
                         break
                         ;;
                 2)
-                        # membuat daftar kata sandi dengan bopscrk
-                        bopscrk -i
-                        break
+                        bash /src/menu_utama.sh
                         ;;
                 *)
                         echo ""
