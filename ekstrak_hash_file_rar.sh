@@ -59,7 +59,7 @@ while true; do
             echo ""
             echo -e "${bt}Mengekstrak hash dari file RAR '${fr}'...${r}"
             sleep 3
-            hash=$(rar2john "${fr}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
+            hash=$(/usr/share/JohnTheRipper/run/./rar2john "${fr}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
             echo "${hash}" > "${nama_file_hash}"
             # Memeriksa apakah hash berhasil dibuat
             if [[ -z "${nama_file_hash}" ]]; then
