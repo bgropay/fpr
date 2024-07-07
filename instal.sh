@@ -1,5 +1,5 @@
 #!/bin/bash
-[instal.sh]
+# [instal.sh]
 
 cd /usr/share
 
