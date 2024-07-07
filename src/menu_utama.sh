@@ -51,23 +51,23 @@ while true; do
     case "${mu}" in
         1)
             # ekstrak hash file zip
-            bash src/ekstrak_hash/ekstrak_hash_file_zip.sh
+            bash ekstrak_hash/ekstrak_hash_file_zip.sh
             ;;
         2)
             # ekstrak hash file rar
-            bash src/ekstrak_hash/ekstrak_hash_file_rar.sh
+            bash ekstrak_hash/ekstrak_hash_file_rar.sh
             ;;
         3)
             # ekstrak hash file 7z
-            bash src/ekstrak_hash/ekstrak_hash_file_7z.sh
+            bash ekstrak_hash/ekstrak_hash_file_7z.sh
             ;;
         4)
             # ekstrak hash file pdf
-            bash src/ekstrak_hash/ekstrak_hash_file_pdf.sh
+            bash ekstrak_hash/ekstrak_hash_file_pdf.sh
             ;;
         5)
             # ekstrak hash file office 
-            bash src/ekstrak_hash/ekstrak_hash_file_office.sh
+            bash ekstrak_hash/ekstrak_hash_file_office.sh
             ;;
     esac
 done
