@@ -76,144 +76,132 @@ while true; do
                 2)
                         echo ""
                         while true; do
-                                read -p "Masukkan nama file RAR: " fr
-                                # Memastikan file RAR yang diberikan ada
-                                if [[ ! -f "${fr}" ]]; then
-                                        echo -e "${kt}File RAR '${fr}' tidak ditemukan.${r}"
+                                read -p "Masukkan nama file hash dari file RAR: " fhr
+                                # Memastikan file hash dari file RAR yang diberikan ada
+                                if [[ ! -f "${fhr}" ]]; then
+                                        echo -e "${kt}File hash '${fhr}' tidak ditemukan.${r}"
                                         continue
                                 else
-                                        if [[ "${fr##*.}" != "rar" ]]; then
-                                                echo -e "${kt}File '${fr}' bukan file RAR.${r}"
-                                                continue
-                                        else
-                                                echo -e "${ht}File RAR '${fr}' ditemukan.${r}"
-                                                break
-                                        fi
+                                        echo -e "${ht}File hash '${fhr}' ditemukan.${r}"
+                                        break
                                 fi
                         done
                         echo ""
-                        read -p "Masukkan nama file untuk menyimpan hash file RAR: " nama_file_hash
+                        while true; do
+                                read -p "Masukkan nama file daftar kata sandi (Wordlist): " fw
+                                # Memastikan file hash dari daftar kata sandi (wordlist) yang diberikan ada
+                                if [[ ! -f "${fw}" ]]; then
+                                        echo -e "${kt}File daftar kata sandi (Wordlist) '${fw}' tidak ditemukan.${r}"
+                                        continue
+                                else
+                                        echo -e "${ht}File daftar kata sandi (Wordlist) '${fw}' ditemukan.${r}"
+                                        break
+                                fi
+                        done
+                        clear
+                        echo -e "${hm}******************** Pulihkan Kata Sandi File RAR ********************${r}"
                         echo ""
-                        echo -e "${bt}Mengekstrak hash dari file RAR '${fr}'...${r}"
-                        sleep 3
-                        hash=$(/usr/share/JohnTheRipper/run/./rar2john "${fr}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
-                        echo "${hash}" > "${nama_file_hash}"
-                        # Memeriksa apakah hash berhasil dibuat
-                        if [[ -z "${nama_file_hash}" ]]; then
-                                echo -e "${kt}Gagal mengekstrak hash dari file RAR '${fr}'.${r}"
-                                exit 1
-                        else
-                                echo -e "${ht}Berhasil mengekstrak hash dari file RAR '${fr}'.${r}"
-                                echo -e "${ht}Hash disimpan di dalam file '${nama_file_hash}'.${r}"
-                        fi
+                        /usr/share/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fhr}"
+                        /usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fhr}"
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         break
                         ;;
                 3)
                         echo ""
                         while true; do
-                                read -p "Masukkan nama file 7z: " f7
-                                # Memastikan file 7z yang diberikan ada
-                                if [[ ! -f "${f7}" ]]; then
-                                        echo -e "${kt}File 7z '${f7}' tidak ditemukan.${r}"
+                                read -p "Masukkan nama file hash dari file 7z: " fh7
+                                # Memastikan file hash dari file 7z yang diberikan ada
+                                if [[ ! -f "${fh7}" ]]; then
+                                        echo -e "${kt}File hash '${fh7}' tidak ditemukan.${r}"
                                         continue
                                 else
-                                        if [[ "${f7##*.}" != "7z" ]]; then
-                                                echo -e "${kt}File '${f7}' bukan file 7z.${r}"
-                                                continue
-                                        else
-                                                echo -e "${ht}File 7z '${f7}' ditemukan.${r}"
-                                                break
-                                        fi
+                                        echo -e "${ht}File hash '${fh7}' ditemukan.${r}"
+                                        break
                                 fi
                         done
                         echo ""
-                        read -p "Masukkan nama file untuk menyimpan hash file 7z: " nama_file_hash
+                        while true; do
+                                read -p "Masukkan nama file daftar kata sandi (Wordlist): " fw
+                                # Memastikan file hash dari daftar kata sandi (wordlist) yang diberikan ada
+                                if [[ ! -f "${fw}" ]]; then
+                                        echo -e "${kt}File daftar kata sandi (Wordlist) '${fw}' tidak ditemukan.${r}"
+                                        continue
+                                else
+                                        echo -e "${ht}File daftar kata sandi (Wordlist) '${fw}' ditemukan.${r}"
+                                        break
+                                fi
+                        done
+                        clear
+                        echo -e "${hm}******************** Pulihkan Kata Sandi File 7z ********************${r}"
                         echo ""
-                        echo -e "${bt}Mengekstrak hash dari file 7z '${f7}'...${r}"
-                        sleep 3
-                        hash=$(/usr/share/JohnTheRipper/run/./7z2john "${f7}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
-                        echo "${hash}" > "${nama_file_hash}"
-                        # Memeriksa apakah hash berhasil dibuat
-                        if [[ -z "${nama_file_hash}" ]]; then
-                                echo -e "${kt}Gagal mengekstrak hash dari file 7z '${f7}'.${r}"
-                                exit 1
-                        else
-                                echo -e "${ht}Berhasil mengekstrak hash dari file 7z '${f7}'.${r}"
-                                echo -e "${ht}Hash disimpan di dalam file '${nama_file_hash}'.${r}"
-                        fi
+                        /usr/share/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fh7}"
+                        /usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fh7}"
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         break
                         ;;
                 4)
                         echo ""
                         while true; do
-                                read -p "Masukkan nama file PDF: " fp
-                                # Memastikan file PDF yang diberikan ada
-                                if [[ ! -f "${fp}" ]]; then
-                                        echo -e "${kt}File PDF '${fp}' tidak ditemukan.${r}"
+                                read -p "Masukkan nama file hash dari file PDF: " fhp
+                                # Memastikan file hash dari file PDF yang diberikan ada
+                                if [[ ! -f "${fhp}" ]]; then
+                                        echo -e "${kt}File hash '${fhp}' tidak ditemukan.${r}"
                                         continue
-                                else        
-                                        if [[ "${fp##*.}" != "pdf" ]]; then
-                                                echo -e "${kt}File '${fp}' bukan file PDF.${r}"
-                                                continue
-                                        else
-                                                echo -e "${ht}File PDF '${fp}' ditemukan.${r}"
-                                                break
-                                        fi
+                                else
+                                        echo -e "${ht}File hash '${fhp}' ditemukan.${r}"
+                                        break
                                 fi
                         done
                         echo ""
-                        read -p "Masukkan nama file untuk menyimpan hash file PDF: " nama_file_hash
+                        while true; do
+                                read -p "Masukkan nama file daftar kata sandi (Wordlist): " fw
+                                # Memastikan file hash dari daftar kata sandi (wordlist) yang diberikan ada
+                                if [[ ! -f "${fw}" ]]; then
+                                        echo -e "${kt}File daftar kata sandi (Wordlist) '${fw}' tidak ditemukan.${r}"
+                                        continue
+                                else
+                                        echo -e "${ht}File daftar kata sandi (Wordlist) '${fw}' ditemukan.${r}"
+                                        break
+                                fi
+                        done
+                        clear
+                        echo -e "${hm}******************** Pulihkan Kata Sandi File PDF ********************${r}"
                         echo ""
-                        echo -e "${bt}Mengekstrak hash dari file PDF '${fp}'...${r}"
-                        sleep 3
-                        hash=$(/usr/share/JohnTheRipper/run/./pdf2john.pl "${fp}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
-                        echo "${hash}" > "${nama_file_hash}"
-                        # Memeriksa apakah hash berhasil dibuat
-                        if [[ -z "${nama_file_hash}" ]]; then
-                                echo -e "${kt}Gagal mengekstrak hash dari file PDF '${fp}'.${r}"
-                                exit 1
-                        else
-                                echo -e "${ht}Berhasil mengekstrak hash dari file PDF '${fp}'.${r}"
-                                echo -e "${ht}Hash disimpan di dalam file '${nama_file_hash}'.${r}"
-                        fi
+                        /usr/share/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fhp}"
+                        /usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fhp}"
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         break
                         ;;
                 5)
                         echo ""
                         while true; do
-                                read -p "Masukkan nama file Office: " fo
-                                # Memastikan file Office yang diberikan ada
-                                if [[ ! -f "${fo}" ]]; then
-                                        echo -e "${kt}File Office '${fo}' tidak ditemukan.${r}"
+                                read -p "Masukkan nama file hash dari file Office (docx, xlsx, pptx): " fho
+                                # Memastikan file hash dari file Office yang diberikan ada
+                                if [[ ! -f "${fho}" ]]; then
+                                        echo -e "${kt}File hash '${fho}' tidak ditemukan.${r}"
                                         continue
                                 else
-                                        if [[ "${fo##*.}" != "docx" && "${fo##*.}" != "xlsx" && "${fo##*.}" != "pptx" ]]; then
-                                                echo -e "${kt}File '${fo}' bukan file Office.${r}"
-                                                continue
-                                        else
-                                                echo -e "${ht}File Office '${fo}' ditemukan.${r}"
-                                                break
-                                        fi
+                                        echo -e "${ht}File hash '${fho}' ditemukan.${r}"
+                                        break
                                 fi
                         done
                         echo ""
-                        read -p "Masukkan nama file untuk menyimpan hash file Office: " nama_file_hash
+                        while true; do
+                                read -p "Masukkan nama file daftar kata sandi (Wordlist): " fw
+                                # Memastikan file hash dari daftar kata sandi (wordlist) yang diberikan ada
+                                if [[ ! -f "${fw}" ]]; then
+                                        echo -e "${kt}File daftar kata sandi (Wordlist) '${fw}' tidak ditemukan.${r}"
+                                        continue
+                                else
+                                        echo -e "${ht}File daftar kata sandi (Wordlist) '${fw}' ditemukan.${r}"
+                                        break
+                                fi
+                        done
+                        clear
+                        echo -e "${hm}******************** Pulihkan Kata Sandi File Office (docx, xlsx, pptx) ********************${r}"
                         echo ""
-                        echo -e "${bt}Mengekstrak hash dari file Office '${fo}'...${r}"
-                        sleep 3
-                        hash=$(/usr/share/JohnTheRipper/run/./office2john.py "${fo}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
-                        echo "${hash}" > "${nama_file_hash}"
-                        # Memeriksa apakah hash berhasil dibuat
-                        if [[ -z "${nama_file_hash}" ]]; then
-                                echo -e "${kt}Gagal mengekstrak hash dari file Office '${fo}'.${r}"
-                                exit 1
-                        else
-                                echo -e "${ht}Berhasil mengekstrak hash dari file Office '${fo}'.${r}"
-                                echo -e "${ht}Hash disimpan di dalam file '${nama_file_hash}'.${r}"
-                        fi
+                        /usr/share/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fho}"
+                        /usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fho}"
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         break
                         ;;
