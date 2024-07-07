@@ -11,17 +11,9 @@ bt="\e[0;34m" # biru terang
 r="\e[0m"
 
 daftar_menu=(
-        "Ekstrak hash file ZIP"
-        "Ekstrak hash file RAR"
-        "Ekstrak hash file 7z"
-        "Ekstrak hash file PDF"
-        "Ekstrak hash file Office (docx, xlsx, pptx)"
+        "Ekstrak hash"
         "Buat daftar kata sandi (Wordlist)"
-        "Memulihkan kata sandi file ZIP (Membutuhkan hash & Wordlist)"
-        "Memulihkan kata sandi file RAR (Membutuhkan hash & Wordlist)"
-        "Memulihkan kata sandi file 7z (Membutuhkan hash & Wordlist)"
-        "Memulihkan kata sandi file PDF (Membutuhkan hash & Wordlist)"
-        "Memulihkan kata sandi file Office (docx, xlsx, pptx) (Membutuhkan hash & Wordlist)"
+        "Memulihkan kata sandi (Membutuhkan hash & Wordlist)"
         "Keluar"
     )
 
@@ -36,13 +28,13 @@ while true; do
         echo -e "${bt}----------${r}"
         for menu in "${daftar_menu[@]}"; do
                 echo "${c}. ${menu}"
-                if [[ "${c}" -eq 5 ]]; then
+                if [[ "${c}" -eq 2 ]]; then
                         echo -e "${bt}----------${r}"
-                elif [[ "${c}" -eq 6 ]]; then
+                elif [[ "${c}" -eq 3 ]]; then
                         echo -e "${bt}----------${r}"
-                elif [[ "${c}" -eq 11 ]]; then
+                elif [[ "${c}" -eq 4 ]]; then
                         echo -e "${bt}----------${r}"
-                elif [[ "${c}" -eq 12 ]]; then
+                elif [[ "${c}" -eq 5 ]]; then
                         echo -e "${bt}----------${r}"
                 fi
                 ((c++))
