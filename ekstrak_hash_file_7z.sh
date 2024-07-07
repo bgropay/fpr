@@ -59,7 +59,7 @@ while true; do
             echo ""
             echo -e "${bt}Mengekstrak hash dari file 7z '${f7}'...${r}"
             sleep 3
-            hash=$(7z2john "${f7}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
+            hash=$(/usr/share/JohnTheRipper/run/./7z2john "${f7}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
             echo "${hash}" > "${nama_file_hash}"
             # Memeriksa apakah hash berhasil dibuat
             if [[ -z "${nama_file_hash}" ]]; then
