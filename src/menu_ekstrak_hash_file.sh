@@ -221,6 +221,10 @@ while true; do
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         break
                         ;;
+                6)
+                        bash src/menu_utama.sh
+                        break
+                        ;;
                 *)
                         echo ""
                         echo -e "${kt}Menu '${mehf}' tidak tersedia. Silahkan pilih menu yang tersedia.${r}"
