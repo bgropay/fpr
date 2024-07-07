@@ -1,7 +1,7 @@
 #!/bin/bash
 # [instal.sh]
 
-cd /usr/share
+
 
 # install john the ripper
 dependensi_john=(
@@ -25,15 +25,18 @@ dependensi_john=(
     "perl"
     "python3"
     "python3-pip"
-    "python3.12-venv"
 )
 
 for instal_dependensi_john in "${dependensi_john[@]}"; do
     apt-get install "${instal_dependensi_john}" -y
 done
 
-git clone https://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo
-cd JohnTheRipper/src
-./configure
-make -s clean && make -sj8
+cd /usr/share
+cd JohnTheRipper
+# git clone https://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo
+# cd JohnTheRipper/src
+# ./configure
+# make -s clean && make -sj8
+cd ../
+git clone https://github.com/Mebus/cupp
 cd -
