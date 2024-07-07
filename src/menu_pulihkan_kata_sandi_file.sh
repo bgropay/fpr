@@ -85,7 +85,7 @@ while true; do
                                         echo -e "${ht}[+] ${pt}Kata sandi berhasil dipulihkan.${r}"
                                         echo -e "${ht}[+] ${pt}Kata sandi: ${ht}${baris_pertama#*:}${r}"
                                 else
-                                        echo "Baris pertama tidak mengandung pemisah ':'"
+                                        echo -e "${mt}[-] ${pt}Kata sandi gagal dipulihkan.${r}"
                                 fi
                         else
                                 echo "Gagal menampilkan kata sandi yang berhasil di-crack"
