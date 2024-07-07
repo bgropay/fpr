@@ -172,7 +172,24 @@ while true; do
                         echo -e "${hm}******************** Pulihkan Kata Sandi File 7z ********************${r}"
                         echo ""
                         /usr/share/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fh7}"
-                        /usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fh7}"
+                        kata_sandi=$(/usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fh7}")
+                        if [ $? -eq 0 ]; then
+                                echo "${kata_sandi}"
+                                # Mengambil baris pertama dari output
+                                baris_pertama=$(echo "${kata_sandi}" | head -n 1)
+    
+                                # Memeriksa apakah baris pertama mengandung pemisah ':'
+                                if [[ "${baris_pertama}" == *:* ]]; then
+                                        # Menampilkan teks di sebelah kanan pemisah ':'
+                                        echo ""
+                                        echo -e "${ht}[+] ${pt}Kata sandi berhasil dipulihkan.${r}"
+                                        echo -e "${ht}[+] ${pt}Kata sandi: ${ht}${baris_pertama#*:}${r}"
+                                else
+                                        echo ""
+                                        echo -e "${mt}[-] ${pt}Kata sandi gagal dipulihkan.${r}"
+                                fi
+                        fi
+                        echo ""
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         break
                         ;;
@@ -205,7 +222,24 @@ while true; do
                         echo -e "${hm}******************** Pulihkan Kata Sandi File PDF ********************${r}"
                         echo ""
                         /usr/share/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fhp}"
-                        /usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fhp}"
+                        kata_sandi=$(/usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fhp}")
+                        if [ $? -eq 0 ]; then
+                                echo "${kata_sandi}"
+                                # Mengambil baris pertama dari output
+                                baris_pertama=$(echo "${kata_sandi}" | head -n 1)
+    
+                                # Memeriksa apakah baris pertama mengandung pemisah ':'
+                                if [[ "${baris_pertama}" == *:* ]]; then
+                                        # Menampilkan teks di sebelah kanan pemisah ':'
+                                        echo ""
+                                        echo -e "${ht}[+] ${pt}Kata sandi berhasil dipulihkan.${r}"
+                                        echo -e "${ht}[+] ${pt}Kata sandi: ${ht}${baris_pertama#*:}${r}"
+                                else
+                                        echo ""
+                                        echo -e "${mt}[-] ${pt}Kata sandi gagal dipulihkan.${r}"
+                                fi
+                        fi
+                        echo ""
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         break
                         ;;
@@ -238,7 +272,24 @@ while true; do
                         echo -e "${hm}******************** Pulihkan Kata Sandi File Office (docx, xlsx, pptx) ********************${r}"
                         echo ""
                         /usr/share/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fho}"
-                        /usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fho}"
+                        kata_sandi=$(/usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fho}")
+                        if [ $? -eq 0 ]; then
+                                echo "${kata_sandi}"
+                                # Mengambil baris pertama dari output
+                                baris_pertama=$(echo "${kata_sandi}" | head -n 1)
+    
+                                # Memeriksa apakah baris pertama mengandung pemisah ':'
+                                if [[ "${baris_pertama}" == *:* ]]; then
+                                        # Menampilkan teks di sebelah kanan pemisah ':'
+                                        echo ""
+                                        echo -e "${ht}[+] ${pt}Kata sandi berhasil dipulihkan.${r}"
+                                        echo -e "${ht}[+] ${pt}Kata sandi: ${ht}${baris_pertama#*:}${r}"
+                                else
+                                        echo ""
+                                        echo -e "${mt}[-] ${pt}Kata sandi gagal dipulihkan.${r}"
+                                fi
+                        fi
+                        echo ""
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         break
                         ;;
