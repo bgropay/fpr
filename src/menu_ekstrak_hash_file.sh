@@ -219,5 +219,10 @@ while true; do
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         break
                         ;;
+                *)
+                        echo ""
+                        echo -e "${kt}Menu '${mehf}' tidak tersedia. Silahkan pilih menu yang tersedia.${r}"
+                        read -p "Tekan [Enter] untuk melanjutkan..."
+                        continue 
         esac
 done
