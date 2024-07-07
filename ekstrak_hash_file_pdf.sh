@@ -59,7 +59,7 @@ while true; do
             echo ""
             echo -e "${bt}Mengekstrak hash dari file PDF '${fp}'...${r}"
             sleep 3
-            hash=$(/usr/share/JohnTheRipper/run/./pdf2john.pl "${fz}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
+            hash=$(/usr/share/JohnTheRipper/run/./pdf2john.pl "${fp}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
             echo "${hash}" > "${nama_file_hash}"
             # Memeriksa apakah hash berhasil dibuat
             if [[ -z "${nama_file_hash}" ]]; then
