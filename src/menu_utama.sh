@@ -42,53 +42,34 @@ while true; do
         read -p "" mu
         case "${mu}" in
                 1)
-                        ehfz="src/ekstrak_hash/ekstrak_hash_file_zip.sh"
-                        if [[ ! -f "${ehfz}" ]]; then
-                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${ehfz}' tidak ditemukan.${r}"
+                        mehf="menu_ekstrak_hash_file.sh"
+                        if [[ ! -f "${mehf}" ]]; then
+                                echo ""
+                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mehf}' tidak ditemukan.${r}"
                                 exit 1
                         else
-                                # ekstrak hash file zip
-                                bash "${ehfz}"
+                                bash "${mehf}"
                         fi
                         ;;
                 2)
-                        # ekstrak hash file rar
-                        ehfr="src/ekstrak_hash/ekstrak_hash_file_rar.sh"
-                        if [[ ! -f "${ehfr}" ]]; then
-                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${ehfr}' tidak ditemukan.${r}"
+                        mbdks="menu_buat_daftar_kata_sandi.sh"
+                        if [[ ! -f "${mbdks}" ]]; then
+                                echo ""
+                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mbdks}' tidak ditemukan.${r}"
                                 exit 1
                         else
-                                bash "${ehfr}"
+                                bash "${mbdks}"
                         fi
                         ;;
                 3)
-                        # ekstrak hash file 7z
-                        ehf7="src/ekstrak_hash/ekstrak_hash_file_7z.sh"
-                        if [[ ! -f "${ehf7}" ]]; then
-                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${ehf7}' tidak ditemukan.${r}"
+                        # menu pulihkan kata sandi file
+                        mpksf="menu_pulihkan_kata_sandi_file.sh"
+                        if [[ ! -f "${mpksf}" ]]; then
+                                echo ""
+                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mpksf}' tidak ditemukan.${r}"
                                 exit 1
                         else
-                                bash "${ehf7}"
-                        fi
-                        ;;
-                4)
-                        # ekstrak hash file pdf
-                        ehfp="src/ekstrak_hash/ekstrak_hash_file_pdf.sh"
-                        if [[ ! -f "${ehfp}" ]]; then
-                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${ehfp}' tidak ditemukan.${r}"
-                                exit 1
-                        else
-                                bash "${ehfp}"
-                        fi
-                        ;;
-                5)
-                        # ekstrak hash file office 
-                        ehfo="src/ekstrak_hash/ekstrak_hash_file_office.sh"
-                        if [[ ! -f "${ehfo}" ]]; then
-                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${ehfo}' tidak ditemukan.${r}"
-                                exit 1
-                        else
-                                bash "${ehfo}"
+                                bash "${mpksf}"
                         fi
                         ;;
         esac
