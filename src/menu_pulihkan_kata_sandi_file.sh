@@ -51,7 +51,6 @@ while true; do
                                 else
                                         echo -e "${ht}File hash '${fhz}' ditemukan.${r}"
                                         break
-                                        fi
                                 fi
                         done
                         echo ""
@@ -64,7 +63,6 @@ while true; do
                                 else
                                         echo -e "${ht}File daftar kata sandi (Wordlist) '${fw}' ditemukan.${r}"
                                         break
-                                        fi
                                 fi
                         done
                         clear
