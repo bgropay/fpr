@@ -42,7 +42,7 @@ while true; do
                         cupp -i
                         break
                         ;;
-                3)
+                2)
                         fmu="src/menu_utama.sh"
                         if [[ ! -f "${fmu}" ]]; then
                                 echo ""
