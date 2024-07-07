@@ -91,6 +91,7 @@ while true; do
                                 echo "Gagal menampilkan kata sandi yang berhasil di-crack"
                                 exit 1
                         fi
+                        echo ""
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         break
                         ;;
