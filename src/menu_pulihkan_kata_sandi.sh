@@ -54,6 +54,7 @@ while true; do
                                         fi
                                 fi
                         done
+                        echo ""
                         while true; do
                                 read -p "Masukkan nama file daftar kata sandi (Wordlist): " fw
                                 # Memastikan file hash dari daftar kata sandi (wordlist) yang diberikan ada
