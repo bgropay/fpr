@@ -46,8 +46,8 @@ while true; do
                         if [[ ! -f "${mehf}" ]]; then
                                 echo ""
                                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mehf}' tidak ditemukan.${r}"
-                                read -p "Tekan [Enter] untuk melanjutkan..."
                                 echo ""
+                                read -p "Tekan [Enter] untuk melanjutkan..."
                                 exit 1
                         else
                                 bash "${mehf}"
@@ -58,8 +58,8 @@ while true; do
                         if [[ ! -f "${mbdks}" ]]; then
                                 echo ""
                                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mbdks}' tidak ditemukan.${r}"
-                                read -p "Tekan [Enter] untuk melanjutkan..."
                                 echo ""
+                                read -p "Tekan [Enter] untuk melanjutkan..."
                                 exit 1
                         else
                                 bash "${mbdks}"
@@ -71,8 +71,8 @@ while true; do
                         if [[ ! -f "${mpksf}" ]]; then
                                 echo ""
                                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mpksf}' tidak ditemukan.${r}"
-                                read -p "Tekan [Enter] untuk melanjutkan..."
                                 echo ""
+                                read -p "Tekan [Enter] untuk melanjutkan..."
                                 exit 1
                         else
                                 bash "${mpksf}"
@@ -81,8 +81,8 @@ while true; do
                 *)
                         echo ""
                         echo -e "${kt}Menu '${mu}' tidak tersedia. Silahkan pilih menu yang tersedia.${r}"
-                        read -p "Tekan [Enter] untuk melanjutkan..."
                         echo ""
+                        read -p "Tekan [Enter] untuk melanjutkan..."
                         continue 
                         ;;
                  
