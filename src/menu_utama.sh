@@ -42,7 +42,7 @@ while true; do
         read -p "" mu
         case "${mu}" in
                 1)
-                        mehf="menu_ekstrak_hash_file.sh"
+                        mehf="src/menu_ekstrak_hash_file.sh"
                         if [[ ! -f "${mehf}" ]]; then
                                 echo ""
                                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mehf}' tidak ditemukan.${r}"
@@ -52,7 +52,7 @@ while true; do
                         fi
                         ;;
                 2)
-                        mbdks="menu_buat_daftar_kata_sandi.sh"
+                        mbdks="src/menu_buat_daftar_kata_sandi.sh"
                         if [[ ! -f "${mbdks}" ]]; then
                                 echo ""
                                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mbdks}' tidak ditemukan.${r}"
@@ -63,7 +63,7 @@ while true; do
                         ;;
                 3)
                         # menu pulihkan kata sandi file
-                        mpksf="menu_pulihkan_kata_sandi_file.sh"
+                        mpksf="src/menu_pulihkan_kata_sandi_file.sh"
                         if [[ ! -f "${mpksf}" ]]; then
                                 echo ""
                                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mpksf}' tidak ditemukan.${r}"
