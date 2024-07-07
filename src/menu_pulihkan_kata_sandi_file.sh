@@ -82,8 +82,8 @@ while true; do
                                 if [[ "${baris_pertama}" == *:* ]]; then
                                         # Menampilkan teks di sebelah kanan pemisah ':'
                                         echo ""
-                                        echo -e "${h}[+] ${p}Kata sandi berhasil dipulihkan.${r}"
-                                        echo -e "${h}[+] ${p}Kata sandi: ${h}${baris_pertama#*:}${r}"
+                                        echo -e "${ht}[+] ${pt}Kata sandi berhasil dipulihkan.${r}"
+                                        echo -e "${ht}[+] ${pt}Kata sandi: ${ht}${baris_pertama#*:}${r}"
                                 else
                                         echo "Baris pertama tidak mengandung pemisah ':'"
                                 fi
