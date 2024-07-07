@@ -34,8 +34,8 @@ while true; do
         fi
         ((c++))
     done
-    read -p "" ehfz
-    case "${ehfz}" in
+    read -p "" ehfp
+    case "${ehfp}" in
         1)
             echo ""
             while true; do
