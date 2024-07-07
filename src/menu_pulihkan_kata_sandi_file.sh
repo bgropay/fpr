@@ -85,6 +85,7 @@ while true; do
                                         echo -e "${ht}[+] ${pt}Kata sandi berhasil dipulihkan.${r}"
                                         echo -e "${ht}[+] ${pt}Kata sandi: ${ht}${baris_pertama#*:}${r}"
                                 else
+                                        echo ""
                                         echo -e "${mt}[-] ${pt}Kata sandi gagal dipulihkan.${r}"
                                 fi
                         else
