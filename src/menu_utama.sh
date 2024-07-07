@@ -80,6 +80,7 @@ while true; do
                         echo -e "${kt}Menu '${mu}' tidak tersedia. Silahkan pilih menu yang tersedia.${r}"
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         continue 
+                        ;;
                  
         esac
 done
