@@ -73,5 +73,7 @@ while true; do
                                 bash "${mpksf}"
                         fi
                         ;;
+                *)
+                 
         esac
 done
