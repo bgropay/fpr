@@ -41,7 +41,7 @@ while true; do
                         break
                         ;;
                 2)
-                        bash /src/menu_utama.sh
+                        bash src/menu_utama.sh
                         ;;
                 *)
                         echo ""
