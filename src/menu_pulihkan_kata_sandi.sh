@@ -38,6 +38,7 @@ while true; do
         done
         # menu pulihkan kata sandi file
         read -p "" mpksf
+        pot="cracked.txt"
         case "${mpksf}" in
                 1)
                         echo ""
@@ -66,7 +67,8 @@ while true; do
                                 fi
                         done
                         clear
-                        /usr/share/JohnTheRipper/run/./john --wordlist="${fw}" "${fhz}"
+                        /usr/share/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fhz}"
+                        /usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fhz}"
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         break
                         ;;
