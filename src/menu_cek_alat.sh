@@ -121,6 +121,7 @@ fmu="src/menu_utama.sh"
 if [[ ! -f "${fmu}" ]]; then   
         echo ""
         echo -e "${kt}Script ini tidak bisa dijalankan karena file '${fmu}' tidak ditemukan.${r}"
+        read -p "Tekan [Enter] untuk keluar..."
         exit 1
 else
         # menjalankan file cek_alat.sh
