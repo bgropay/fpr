@@ -61,19 +61,43 @@ while true; do
             ;;
         2)
             # ekstrak hash file rar
-            bash ekstrak_hash/ekstrak_hash_file_rar.sh
+            ehfr="src/ekstrak_hash/ekstrak_hash_file_rar.sh"
+            if [[ ! -f "${ehfr}" ]]; then
+                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${ehfr}' tidak ditemukan.${r}"
+                exit 1
+            else
+                bash "${ehfr}"
+            fi
             ;;
         3)
-            # ekstrak  hash file 7z
-            bash ekstrak_hash/ekstrak_hash_file_7z.sh
+            # ekstrak hash file 7z
+            ehf7="src/ekstrak_hash/ekstrak_hash_file_7z.sh"
+            if [[ ! -f "${ehf7}" ]]; then
+                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${ehf7}' tidak ditemukan.${r}"
+                exit 1
+            else
+                bash "${ehf7}"
+            fi
             ;;
         4)
             # ekstrak hash file pdf
-            bash ekstrak_hash/ekstrak_hash_file_pdf.sh
+            ehfp="src/ekstrak_hash/ekstrak_hash_file_pdf.sh"
+            if [[ ! -f "${ehfp}" ]]; then
+                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${ehfp}' tidak ditemukan.${r}"
+                exit 1
+            else
+                bash "${ehfp}"
+            fi
             ;;
         5)
             # ekstrak hash file office 
-            bash ekstrak_hash/ekstrak_hash_file_office.sh
+            ehfo="src/ekstrak_hash/ekstrak_hash_file_office.sh"
+            if [[ ! -f "${ehfo}" ]]; then
+                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${ehfo}' tidak ditemukan.${r}"
+                exit 1
+            else
+                bash "${ehfo}"
+            fi
             ;;
     esac
 done
