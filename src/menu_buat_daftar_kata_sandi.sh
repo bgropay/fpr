@@ -36,17 +36,22 @@ while true; do
                 ((c++))
         done
         # menu buat wordlist
-        read -p "" mbw
-        case "${mbw}" in
+        read -p "" mbdksf
+        case "${mbdksf}" in
                 1)
                         # membuat daftar kata sandi dengan cupp
                         cupp -i
                         break
-                ;;
+                        ;;
                 2)
                         # membuat daftar kata sandi dengan bopscrk
                         bopscrk -i
                         break
-                ;;
+                        ;;
+                *)
+                        echo ""
+                        echo -e "${kt}Menu '${mbdksf}' tidak tersedia. Silahkan pilih menu yang tersedia.${r}"
+                        read -p "Tekan [Enter] untuk melanjutkan..."
+                        continue 
         esac
 done
