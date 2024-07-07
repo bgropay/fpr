@@ -70,9 +70,10 @@ while true; do
                         clear
                         echo -e "${hm}******************** Pulihkan Kata Sandi File ZIP ********************${r}"
                         echo ""
-                        memulihkan_kata_sandi=$(/usr/share/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fhz}")
+                        /usr/share/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fhz}"
                         kata_sandi=$(/usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fhz}")
                         if [ $? -eq 0 ]; then
+                                echo "${kata_sandi}"
                                 # Mengambil baris pertama dari output
                                 baris_pertama=$(echo "${kata_sandi}" | head -n 1)
     
