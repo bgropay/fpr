@@ -26,24 +26,7 @@ if [[ ! -f "${fmca}" ]]; then
         echo -e "${kt}Script ini tidak bisa dijalankan karena file '${fmca}' tidak ditemukan.${r}"
         exit 1
 else
-echo "              _            _.,----,"
-echo "   __  _.-._ / '-.        -  ,._  \) "
-echo "  |  `-)_   '-.   \       / < _ )/' }"
-echo "  /__    '-.   \   '-, ___(c-(6)=(6)"
-echo "   , `'.    `._ '.  _,'   >\    '  )"
-echo "   :;;,,'-._   '---' (  ( '/`. -='/"
-echo "  :::::::,  '..__    ,`-.`)'- '--'"
-echo "  :::::::::'-._ /'._|   Y/   _/' \"
-echo "        ''''._ F    |  _/ _.'._   `\"
-echo "               L    \   \/     '._  \"
-echo "        .-,-,_ |     `.  `'---,  \_ _|"
-echo "        //    'L    /  \,   ('--',=`)7"
-echo "       | `._       : _,  \  /'`-._L,_'-._"
-echo "       '--' '-.\__/ _L   .`'         './/"
-echo "                   [ (  /"
-echo "                    ) `{"
-echo "                    \__)"
-echo ""
+        python3 banner.py
         # menjalankan file cek_alat.sh
         bash "${fmca}"
 fi
