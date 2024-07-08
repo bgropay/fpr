@@ -11,9 +11,9 @@ bt="\e[0;34m" # biru terang
 r="\e[0m"
 
 daftar_menu=(
-        "Ekstrak hash"
-        "Buat daftar kata sandi (Wordlist)"
-        "Memulihkan kata sandi (Membutuhkan hash & Wordlist)"
+        "Ekstrak hash file"
+        "Buat Wordlist"
+        "Pulihkan kata sandi file (Membutuhkan hash & Wordlist)"
         "Keluar"
     )
 
