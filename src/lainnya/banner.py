@@ -13,8 +13,8 @@ print(f"""{h}
 {c}      /b_,dM\__,_
 {c}   _/MMMMMMMMMMMm,
 {c}  _YMMMMMMMMMMMM(
-{c}  `MMMMMM/   /   \    
-{c}   MMM|  __  / __/
+{c}  `MMMMMMMMMMMMMM\    
+{c}   MMMMMMMMMMMMMM/
 {c}   YMM/{h}_/# \__/# \.{r}   
 {k}   (.   {h}\__/  \__/{r}   
 {k}    )       _,  |  
