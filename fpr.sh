@@ -28,7 +28,7 @@ if [[ ! -f "${fmca}" ]]; then
 else
         banner=$(python3 src/lainnya/banner.py >> /dev/null 2>&1)
         if [[ "${banner}" == "No module named 'colorama'" ]]; then
-                print("error")
+                echo "error"
                 exit 1
         fi
         # menjalankan file cek_alat.sh
