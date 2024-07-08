@@ -1,7 +1,10 @@
 ---- TODO ----
 
-[ Selesai]
+[ SELESAI]
 Menggunakan mode interaktif
 
-[ Sedang diusahakan ]
+[ SELESAI ]
 Jika format hash tidak valid maka menampilkan pesan error.
+
+[ ON PROGRESS ]
+Menampilkan banner saat script dijalankan.
