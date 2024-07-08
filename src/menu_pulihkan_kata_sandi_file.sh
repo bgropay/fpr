@@ -58,13 +58,13 @@ while true; do
                         done
                         echo ""
                         while true; do
-                                read -p "Masukkan nama file daftar kata sandi (Wordlist): " fw
+                                read -p "Masukkan nama file Wordlist: " fw
                                 # Memastikan file hash dari daftar kata sandi (wordlist) yang diberikan ada
                                 if [[ ! -f "${fw}" ]]; then
-                                        echo -e "${kt}File daftar kata sandi (Wordlist) '${fw}' tidak ditemukan.${r}"
+                                        echo -e "${kt}File Wordlist '${fw}' tidak ditemukan.${r}"
                                         continue
                                 else
-                                        echo -e "${ht}File daftar kata sandi (Wordlist) '${fw}' ditemukan.${r}"
+                                        echo -e "${ht}File Wordlist '${fw}' ditemukan.${r}"
                                         break
                                 fi
                         done
@@ -108,13 +108,13 @@ while true; do
                         done
                         echo ""
                         while true; do
-                                read -p "Masukkan nama file daftar kata sandi (Wordlist): " fw
+                                read -p "Masukkan nama file Wordlist: " fw
                                 # Memastikan file hash dari daftar kata sandi (wordlist) yang diberikan ada
                                 if [[ ! -f "${fw}" ]]; then
-                                        echo -e "${kt}File daftar kata sandi (Wordlist) '${fw}' tidak ditemukan.${r}"
+                                        echo -e "${kt}File Wordlist '${fw}' tidak ditemukan.${r}"
                                         continue
                                 else
-                                        echo -e "${ht}File daftar kata sandi (Wordlist) '${fw}' ditemukan.${r}"
+                                        echo -e "${ht}File Wordlist '${fw}' ditemukan.${r}"
                                         break
                                 fi
                         done
@@ -158,13 +158,13 @@ while true; do
                         done
                         echo ""
                         while true; do
-                                read -p "Masukkan nama file daftar kata sandi (Wordlist): " fw
+                                read -p "Masukkan nama file Wordlist: " fw
                                 # Memastikan file hash dari daftar kata sandi (wordlist) yang diberikan ada
                                 if [[ ! -f "${fw}" ]]; then
-                                        echo -e "${kt}File daftar kata sandi (Wordlist) '${fw}' tidak ditemukan.${r}"
+                                        echo -e "${kt}File Wordlist '${fw}' tidak ditemukan.${r}"
                                         continue
                                 else
-                                        echo -e "${ht}File daftar kata sandi (Wordlist) '${fw}' ditemukan.${r}"
+                                        echo -e "${ht}File Wordlist '${fw}' ditemukan.${r}"
                                         break
                                 fi
                         done
@@ -208,13 +208,13 @@ while true; do
                         done
                         echo ""
                         while true; do
-                                read -p "Masukkan nama file daftar kata sandi (Wordlist): " fw
+                                read -p "Masukkan nama file Wordlist: " fw
                                 # Memastikan file hash dari daftar kata sandi (wordlist) yang diberikan ada
                                 if [[ ! -f "${fw}" ]]; then
-                                        echo -e "${kt}File daftar kata sandi (Wordlist) '${fw}' tidak ditemukan.${r}"
+                                        echo -e "${kt}File Wordlist'${fw}' tidak ditemukan.${r}"
                                         continue
                                 else
-                                        echo -e "${ht}File daftar kata sandi (Wordlist) '${fw}' ditemukan.${r}"
+                                        echo -e "${ht}File Wordlist '${fw}' ditemukan.${r}"
                                         break
                                 fi
                         done
@@ -258,13 +258,13 @@ while true; do
                         done
                         echo ""
                         while true; do
-                                read -p "Masukkan nama file daftar kata sandi (Wordlist): " fw
+                                read -p "Masukkan nama file Wordlist: " fw
                                 # Memastikan file hash dari daftar kata sandi (wordlist) yang diberikan ada
                                 if [[ ! -f "${fw}" ]]; then
-                                        echo -e "${kt}File daftar kata sandi (Wordlist) '${fw}' tidak ditemukan.${r}"
+                                        echo -e "${kt}File Wordlist '${fw}' tidak ditemukan.${r}"
                                         continue
                                 else
-                                        echo -e "${ht}File daftar kata sandi (Wordlist) '${fw}' ditemukan.${r}"
+                                        echo -e "${ht}File Wordlist '${fw}' ditemukan.${r}"
                                         break
                                 fi
                         done
