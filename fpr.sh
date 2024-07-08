@@ -26,7 +26,7 @@ if [[ ! -f "${fmca}" ]]; then
         echo -e "${kt}Script ini tidak bisa dijalankan karena file '${fmca}' tidak ditemukan.${r}"
         exit 1
 else
-        python3 banner.py
+        python3 src/lainnya/banner.py
         # menjalankan file cek_alat.sh
         bash "${fmca}"
 fi
