@@ -52,6 +52,7 @@ while true; do
                                         echo -e "${kt}File hash '${fhz}' tidak ditemukan.${r}"
                                         continue
                                 else
+                                        # Mengecek apakah format hash pkzip atau zip
                                         if grep -i "pkzip" "${fhz}" >> /dev/null 2>&1 || grep -i "zip" "${fhz}" >> /dev/null 2>&1; then
                                                 echo -e "${ht}File hash '${fhz}' ditemukan.${r}"
                                                 break
