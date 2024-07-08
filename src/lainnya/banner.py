@@ -1,7 +1,11 @@
 # [ banner.py ]
 
 import os
-from colorama import Fore
+try:
+        from colorama import Fore
+except ImportError as e:
+        print(e)
+        exit(1)
 
 h = Fore.LIGHTGREEN_EX   # Warna Hijau 
 m = Fore.LIGHTRED_EX     # Warna Merah 
