@@ -12,7 +12,7 @@ r="\e[0m"
 
 
 daftar_menu=(
-        "Buat daftar kata sandi (Wordlist) dengan cupp"
+        "Buat Wordlist dengan cupp"
         "Kembali ke menu utama"
 )
 
@@ -38,7 +38,7 @@ while true; do
         read -p "" mbdksf
         case "${mbdksf}" in
                 1)
-                        # membuat daftar kata sandi dengan cupp
+                        # membuat wordlist dengan cupp
                         cupp -i
                         break
                         ;;
