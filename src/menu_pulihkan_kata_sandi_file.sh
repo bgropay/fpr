@@ -3,7 +3,9 @@
 # # file ini merupakan salah satu file dari projek FPR
 #
 # Format hash yang baru dibuat error handlingnya:
-# - File ZIP [PKZIP, ZIP]
+# - File ZIP [ pkzip, zip ]
+# - File RAR [ rar5 ]
+
 
 # variabel warna 
 hm="\e[0;32m" # hijau muda
@@ -111,8 +113,13 @@ while true; do
                                         echo -e "${kt}File hash '${fhr}' tidak ditemukan.${r}"
                                         continue
                                 else
-                                        echo -e "${ht}File hash '${fhr}' ditemukan.${r}"
-                                        break
+                                        if grep -i "rar5" "${fhz}" >> /dev/null 2>&1; then
+                                                echo -e "${ht}File hash '${fhz}' ditemukan.${r}"
+                                                break
+                                        else
+                                                echo -e "${kt}Format hash yang ada didalam file hash '${fhr}' tidak valid.${r}"
+                                                break
+                                        fi
                                 fi
                         done
                         echo ""
