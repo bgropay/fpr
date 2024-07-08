@@ -280,8 +280,13 @@ while true; do
                                         echo -e "${kt}File hash '${fho}' tidak ditemukan.${r}"
                                         continue
                                 else
-                                        echo -e "${ht}File hash '${fho}' ditemukan.${r}"
-                                        break
+                                        if grep -i "office" "${fho}" >> /dev/null 2>&1; then
+                                                echo -e "${ht}File hash '${fho}' ditemukan.${r}"
+                                                break
+                                        else
+                                                echo -e "${kt}Format hash yang ada didalam file hash '${fho}' tidak valid.${r}"
+                                                continue 
+                                        fi
                                 fi
                         done
                         echo ""
