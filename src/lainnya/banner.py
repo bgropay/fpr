@@ -2,10 +2,11 @@
 
 from colorama import Fore
 
-c = Fore.LIGHTCYAN_EX  # Warna Cyan
-m = Fore.LIGHTRED_EX   # Warna Merah 
-h = Fore.LIGHTBLACK_EX # Warna Hitam
-r = Fore.RESET         # Reset Warna 
+c = Fore.LIGHTCYAN_EX   # Warna Cyan
+m = Fore.LIGHTRED_EX    # Warna Merah 
+k = Fore.LIGHTYELLOW_EX # Warna Kuning 
+h = Fore.LIGHTBLACK_EX  # Warna Hitam
+r = Fore.RESET          # Reset Warna 
 
 print(f"""{h}
 {c}           _
