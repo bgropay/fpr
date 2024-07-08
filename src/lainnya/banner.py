@@ -5,7 +5,6 @@ from colorama import Fore
 h = Fore.LIGHTGREEN_EX   # Warna Hijau 
 m = Fore.LIGHTRED_EX     # Warna Merah 
 k = Fore.LIGHTYELLOW_EX  # Warna Kuning 
-h = Fore.LIGHTBLACK_EX   # Warna Hitam
 r = Fore.RESET           # Reset Warna 
 
 print(f"""{h}
