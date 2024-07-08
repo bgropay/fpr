@@ -1,8 +1,21 @@
 #!/bin/bash
 # [ banner.sh ]
 
-t="\e[1;33mPeringatan. \e[1;37mScript ini dibuat hanya untuk tujuan edukasi dan pembelajaran saja. Tidak ada niat atau maksud untuk mendorong kegiatan ilegal.\e[0m"
+k="\e[1;33m"
+p="\e[1;37m
+r="\e[0m"
 
-c=$(cowsay "${t}")
+echo -e "+----------------------------------------+"
+echo -e "| Peringatan. Script ini dibuat hanya    |"
+echo -e "| untuk tujuan edukasi dan pembelajaran  |"
+echo -e "| saja. Tidak ada niat atau maksud untuk |"
+echo -e "| mendorong kegiatan ilegal.             |"
+echo -e "+----------------------------------------+"
+echo -e "        \   ^__^"
+echo -e "         \  (oo)\_______"
+echo -e "            (__)\       )\/\."
+echo -e "                ||----w |"
+echo -e "                ||     ||"
+echo -e ""
 
-echo -e "${c}"
+read -p "Tekan [Enter] untuk melanjutkan..."
