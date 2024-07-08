@@ -17,7 +17,7 @@ print(f"""{h}
 . .  .      ::dUUUUMUMMM!MMMMMMMMMMMVMMM:      .     .       .
 .   '     .::dUUUUUUUUUM!MMMMMMMMMMVVMMMR   .     .      .         .     .  dan
 .  '      .::UUUUUUUUUUMUMMMMMMMMMVVVVMVVk     .     .
-  '      . ':UU""""""ZZZMMMMPP"""""VVZMVV%..      .          .     pembelajaran 
+  '      . ':UU'''''ZZZMMMMPP'''''VVZMVV%..      .          .     pembelajaran 
  :    :. !: dP:'     'ZZZRMX::     `RVVTMF ::::,..   .   .        .
  '  :!!!:~!!E!:      sZZBBM9::      dVVVM" ::::;`::                       saja!
  ':: `.!!!!!N!..     @WEMEM@k:.     MVVVV``::::! ;:  .       .
