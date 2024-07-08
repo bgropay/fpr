@@ -1,15 +1,18 @@
 # [ banner.py ]
 
 import os
+import time
 try:
-        from colorama import Fore
+        import colorama 
+        time.sleep(5)
 except ImportError as e:
         print(e)
+        time.sleep(10)
         exit(1)
 
-h = Fore.LIGHTGREEN_EX   # Warna Hijau 
-m = Fore.LIGHTRED_EX     # Warna Merah 
-r = Fore.RESET           # Reset Warna 
+h = colorama.Fore.LIGHTGREEN_EX   # Warna Hijau 
+m = colorama.Fore.LIGHTRED_EX     # Warna Merah 
+r = colorama.Fore.RESET           # Reset Warna 
 
 os.system("clear")
 
