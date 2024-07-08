@@ -44,3 +44,5 @@ print(f"""
 {h}             ,+ '      J*#b$@$*''        `+{r}
 {h}         ,+'          J$$eu...              `  .{r}
 """)
+
+e = input("Tekan [Enter] untuk melanjutkan...")
