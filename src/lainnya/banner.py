@@ -15,7 +15,7 @@ print(f"""
 {h}. .  .      ::dUUUUMUMMM!MMMMMMMMMMMVMMM:      .     .       .{r}
 {h}.   '     .::dUUUUUUUUUM!MMMMMMMMMMVVMMMR   .     .      .         .     .  {m}dan{r}
 {h}.  '      .::UUUUUUUUUUMUMMMMMMMMMVVVVMVVk     .     .{r}
-{h}  '      . ':UU'''''ZZZMMMMPP'''''VVZMVV%..      .          .     {m}pembelajaran{r} 
+{h}  '      . ':UU'''''ZZZMMMMPP'''''VVZMVV%..      .          .      {m}pembelajaran{r} 
 {h} :    :. !: dP:'     'ZZZRMX::     `RVVTMF ::::,..   .   .        .{r}
 {h} '  :!!!:~!!E!:      sZZBBM9::      dVVVM" ::::;`::                       {m}saja!{r}
 {h} ':: `.!!!!!N!..     @WEMEM@k:.     MVVVV``::::! ;:  .       .{r}
@@ -26,7 +26,7 @@ print(f"""
 {h}  '      ` .   ,B*'.e$$B$$$$6@Bc 'N,     `      `{r}
 {h}              .  :$f d$$$$$$$$$$$$$c $N..    ;{r}
 {h}           := `$>'$$F `#$$$' '$$$ 9$6.^'= ;      {m}https://github.com/bgropay/fpr{r}
-{h}               += *L $$   '$$E   3$$ 'I`''*-,{r}
+{h}            += *L $$   '$$E   3$$ 'I`''*-,{r}
 {h}            `  '4.$$,  J$$N   @$EzE '' ...{r}
 {h}           -*%Ne$@$$b.z$$$$k.z$$$Ph .WP'73&{r}
 {h}          td'  ''$$$*' ..LB$$$$$$Ned#`: ^'B'{r}
