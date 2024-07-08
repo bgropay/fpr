@@ -52,8 +52,13 @@ while true; do
                                         echo -e "${kt}File hash '${fhz}' tidak ditemukan.${r}"
                                         continue
                                 else
-                                        echo -e "${ht}File hash '${fhz}' ditemukan.${r}"
-                                        break
+                                        if grep -i "pkzip" "${fhz}" || grep -i "zip" "${fhz}"; then
+                                                echo -e "${ht}File hash '${fhz}' ditemukan.${r}"
+                                                break
+                                        else
+                                                echo -e "${kt}Format hash yang ada didalam file hash '${fhz}' tidak valid.${r}"
+                                                continue 
+                                        fi
                                 fi
                         done
                         echo ""
