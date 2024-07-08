@@ -33,7 +33,7 @@ else
                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${fb}' tidak ditemukan.${r}"
                 exit 1
         else
-                bash "${banner}"
+                bash "${fb}"
                 # menjalankan file cek_alat.sh
                 bash "${fmca}"
         fi
