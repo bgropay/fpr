@@ -113,7 +113,7 @@ while true; do
                                         echo -e "${kt}File hash '${fhr}' tidak ditemukan.${r}"
                                         continue
                                 else
-                                        if grep -i "rar5" "${fhz}" >> /dev/null 2>&1; then
+                                        if grep -i "rar5" "${fhr}" >> /dev/null 2>&1; then
                                                 echo -e "${ht}File hash '${fhz}' ditemukan.${r}"
                                                 break
                                         else
