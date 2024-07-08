@@ -2,18 +2,14 @@
 
 import os
 from colorama import Fore
-from time import sleep
 
 h = Fore.LIGHTGREEN_EX   # Warna Hijau 
 m = Fore.LIGHTRED_EX     # Warna Merah 
 r = Fore.RESET           # Reset Warna 
 
-# sleep
-s = sleep(0.1)
-
+os.system("clear")
 
 print(f"""
-{s}
 {h}-------------------------------------------------------------------------------{r}
 {h};::::.. . . .    ..oedMMVMMMMbeo.    .   .     .        {m}Script ini dibuat hanya{r} 
 {h}:::.. . . .  ..!!!!eMMMMVMMMNWWUUX.    .    .     .{r}
