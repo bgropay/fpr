@@ -4,21 +4,20 @@ from colorama import Fore
 
 h = Fore.LIGHTGREEN_EX   # Warna Hijau 
 m = Fore.LIGHTRED_EX     # Warna Merah 
-k = Fore.LIGHTYELLOW_EX  # Warna Kuning 
 r = Fore.RESET           # Reset Warna 
 
 print(f"""{h}
 -------------------------------------------------------------------------------
-;::::.. . . .    ..oedMMVMMMMbeo.    .   .     .  Script ini hanya untuk tujuan 
+;::::.. . . .    ..oedMMVMMMMbeo.    .   .     .  {m}Script ini hanya untuk tujuan{r} 
 :::.. . . .  ..!!!!eMMMMVMMMNWWUUX.    .    .     .
-:.. . .  . -!<- .edMMMMMIMMMMMMMMMMMo    .     .     .   .   .   .   .  edukasi   
+:.. . .  . -!<- .edMMMMMIMMMMMMMMMMMo    .     .     .   .   .   .   .  {m}edukasi{r}   
 : . .  ,~   ~::WMMMMMMMMIMMMMMMMMMMMVMu     .     .               .       .
 . .  .      ::dUUUUMUMMM!MMMMMMMMMMMVMMM:      .     .       .
-.   '     .::dUUUUUUUUUM!MMMMMMMMMMVVMMMR   .     .      .         .     .  dan
+.   '     .::dUUUUUUUUUM!MMMMMMMMMMVVMMMR   .     .      .         .     .  {m}dan{r}
 .  '      .::UUUUUUUUUUMUMMMMMMMMMVVVVMVVk     .     .
-  '      . ':UU'''''ZZZMMMMPP'''''VVZMVV%..      .          .     pembelajaran 
+  '      . ':UU'''''ZZZMMMMPP'''''VVZMVV%..      .          .     {m}pembelajaran{r} 
  :    :. !: dP:'     'ZZZRMX::     `RVVTMF ::::,..   .   .        .
- '  :!!!:~!!E!:      sZZBBM9::      dVVVM" ::::;`::                       saja!
+ '  :!!!:~!!E!:      sZZBBM9::      dVVVM" ::::;`::                       {m}saja!{r}
  ':: `.!!!!!N!..     @WEMEM@k:.     MVVVV``::::! ;:  .       .
  !!!!!!(`~~`Mkb.   :@UUR%%MMMu:.   d9VVV* _`::!!         .        .
  !!!!!!!!>  'Teeoe@@UUU ! 9MMMMWeee@M**P.'  :!!!  .  .              
@@ -26,7 +25,7 @@ print(f"""{h}
   !!!!!!         ->.., .   .  .. _
   '      ` .   ,B*'.e$$B$$$$6@Bc 'N,     `      `
            .  :$f d$$$$$$$$$$$$$c $N..    ;
-           := `$>'$$F `#$$$' '$$$ 9$6.^'= ;      https://github.com/bgropay/fpr
+           := `$>'$$F `#$$$' '$$$ 9$6.^'= ;      {m}https://github.com/bgropay/fpr{r}
             += *L $$   '$$E   3$$ 'I`''*-,
             `  '4.$$,  J$$N   @$EzE '' ...
            -*%Ne$@$$b.z$$$$k.z$$$Ph .WP'73&
