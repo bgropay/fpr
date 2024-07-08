@@ -5,6 +5,7 @@
 # Format hash yang baru dibuat error handlingnya:
 # - File ZIP [ pkzip, zip ]
 # - File RAR [ rar5 ]
+# - File 7z [ 7z ]
 
 
 # variabel warna 
@@ -168,8 +169,13 @@ while true; do
                                         echo -e "${kt}File hash '${fh7}' tidak ditemukan.${r}"
                                         continue
                                 else
-                                        echo -e "${ht}File hash '${fh7}' ditemukan.${r}"
-                                        break
+                                        if grep -i "7z" "${fh7}" >> /dev/null 2>&1; then
+                                                echo -e "${ht}File hash '${fh7}' ditemukan.${r}"
+                                                break
+                                        else
+                                                echo -e "${kt}Format hash yang ada didalam file hash '${fh7}' tidak valid.${r}"
+                                                break
+                                        fi
                                 fi
                         done
                         echo ""
