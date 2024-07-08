@@ -114,7 +114,7 @@ while true; do
                                         continue
                                 else
                                         if grep -i "rar5" "${fhr}" >> /dev/null 2>&1; then
-                                                echo -e "${ht}File hash '${fhz}' ditemukan.${r}"
+                                                echo -e "${ht}File hash '${fhr}' ditemukan.${r}"
                                                 break
                                         else
                                                 echo -e "${kt}Format hash yang ada didalam file hash '${fhr}' tidak valid.${r}"
