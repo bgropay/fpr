@@ -1,13 +1,6 @@
 #!/bin/bash
 # [menu_ekstrak_hash_file.sh]
 # # file ini merupakan salah satu file dari projek FPR
-#
-# Format hash yang baru dibuat error handlingnya:
-# - File ZIP [ pkzip, zip ]
-# - File RAR [ rar5 ]
-# - File 7z [ 7z ]
-# - File PDD [ pdf ]
-
 
 # variabel warna 
 hm="\e[0;32m" # hijau muda
@@ -59,6 +52,14 @@ while true; do
                                         echo -e "${kt}File hash '${fhz}' tidak ditemukan.${r}"
                                         continue
                                 else
+                                        # Format hash yang baru dibuat error handlingnya:
+                                        #
+                                        # - File ZIP [ pkzip, zip ]
+                                        # - File RAR [ rar5 ]
+                                        # - File 7z [ 7z ]
+                                        # - File PDD [ pdf ]
+                                        # - File Office [office ]
+                                        #
                                         # Mengecek apakah format hash pkzip atau zip
                                         if grep -i "pkzip" "${fhz}" >> /dev/null 2>&1 || grep -i "zip" "${fhz}" >> /dev/null 2>&1; then
                                                 echo -e "${ht}File hash '${fhz}' ditemukan.${r}"
