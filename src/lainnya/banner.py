@@ -2,7 +2,7 @@
 
 from colorama import Fore
 
-c = Fore.LIGHTGREE _EX   # Warna Hijau 
+h = Fore.LIGHTGREE _EX   # Warna Hijau 
 m = Fore.LIGHTRED_EX     # Warna Merah 
 k = Fore.LIGHTYELLOW_EX  # Warna Kuning 
 h = Fore.LIGHTBLACK_EX   # Warna Hitam
