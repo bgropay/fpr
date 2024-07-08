@@ -26,11 +26,12 @@ if [[ ! -f "${fmca}" ]]; then
         echo -e "${kt}Script ini tidak bisa dijalankan karena file '${fmca}' tidak ditemukan.${r}"
         exit 1
 else
-        banner=$(python3 src/lainnya/banner.py >> /dev/null 2>&1)
-        if [[ "${banner}" == "No module named 'colorama'" ]]; then
+        banner="src/banner.sh"
+        if [[ ! -f "${banner}" ]]; then
                 echo "error"
                 exit 1
         fi
+        bash "${banner}"
         # menjalankan file cek_alat.sh
         bash "${fmca}"
 fi
