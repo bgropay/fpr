@@ -6,6 +6,7 @@
 # - File ZIP [ pkzip, zip ]
 # - File RAR [ rar5 ]
 # - File 7z [ 7z ]
+# - File PDD [ pdf ]
 
 
 # variabel warna 
@@ -224,8 +225,13 @@ while true; do
                                         echo -e "${kt}File hash '${fhp}' tidak ditemukan.${r}"
                                         continue
                                 else
-                                        echo -e "${ht}File hash '${fhp}' ditemukan.${r}"
-                                        break
+                                        if grep -i "pdf" "${fhp}" >> /dev/null 2>&1; then
+                                                echo -e "${ht}File hash '${fhp}' ditemukan.${r}"
+                                                break
+                                        else
+                                                echo -e "${kt}Format hash yang ada didalam file hash '${fhp}' tidak valid.${r}"
+                                                continue 
+                                        fi
                                 fi
                         done
                         echo ""
