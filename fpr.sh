@@ -28,7 +28,7 @@ if [[ ! -f "${fmca}" ]]; then
 else
         # file banner 
         fb="src/banner.sh"
-        if [[ ! -f "${banner}" ]]; then
+        if [[ ! -f "${fb}" ]]; then
                 echo ""
                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${fb}' tidak ditemukan.${r}"
                 exit 1
