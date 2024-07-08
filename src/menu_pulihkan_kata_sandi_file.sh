@@ -1,6 +1,9 @@
 #!/bin/bash
 # [menu_ekstrak_hash_file.sh]
 # # file ini merupakan salah satu file dari projek FPR
+#
+# Format hash yang baru dibuat error handlingnya:
+# - File ZIP [PKZIP, ZIP]
 
 # variabel warna 
 hm="\e[0;32m" # hijau muda
