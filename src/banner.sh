@@ -11,6 +11,7 @@ r="\e[0m"
 clear
 echo -e "${h}"
 echo -e "       ${k}Selamat datang di Jono${r}"
+sleep 0.1
 echo ""
 sleep 0.1
 echo -e "${h}   ⠀⠀⢀⣴⣶⣿⣿⣷⡶⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⢶⣿⣿⣿⣿⣶⣄⠀⠀"
