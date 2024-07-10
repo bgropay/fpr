@@ -26,15 +26,6 @@ if [[ ! -f "${fmca}" ]]; then
         echo -e "${kt}Script ini tidak bisa dijalankan karena file '${fmca}' tidak ditemukan.${r}"
         exit 1
 else
-        # file banner 
-        fb="src/banner.sh"
-        if [[ ! -f "${fb}" ]]; then
-                echo ""
-                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${fb}' tidak ditemukan.${r}"
-                exit 1
-        else
-                bash "${fb}"
-                # menjalankan file cek_alat.sh
-                bash "${fmca}"
-        fi
+        # menjalankan file cek_alat.sh
+        bash "${fmca}"
 fi
