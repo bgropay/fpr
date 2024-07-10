@@ -10,8 +10,8 @@ r="\e[0m"
 
 clear
 echo -e "${h}"
+echo -e "     ${k}Selamat datang di Jono${r}"
 sleep 3
-echo "Selamat datang di Jono"
 echo ""
 sleep 0.1
 echo -e "   ⠀⠀⢀⣴⣶⣿⣿⣷⡶⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⢶⣿⣿⣿⣿⣶⣄⠀⠀"
