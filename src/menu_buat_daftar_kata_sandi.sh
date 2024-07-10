@@ -1,6 +1,6 @@
 #!/bin/bash
 # [menu_buat_daftar_kata_sandi.sh]
-# # file ini merupakan salah satu file dari projek FPR
+# File ini merupakan salah satu file dari projek Jono 
 
 # variabel warna 
 hm="\e[0;32m" # hijau muda
