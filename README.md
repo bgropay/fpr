@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="recovery.png" width=100 height=100/><br>
+  <img src="https://github.com/bgropay/fpr/blob/main/img/recovery.png" width=100 height=100/><br>
 FPR</h1>
 
 <p align="center">
