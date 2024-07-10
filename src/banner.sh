@@ -2,7 +2,7 @@
 # [ banner.sh ]
 
 c="\e[1;36m" # cyan
-c="\e[1;32m" # cyan
+h="\e[1;32m" # cyan
 k="\e[1;33m" # kuning
 l="\e[0;33m" # coklat 
 p="\e[1;37m" # putih 
