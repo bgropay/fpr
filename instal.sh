@@ -33,10 +33,10 @@ done
 
 cd /usr/share
 cd JohnTheRipper
-# git clone https://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo
-# cd JohnTheRipper/src
-# ./configure
-# make -s clean && make -sj8
-cd ../
+git clone https://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo
+cd JohnTheRipper/src
+./configure
+make -s clean && make -sj8
+cd ../../
 git clone https://github.com/Mebus/cupp
 cd -
