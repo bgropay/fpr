@@ -78,12 +78,28 @@ for instal_dependensi_hashcat in "${dependensi_hashcat[@]}"; do
     fi
 done
 
-cd /usr/share
-cd JohnTheRipper
-git clone https://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo
-cd JohnTheRipper/src
-./configure
-make -s clean && make -sj8
-cd ../../
-git clone https://github.com/Mebus/cupp
-cd -
+# pindah ke direktorat untuk menyimpan john the ripper dan hashcat '/opt'
+cd "${path}"
+
+# mengunduh john the ripper 
+echo "Mengunduh John The Ripper..."
+sleep 3
+wget "${url_john}"
+if [[ $? -eq 0 ]]; then
+    echo "John The Ripper berhasil diunduh."
+    sleep 1.5
+else
+    echo "John The Ripper gagal diunduh."
+    sleep 1.5
+fi
+
+
+# cd /usr/share
+# cd JohnTheRipper
+# git clone https://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo
+# cd JohnTheRipper/src
+#../configure
+# make -s clean && make -sj8
+# cd ../../
+# git clone https://github.com/Mebus/cupp
+# cd -
