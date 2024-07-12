@@ -4,7 +4,9 @@
 Menggunakan mode interaktif
 
 [ SELESAI ]
-Jika format hash tidak valid maka menampilkan pesan error.
+Jika format hash tidak valid maka 
+menampilkan pesan error.
 
 [ SEDANG DIUSAHAKAN ]
-Menampilkan banner saat script dijalankan.
+Menambahkan vitur melakukan cracking 
+menggunakan Hashcat.
