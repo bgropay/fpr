@@ -44,6 +44,8 @@ dependensi_hashcat=(
 echo "[*] Menginstal seluruh dependensi yang diperlukan oleh John The Ripper."
 sleep 3
 for instal_dependensi_john in "${dependensi_john[@]}"; do
+    echo "[*] Menginstal dependensi '${instal_dependensi_john}'..."
+    sleep 1.5
     apt-get install "${instal_dependensi_john}" -y
     if [[ $? -eq 0 ]]; then
         echo "[+] Dependensi '${instal_dependensi_john}' berhasil diinstal."
@@ -57,6 +59,8 @@ echo "[*] Menginstal seluruh dependensi yang diperlukan oleh Hashcat."
 sleep 3
 for instal_dependensi_hashcat in "${dependensi_hashcat[@]}"; do
     apt-get install "${instal_dependensi_hashcat}" -y
+    echo "[*] Menginstal dependensi '${instal_dependensi_hashcat}'..."
+    sleep 1.5
     if [[ $? -eq 0 ]]; then
         echo "[+] Dependensi '${instal_dependensi_hashcat}' berhasil diinstal."
     else
