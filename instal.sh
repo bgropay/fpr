@@ -142,6 +142,17 @@ else
     sleep 1.5
 fi
 
+# mengkompilasi ulang john the ripper 
+echo -e "${kt}Mengkompilasi ulang John The Ripper...${r}"
+sleep 3
+make -sj4 
+if [[ $? -eq 0 ]]; then
+    echo -e "${ht} Berhasil mengkompilasi ulang John The Ripper.${r}"
+    sleep 1.5
+else
+    echo -e "${kt} Gagal mengkompilasi ulang John The Ripper.${r}"
+    sleep 1.5
+fi
 
 # cd /usr/share
 # cd JohnTheRipper
