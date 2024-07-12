@@ -112,6 +112,23 @@ else
     sleep 1.5
 fi
 
+# nama file hasil ekstraksi john the ripper 
+nama_file_hasil_ekstraksi_john="john-1.9.0-jumbo-1"
+
+# pindah ke direktori 'src' john the ripper 
+cd "${nama_file_hasil_ekstraksi_john}/src"
+
+# mempersiapkan lingkungan kompilasi john the ripper 
+echo -e "${kt}Mempersiapkan lingkungan kompilasi John The Ripper...${r}"
+sleep 3
+./configure
+if [[ $? -eq 0 ]]; then
+    echo -e "${ht} Berhasil mempersiapkan lingkungan kompilasi John The Ripper.${r}"
+    sleep 1.5
+else
+    echo -e "${kt} Gagal mempersiapkan lingkungan kompilasi John The Ripper.${r}"
+    sleep 1.5
+fi
 
 # cd /usr/share
 # cd JohnTheRipper
