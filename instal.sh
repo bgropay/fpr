@@ -130,6 +130,19 @@ else
     sleep 1.5
 fi
 
+# membersihkan hasil kompilasi sebelumnya
+echo -e "${kt}Membersihkan hasil kompilasi sebelumnya...${r}"
+sleep 3
+make -s clean
+if [[ $? -eq 0 ]]; then
+    echo -e "${ht} Berhasil membersihkan hasil kompilasi sebelumnya.${r}"
+    sleep 1.5
+else
+    echo -e "${kt} Gagal Membersihkan hasil kompilasi sebelumnya.${r}"
+    sleep 1.5
+fi
+
+
 # cd /usr/share
 # cd JohnTheRipper
 # git clone https://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo
