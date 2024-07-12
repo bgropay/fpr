@@ -1,12 +1,4 @@
 ---- TODO ----
 
-[ SELESAI]
-Menggunakan mode interaktif
-
-[ SELESAI ]
-Jika format hash tidak valid maka 
-menampilkan pesan error.
-
-[ SEDANG DIUSAHAKAN ]
-Menambahkan vitur melakukan cracking 
-menggunakan Hashcat.
+[ SEDANG DIBUAT ]
+Membuat file installer otomatis.
