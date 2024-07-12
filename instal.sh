@@ -148,26 +148,14 @@ else
 fi
 
 # membersihkan hasil kompilasi sebelumnya
-echo -e "${kt}Membersihkan hasil kompilasi sebelumnya...${r}"
+echo -e "${kt} Mengkompilasi John The Ripper...${r}"
 sleep 3
-make -s clean
+make -s clean && make -sj4 
 if [[ $? -eq 0 ]]; then
-    echo -e "${ht} Berhasil membersihkan hasil kompilasi sebelumnya.${r}"
+    echo -e "${ht} Berhasil mengkompilasi John The Ripper.${r}"
     sleep 1.5
 else
-    echo -e "${mt} Gagal Membersihkan hasil kompilasi sebelumnya.${r}"
-    sleep 1.5
-fi
-
-# mengkompilasi ulang john the ripper 
-echo -e "${kt}Mengkompilasi ulang John The Ripper...${r}"
-sleep 3
-make -sj4 
-if [[ $? -eq 0 ]]; then
-    echo -e "${ht} Berhasil mengkompilasi ulang John The Ripper.${r}"
-    sleep 1.5
-else
-    echo -e "${mt} Gagal mengkompilasi ulang John The Ripper.${r}"
+    echo -e "${mt} Gagal mengkompilasi John The Ripper.${r}"
     sleep 1.5
 fi
 
