@@ -10,6 +10,7 @@ fi
 # variabel warna 
 kt="\e[1;33m" # kuning terang 
 ht="\e[1;32m" # hijau terang 
+ct="\e[1;36m" # cyan terang 
 r="\e[0m"     # reset
 
 # path atau lokasi folder untuk menyimpan tools 
@@ -70,7 +71,7 @@ for instal_dependensi_john in "${dependensi_john[@]}"; do
 done
 
 if [[ "${#depedensi_john_gagal[@]}" -eq 0 ]]; then
-    echo -e "${ht}Seluruh dependensi yang diperlukan oleh John The Ripper berhasil diinstal.${r}"
+    echo -e "${ct}Seluruh dependensi yang diperlukan oleh John The Ripper berhasil diinstal.${r}"
     sleep 1.5
 fi
 
