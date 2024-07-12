@@ -78,6 +78,9 @@ while true; do
                                 bash "${mpksf}"
                         fi
                         ;;
+                4)
+                        exit 0
+                        ;;
                 *)
                         echo ""
                         echo -e "${kt}Menu '${mu}' tidak tersedia. Silahkan pilih menu yang tersedia.${r}"
