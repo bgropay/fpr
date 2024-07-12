@@ -100,7 +100,7 @@ if [[ "${#depedensi_hashcat_gagal[@]}" -eq 0 ]]; then
 fi
 
 # pindah ke direktori untuk menyimpan john the ripper dan hashcat '/opt'
-cd "${path}"
+# cd "${path}"
 
 # mengunduh john the ripper 
 echo -e "${kt}Mengunduh John The Ripper...${r}"
@@ -110,7 +110,7 @@ if [[ $? -eq 0 ]]; then
     echo -e "${ht}John The Ripper berhasil diunduh.${r}"
     sleep 1.5
 else
-    echo -e "${kt}John The Ripper gagal diunduh.${r}"
+    echo -e "${mt}John The Ripper gagal diunduh.${r}"
     sleep 1.5
 fi
 
@@ -125,7 +125,7 @@ if [[ $? -eq 0 ]]; then
     echo -e "${ht}John The Ripper berhasil diekstrak.${r}"
     sleep 1.5
 else
-    echo -e "${kt}John The Ripper gagal diekstrak.${r}"
+    echo -e "${mt}John The Ripper gagal diekstrak.${r}"
     sleep 1.5
 fi
 
@@ -143,7 +143,7 @@ if [[ $? -eq 0 ]]; then
     echo -e "${ht} Berhasil mempersiapkan lingkungan kompilasi John The Ripper.${r}"
     sleep 1.5
 else
-    echo -e "${kt} Gagal mempersiapkan lingkungan kompilasi John The Ripper.${r}"
+    echo -e "${mt} Gagal mempersiapkan lingkungan kompilasi John The Ripper.${r}"
     sleep 1.5
 fi
 
@@ -155,7 +155,7 @@ if [[ $? -eq 0 ]]; then
     echo -e "${ht} Berhasil membersihkan hasil kompilasi sebelumnya.${r}"
     sleep 1.5
 else
-    echo -e "${kt} Gagal Membersihkan hasil kompilasi sebelumnya.${r}"
+    echo -e "${mt} Gagal Membersihkan hasil kompilasi sebelumnya.${r}"
     sleep 1.5
 fi
 
@@ -167,7 +167,7 @@ if [[ $? -eq 0 ]]; then
     echo -e "${ht} Berhasil mengkompilasi ulang John The Ripper.${r}"
     sleep 1.5
 else
-    echo -e "${kt} Gagal mengkompilasi ulang John The Ripper.${r}"
+    echo -e "${mt} Gagal mengkompilasi ulang John The Ripper.${r}"
     sleep 1.5
 fi
 
