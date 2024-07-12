@@ -20,6 +20,8 @@ url_john="https://www.openwall.com/john/k/john-1.9.0-jumbo-1.tar.gz"
 # url hashcat
 url_hashcat="https://hashcat.net/files/hashcat-6.2.6.tar.gz"
 
+depedensi_john_gagal=()
+
 # dependensi yang diperlukan oleh john the ripper 
 dependensi_john=(
     "libcrypt1"
@@ -62,9 +64,15 @@ for instal_dependensi_john in "${dependensi_john[@]}"; do
         sleep 1.5
     else
         echo -e "${kt}Dependensi '${instal_dependensi_john}' gagal diinstal.${r}"
+        depedensi_john_gagal+=("${instal_dependensi_john}")
         sleep 1.5
     fi
 done
+
+if [[ "${#depedensi_john_gagal[@]}" -ne 0 ]]; then
+    echo -e "${ht}Seluruh dependensi yang diperlukan oleh John The Ripper berhasil diinstal.${r}"
+    sleep 1.5
+fi
 
 # menginstal seluruh dependensi yang diperlukan oleh hashcat 
 echo -e "${kt}Menginstal seluruh dependensi yang diperlukan oleh Hashcat.${r}"
