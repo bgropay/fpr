@@ -1,6 +1,12 @@
 #!/bin/bash
 # [instal.sh]
 
+# cek apakah dalam mode root atau tidak 
+if [[ $(id -u) -ne 0 ]]; then
+        echo "Script ini harus dijalani sebagai root."
+        exit 1
+fi
+
 # path atau lokasi folder untuk menyimpan tools 
 path="/opt"
 
@@ -41,30 +47,34 @@ dependensi_hashcat=(
 )
 
 # menginstal seluruh depan yang diperlukan oleh john the ripper 
-echo "[*] Menginstal seluruh dependensi yang diperlukan oleh John The Ripper."
+echo "Menginstal seluruh dependensi yang diperlukan oleh John The Ripper."
 sleep 3
 for instal_dependensi_john in "${dependensi_john[@]}"; do
-    echo "[*] Menginstal dependensi '${instal_dependensi_john}'..."
+    echo "Menginstal dependensi '${instal_dependensi_john}'..."
     sleep 1.5
     apt-get install "${instal_dependensi_john}" -y
     if [[ $? -eq 0 ]]; then
-        echo "[+] Dependensi '${instal_dependensi_john}' berhasil diinstal."
+        echo "Dependensi '${instal_dependensi_john}' berhasil diinstal."
+        sleep 1.5
     else
-        echo "[-] Dependensi '${instal_dependensi_john}' gagal diinstal."
+        echo "Dependensi '${instal_dependensi_john}' gagal diinstal."
+        sleep 1.5
     fi
 done
 
 # menginstal seluruh dependensi yang diperlukan oleh hashcat 
-echo "[*] Menginstal seluruh dependensi yang diperlukan oleh Hashcat."
+echo "Menginstal seluruh dependensi yang diperlukan oleh Hashcat."
 sleep 3
 for instal_dependensi_hashcat in "${dependensi_hashcat[@]}"; do
     apt-get install "${instal_dependensi_hashcat}" -y
-    echo "[*] Menginstal dependensi '${instal_dependensi_hashcat}'..."
+    echo "Menginstal dependensi '${instal_dependensi_hashcat}'..."
     sleep 1.5
     if [[ $? -eq 0 ]]; then
-        echo "[+] Dependensi '${instal_dependensi_hashcat}' berhasil diinstal."
+        echo "Dependensi '${instal_dependensi_hashcat}' berhasil diinstal."
+        sleep 1.5
     else
-        echo "[-] Dependensi '${instal_dependensi_hashcat}' gagal diinstal."
+        echo "Dependensi '${instal_dependensi_hashcat}' gagal diinstal."
+        sleep 1.5
     fi
 done
 
