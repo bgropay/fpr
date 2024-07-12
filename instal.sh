@@ -8,7 +8,9 @@ if [[ $(id -u) -ne 0 ]]; then
 fi
 
 # variabel warna 
-kt="\e[1;33m" # kuning terang 
+bt="\e[1;34m" # biru terang  
+kt="\e[1;33m" # kuning terang  
+mt="\e[1;31m" # merah terang  
 ht="\e[1;32m" # hijau terang 
 ct="\e[1;36m" # cyan terang 
 r="\e[0m"     # reset
@@ -22,6 +24,7 @@ url_john="https://www.openwall.com/john/k/john-1.9.0-jumbo-1.tar.gz"
 url_hashcat="https://hashcat.net/files/hashcat-6.2.6.tar.gz"
 
 depedensi_john_gagal=()
+depedensi_hashcat_gagal=()
 
 # dependensi yang diperlukan oleh john the ripper 
 dependensi_john=(
@@ -57,14 +60,14 @@ dependensi_hashcat=(
 echo -e "${kt}Menginstal seluruh dependensi yang diperlukan oleh John The Ripper.${r}"
 sleep 3
 for instal_dependensi_john in "${dependensi_john[@]}"; do
-    echo -e "${kt}Menginstal dependensi '${instal_dependensi_john}'...${r}"
+    echo -e "${bt}Menginstal dependensi '${instal_dependensi_john}'...${r}"
     sleep 1.5
     apt-get install "${instal_dependensi_john}" -y
     if [[ $? -eq 0 ]]; then
         echo -e "${ht}Dependensi '${instal_dependensi_john}' berhasil diinstal.${r}"
         sleep 1.5
     else
-        echo -e "${kt}Dependensi '${instal_dependensi_john}' gagal diinstal.${r}"
+        echo -e "${mt}Dependensi '${instal_dependensi_john}' gagal diinstal.${r}"
         depedensi_john_gagal+=("${instal_dependensi_john}")
         sleep 1.5
     fi
@@ -80,16 +83,21 @@ echo -e "${kt}Menginstal seluruh dependensi yang diperlukan oleh Hashcat.${r}"
 sleep 3
 for instal_dependensi_hashcat in "${dependensi_hashcat[@]}"; do
     apt-get install "${instal_dependensi_hashcat}" -y
-    echo -e "${kt}Menginstal dependensi '${instal_dependensi_hashcat}'...${r}"
+    echo -e "${bt}Menginstal dependensi '${instal_dependensi_hashcat}'...${r}"
     sleep 1.5
     if [[ $? -eq 0 ]]; then
         echo -e "${ht}Dependensi '${instal_dependensi_hashcat}' berhasil diinstal.${r}"
         sleep 1.5
     else
-        echo -e "${kt}Dependensi '${instal_dependensi_hashcat}' gagal diinstal.${r}"
+        echo -e "${mt}Dependensi '${instal_dependensi_hashcat}' gagal diinstal.${r}"
         sleep 1.5
     fi
 done
+
+if [[ "${#depedensi_hashcat_gagal[@]}" -eq 0 ]]; then
+    echo -e "${ct}Seluruh dependensi yang diperlukan oleh Hashcat berhasil diinstal.${r}"
+    sleep 1.5
+fi
 
 # pindah ke direktori untuk menyimpan john the ripper dan hashcat '/opt'
 cd "${path}"
