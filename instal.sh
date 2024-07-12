@@ -78,7 +78,7 @@ for instal_dependensi_hashcat in "${dependensi_hashcat[@]}"; do
     fi
 done
 
-# pindah ke direktorat untuk menyimpan john the ripper dan hashcat '/opt'
+# pindah ke direktori untuk menyimpan john the ripper dan hashcat '/opt'
 cd "${path}"
 
 # mengunduh john the ripper 
