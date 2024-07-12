@@ -2,7 +2,7 @@
 # [instal_john.sh]
 
 # url github john the ripper 
-url="https://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo"
+url="https://github.com/magnumripper/JohnTheRipper"
 
 # list dependensi yang gagal diinstal 
 ldygd=()
@@ -54,9 +54,9 @@ if [[ "${#ldygd[@]}" -eq 0 ]]; then
 fi
 
 # mengkloning john the ripper 
-echo -e "${kt} Mengkloning John The Ripper...${r}"
+echo -e "${kt}Mengkloning John The Ripper...${r}"
 sleep 3
-git clone  "${url}"
+git clone "${url}" -b bleeding-jumbo
 if [[ $? -eq 0 ]]; then
     echo -e "${ht} Berhasil mengkloning John The Ripper.${r}"
     sleep 1.5
