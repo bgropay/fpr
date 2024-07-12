@@ -31,7 +31,6 @@ dependensi_john=(
     "libicu-dev"
     "build-essential"
     "libssl-dev"
-    "git"
     "zlib1g-dev"
     "libgmp-dev"
     "yasm"
@@ -87,14 +86,29 @@ done
 cd "${path}"
 
 # mengunduh john the ripper 
-echo "Mengunduh John The Ripper..."
+echo -e "${kt}Mengunduh John The Ripper...${r}"
 sleep 3
 wget "${url_john}"
 if [[ $? -eq 0 ]]; then
-    echo "John The Ripper berhasil diunduh."
+    echo -e "${ht}John The Ripper berhasil diunduh.${r}"
     sleep 1.5
 else
-    echo "John The Ripper gagal diunduh."
+    echo -e "${kt}John The Ripper gagal diunduh.${r}"
+    sleep 1.5
+fi
+
+# nama file hasil download
+hasil_download_john="john-1.9.0-jumbo-1.tar.gz"
+
+# mengekstrak john the ripper 
+echo -e "${kt}Mengekstrak John The Ripper...${r}"
+sleep 3
+tar -xzvf "${hasil_download_john}"
+if [[ $? -eq 0 ]]; then
+    echo -e "${ht}John The Ripper berhasil diekstrak.${r}"
+    sleep 1.5
+else
+    echo -e "${kt}John The Ripper gagal diekstrak.${r}"
     sleep 1.5
 fi
 
