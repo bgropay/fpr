@@ -40,14 +40,29 @@ dependensi_hashcat=(
     "zlib1g-dev"
 )
 
+# menginstal seluruh depan yang diperlukan oleh john the ripper 
 echo "[*] Menginstal seluruh dependensi yang diperlukan oleh John The Ripper."
 sleep 3
 for instal_dependensi_john in "${dependensi_john[@]}"; do
     apt-get install "${instal_dependensi_john}" -y
+    if [[ $? -eq 0 ]]; then
+        echo "[+] Dependensi '${instal_dependensi_john}' berhasil diinstal."
+    else
+        echo "[-] Dependensi '${instal_dependensi_john}' gagal diinstal."
+    fi
 done
 
+# menginstal seluruh dependensi yang diperlukan oleh hashcat 
 echo "[*] Menginstal seluruh dependensi yang diperlukan oleh Hashcat."
 sleep 3
+for instal_dependensi_hashcat in "${dependensi_hashcat[@]}"; do
+    apt-get install "${instal_dependensi_hashcat}" -y
+    if [[ $? -eq 0 ]]; then
+        echo "[+] Dependensi '${instal_dependensi_hashcat}' berhasil diinstal."
+    else
+        echo "[-] Dependensi '${instal_dependensi_hashcat}' gagal diinstal."
+    fi
+done
 
 cd /usr/share
 cd JohnTheRipper
