@@ -7,6 +7,11 @@ if [[ $(id -u) -ne 0 ]]; then
         exit 1
 fi
 
+# variabel warna 
+kt="\e[1;33m" # kuning terang 
+ht="\e[1;36m" # hijau terang 
+r="\e[0m"     # reset
+
 # path atau lokasi folder untuk menyimpan tools 
 path="/opt"
 
@@ -47,33 +52,33 @@ dependensi_hashcat=(
 )
 
 # menginstal seluruh depan yang diperlukan oleh john the ripper 
-echo "Menginstal seluruh dependensi yang diperlukan oleh John The Ripper."
+echo -e "${kt}Menginstal seluruh dependensi yang diperlukan oleh John The Ripper.${r}"
 sleep 3
 for instal_dependensi_john in "${dependensi_john[@]}"; do
-    echo "Menginstal dependensi '${instal_dependensi_john}'..."
+    echo -e "${kt}Menginstal dependensi '${instal_dependensi_john}'...${r}"
     sleep 1.5
     apt-get install "${instal_dependensi_john}" -y
     if [[ $? -eq 0 ]]; then
-        echo "Dependensi '${instal_dependensi_john}' berhasil diinstal."
+        echo -e "${ht}Dependensi '${instal_dependensi_john}' berhasil diinstal.${r}"
         sleep 1.5
     else
-        echo "Dependensi '${instal_dependensi_john}' gagal diinstal."
+        echo -e "${kt}Dependensi '${instal_dependensi_john}' gagal diinstal.${r}"
         sleep 1.5
     fi
 done
 
 # menginstal seluruh dependensi yang diperlukan oleh hashcat 
-echo "Menginstal seluruh dependensi yang diperlukan oleh Hashcat."
+echo -e "${kt}Menginstal seluruh dependensi yang diperlukan oleh Hashcat.${r}"
 sleep 3
 for instal_dependensi_hashcat in "${dependensi_hashcat[@]}"; do
     apt-get install "${instal_dependensi_hashcat}" -y
-    echo "Menginstal dependensi '${instal_dependensi_hashcat}'..."
+    echo -e "${kt}Menginstal dependensi '${instal_dependensi_hashcat}'...${r}"
     sleep 1.5
     if [[ $? -eq 0 ]]; then
-        echo "Dependensi '${instal_dependensi_hashcat}' berhasil diinstal."
+        echo -e "${ht}Dependensi '${instal_dependensi_hashcat}' berhasil diinstal.${r}"
         sleep 1.5
     else
-        echo "Dependensi '${instal_dependensi_hashcat}' gagal diinstal."
+        echo -e "${kt}Dependensi '${instal_dependensi_hashcat}' gagal diinstal.${r}"
         sleep 1.5
     fi
 done
