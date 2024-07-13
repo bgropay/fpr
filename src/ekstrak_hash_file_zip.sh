@@ -12,11 +12,12 @@ pt="\e[1;37m" # putih terang
 bt="\e[0;34m" # biru terang 
 r="\e[0m"
 
+w=$(date "+%d-%m-%Y %H:%M:%S")
+clear
+echo -e "${pt}[ ${hm}Ekstrak Hash File Zip ${pt}] [ ${mt}${w} ${pt}]${r}"
+echo ""
+
 while true; do
-        w=$(date "+%d-%m-%Y %H:%M:%S")
-        clear
-        echo -e "${pt}[ ${hm}Ekstrak Hash File Zip ${pt}] [ ${mt}${w} ${pt}]${r}"
-        echo ""
         read -p "Masukkan nama file ZIP: " fz
         # Memastikan file ZIP yang diberikan ada
         if [[ ! -f "${fz}" ]]; then
