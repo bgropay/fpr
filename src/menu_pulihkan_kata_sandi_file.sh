@@ -258,7 +258,7 @@ while true; do
                         clear
                         echo -e "${hm}******************** Pulihkan Kata Sandi File PDF ********************${r}"
                         echo ""
-                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" " --pot="${pot}" "${fhp}"
+                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" "--pot="${pot}" "${fhp}"
                         kata_sandi=$(/opt/JohnTheRipper/run/./john --show --pot="${pot}" "${fhp}")
                         if [ $? -eq 0 ]; then
                                 echo "${kata_sandi}"
@@ -314,7 +314,7 @@ while true; do
                         clear
                         echo -e "${hm}******************** Pulihkan Kata Sandi File Office (docx, xlsx, pptx) ********************${r}"
                         echo ""
-                        /opt/JohnTheRipper/run/./john --wordlist="${fw}"  --pot="${pot}" "${fho}"
+                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fho}"
                         kata_sandi=$(/opt/JohnTheRipper/run/./john --show --pot="${pot}" "${fho}")
                         if [ $? -eq 0 ]; then
                                 echo "${kata_sandi}"
