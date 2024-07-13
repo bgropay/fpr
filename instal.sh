@@ -19,9 +19,9 @@ r="\e[0m"     # reset
 path="/opt"
 
 # url john the ripper 
-url_john="https://www.openwall.com/john/k/john-1.9.0-jumbo-1.tar.gz"
+url_john="https://github.com/magnumripper/JohnTheRipper"
 # url hashcat
-url_hashcat="https://hashcat.net/files/hashcat-6.2.6.tar.gz"
+url_hashcat="https://github.com/hashcat/hashcat"
 
 depedensi_john_gagal=()
 depedensi_hashcat_gagal=()
@@ -102,38 +102,23 @@ fi
 # pindah ke direktori untuk menyimpan john the ripper dan hashcat '/opt'
 # cd "${path}"
 
-# mengunduh john the ripper 
-echo -e "${kt}Mengunduh John The Ripper...${r}"
+# mengkloning john the ripper 
+echo -e "${kt}Mengkloning John The Ripper...${r}"
 sleep 3
-wget "${url_john}"
+git clone "${url_john}" -b bleeding-jumbo
 if [[ $? -eq 0 ]]; then
-    echo -e "${ht}John The Ripper berhasil diunduh.${r}"
+    echo -e "${ht} Berhasil mengkloning John The Ripper.${r}"
     sleep 1.5
 else
-    echo -e "${mt}John The Ripper gagal diunduh.${r}"
+    echo -e "${mt}Gagal mengkloning John The Ripper.${r}"
     sleep 1.5
 fi
 
-# nama file hasil download
-hasil_download_john="john-1.9.0-jumbo-1.tar.gz"
-
-# mengekstrak john the ripper 
-echo -e "${kt}Mengekstrak John The Ripper...${r}"
-sleep 3
-tar -xzvf "${hasil_download_john}"
-if [[ $? -eq 0 ]]; then
-    echo -e "${ht}John The Ripper berhasil diekstrak.${r}"
-    sleep 1.5
-else
-    echo -e "${mt}John The Ripper gagal diekstrak.${r}"
-    sleep 1.5
-fi
-
-# nama file hasil ekstraksi john the ripper 
-nama_file_hasil_ekstraksi_john="john-1.9.0-jumbo-1"
+# nama folder hasil kloning john the ripper 
+john="JohnTheRipper"
 
 # pindah ke direktori 'src' john the ripper 
-cd "${nama_file_hasil_ekstraksi_john}/src"
+cd "${john}/src"
 
 # mempersiapkan lingkungan kompilasi john the ripper 
 echo -e "${kt}Mempersiapkan lingkungan kompilasi John The Ripper...${r}"
@@ -147,7 +132,7 @@ else
     sleep 1.5
 fi
 
-# membersihkan hasil kompilasi sebelumnya
+# mengkompilasi john the ripper 
 echo -e "${kt} Mengkompilasi John The Ripper...${r}"
 sleep 3
 make -s clean && make -sj4 
@@ -159,12 +144,38 @@ else
     sleep 1.5
 fi
 
-# cd /usr/share
-# cd JohnTheRipper
-# git clone https://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo
-# cd JohnTheRipper/src
-#../configure
-# make -s clean && make -sj8
-# cd ../../
-# git clone https://github.com/Mebus/cupp
-# cd -
+# pondok ke direktori '/opt'
+cd ../../
+
+# mengkloning hashcat 
+echo -e "${kt}Mengkloning Hashcat...${r}"
+sleep 3
+git clone "${url_hashcat}"
+if [[ $? -eq 0 ]]; then
+    echo -e "${ht} Berhasil mengkloning Hashcat.${r}"
+    sleep 1.5
+else
+    echo -e "${mt}Gagal mengkloning Hashcat.${r}"
+    sleep 1.5
+fi
+
+# nama folder hasil kloning hashcat
+hashcat="hashcat"
+
+# pindah ke direktori hashcat 
+cd "${hashcat}"
+
+# mengkompilasi hashcat 
+echo -e "${kt} Mengkompilasi Hashcat...${r}"
+sleep 3
+make
+if [[ $? -eq 0 ]]; then
+    echo -e "${ht} Berhasil mengkompilasi Hashcat.${r}"
+    sleep 1.5
+else
+    echo -e "${mt} Gagal mengkompilasi Hashcat.${r}"
+    sleep 1.5
+fi
+
+cd ../
+cd -
