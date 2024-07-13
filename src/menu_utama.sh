@@ -13,6 +13,7 @@ r="\e[0m"
 daftar_menu=(
         "Ekstrak hash file"
         "Buat Wordlist"
+        "Download Wordlist"
         "Pulihkan kata sandi file (Membutuhkan hash & Wordlist)"
         "Keluar"
     )
@@ -66,6 +67,18 @@ while true; do
                         fi
                         ;;
                 3)
+                        mdw="src/menu_download_wordlist.sh"
+                        if [[ ! -f "${mdw}" ]]; then
+                                echo ""
+                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mdw}' tidak ditemukan.${r}"
+                                echo ""
+                                read -p "Tekan [Enter] untuk melanjutkan..."
+                                exit 1
+                        else
+                                bash "${mdw}"
+                        fi
+                        ;;
+                4)
                         # menu pulihkan kata sandi file
                         mpksf="src/menu_pulihkan_kata_sandi_file.sh"
                         if [[ ! -f "${mpksf}" ]]; then
@@ -78,7 +91,7 @@ while true; do
                                 bash "${mpksf}"
                         fi
                         ;;
-                4)
+                5)
                         exit 0
                         ;;
                 *)
