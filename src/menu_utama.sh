@@ -43,7 +43,7 @@ while true; do
                         if [[ ! -f "${mehf}" ]]; then
                                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mehf}' tidak ditemukan.${r}"
                                 echo ""
-                                read -p $'\e[1;37mTekan [\e[1;32mEnter\e[1;37m] untuk melanjutkan...\e[0m' 
+                                read -p $'\e[1;37mTekan [\e[1;32mEnter\e[1;37m] untuk keluar...\e[0m' 
                                 exit 1
                         else
                                 bash "${mehf}"
@@ -54,7 +54,7 @@ while true; do
                         if [[ ! -f "${mbdks}" ]]; then
                                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mbdks}' tidak ditemukan.${r}"
                                 echo ""
-                                read -p $'\e[1;37mTekan [\e[1;32mEnter\e[1;37m] untuk melanjutkan...\e[0m' 
+                                read -p $'\e[1;37mTekan [\e[1;32mEnter\e[1;37m] untuk keluar...\e[0m' 
                                 exit 1
                         else
                                 bash "${mbdks}"
@@ -65,7 +65,7 @@ while true; do
                         if [[ ! -f "${mdw}" ]]; then
                                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mdw}' tidak ditemukan.${r}"
                                 echo ""
-                                read -p $'\e[1;37mTekan [\e[1;32mEnter\e[1;37m] untuk melanjutkan...\e[0m' 
+                                read -p $'\e[1;37mTekan [\e[1;32mEnter\e[1;37m] untuk keluar...\e[0m' 
                                 exit 1
                         else
                                 bash "${mdw}"
@@ -77,7 +77,7 @@ while true; do
                         if [[ ! -f "${mpksf}" ]]; then
                                 echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mpksf}' tidak ditemukan.${r}"
                                 echo ""
-                                read -p $'\e[1;37mTekan [\e[1;32mEnter\e[1;37m] untuk melanjutkan...\e[0m' 
+                                read -p $'\e[1;37mTekan [\e[1;32mEnter\e[1;37m] untuk keluar...\e[0m' 
                                 exit 1
                         else
                                 bash "${mpksf}"
