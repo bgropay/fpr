@@ -22,6 +22,8 @@ while true; do
         # Memastikan file ZIP yang diberikan ada
         if [[ ! -f "${fz}" ]]; then
                 echo -e "${kt}File ZIP '${fz}' tidak ditemukan.${r}"
+                echo ""
+                read -p $'\e[1;37mTekan [\e[1;32mEnter\e[1;37m] untuk melanjutkan...\e[0m'
                 continue
         else
                 if [[ "${fz##*.}" != "zip" ]]; then
