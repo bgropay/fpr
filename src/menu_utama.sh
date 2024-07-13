@@ -25,14 +25,14 @@ while true; do
         clear
         echo -e "${hm}[ Menu utama FPR ]${r}"
         echo ""
-        echo -e "${ht}Pilih opsi dari menu:${r}"
+        echo -e "${ht}Daftar menu:${r}"
         echo ""
         for menu in "${daftar_menu[@]}"; do
                 echo "[${c}] ${menu}"
                 ((c++))
         done
         echo ""
-        read -p "Opsi->" mu
+        read -p "Menu: " mu
         case "${mu}" in
                 1)
                         mehf="src/menu_ekstrak_hash_file.sh"
