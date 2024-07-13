@@ -26,18 +26,9 @@ while true; do
         echo -e "${hm}******************** Menu utama FPR ********************${r}"
         echo ""
         echo -e "${ht}Pilih opsi dari menu:${r}"
-        echo -e "${bt}----------${r}"
+        echo ""
         for menu in "${daftar_menu[@]}"; do
                 echo "${c}. ${menu}"
-                if [[ "${c}" -eq 1 ]]; then
-                        echo -e "${bt}----------${r}"
-                elif [[ "${c}" -eq 2 ]]; then
-                        echo -e "${bt}----------${r}"
-                elif [[ "${c}" -eq 3 ]]; then
-                        echo -e "${bt}----------${r}"
-                elif [[ "${c}" -eq 4 ]]; then
-                        echo -e "${bt}----------${r}"
-                fi
                 ((c++))
         done
         read -p "" mu
