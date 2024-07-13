@@ -5,8 +5,10 @@
 # variabel warna 
 hm="\e[0;32m" # hijau muda
 ht="\e[1;32m" # hijau terang 
+ct="\e[1;36m" # cyan terang 
 mt="\e[1;31m" # merah terang
 kt="\e[1;33m" # kuning terang 
+pt="\e[1;37m" # putih terang 
 bt="\e[0;34m" # biru terang 
 r="\e[0m"
 
@@ -25,7 +27,7 @@ c=1
 while true; do
         c=1
         clear
-        echo -e "${hm}******************** Menu Ekstrak Hash File ********************${r}"
+        echo -e "[ Menu Ekstrak Hash File ] "
         echo ""
         echo -e "${ht}Pilih opsi dari menu:${r}"
         echo -e "${bt}----------${r}"
