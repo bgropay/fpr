@@ -46,13 +46,20 @@ echo -e "${bt}Alat penting: memeriksa...${r}"
 for ap in "${dap[@]}"; do
         sleep 0.1
         if [[ ! -f "${ap}" ]]; then
-            if [[ "${ap}" == "/usr/share/JohnTheRipper/run/john" ]]; then
+            if [[ "${ap}" == "/opt/JohnTheRipper/run/john" ]]; then
                 echo -e "${r}john ... ${mt}Error${r}"
                 apbt+=("${ap}")
             fi
+        elif [[ ! -f "${ap}" ]]; then
+            if [[ "${ap}" == "/opt/hashcat/hashcat" ]]; then
+                echo -e "${r}hashcat ... ${mt}Error${r}"
+                apbt+=("${ap}")
+            fi
         else
-            if [[ "${ap}" == "/usr/share/JohnTheRipper/run/john" ]]; then
+            if [[ "${ap}" == "/opt/JohnTheRipper/run/john" ]]; then
                 echo -e "${r}john ... ${ht}OK${r}"
+            elif [[ "${ap}" == "/opt/hashcat/hashcat" ]]; then
+                echo -e "${r}hashcat ... ${ht}OK${r}"
             fi
         fi
 done
