@@ -91,8 +91,7 @@ while true; do
                         exit 0
                         ;;
                 *)
-                        echo ""
-                        echo -e "${kt}Menu '${mu}' tidak tersedia. Silahkan pilih menu yang tersedia.${r}"
+                        echo -e "${mt}Menu '${mu}' tidak tersedia. Silahkan pilih menu yang tersedia.${r}"
                         echo ""
                         read -p "Tekan [Enter] untuk melanjutkan..."
                         continue 
