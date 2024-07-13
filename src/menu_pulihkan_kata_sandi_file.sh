@@ -121,7 +121,7 @@ while true; do
                                                 break
                                         else
                                                 echo -e "${kt}Format hash yang ada didalam file hash '${fhr}' tidak valid.${r}"
-                                                break
+                                                continue 
                                         fi
                                 fi
                         done
@@ -176,7 +176,7 @@ while true; do
                                                 break
                                         else
                                                 echo -e "${kt}Format hash yang ada didalam file hash '${fh7}' tidak valid.${r}"
-                                                break
+                                                continue 
                                         fi
                                 fi
                         done
