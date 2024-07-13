@@ -107,7 +107,7 @@ echo -e "${kt}Mengkloning John The Ripper...${r}"
 sleep 3
 git clone "${url_john}" -b bleeding-jumbo
 if [[ $? -eq 0 ]]; then
-    echo -e "${ht} Berhasil mengkloning John The Ripper.${r}"
+    echo -e "${ht}Berhasil mengkloning John The Ripper.${r}"
     sleep 1.5
 else
     echo -e "${mt}Gagal mengkloning John The Ripper.${r}"
@@ -125,22 +125,22 @@ echo -e "${kt}Mempersiapkan lingkungan kompilasi John The Ripper...${r}"
 sleep 3
 ./configure
 if [[ $? -eq 0 ]]; then
-    echo -e "${ht} Berhasil mempersiapkan lingkungan kompilasi John The Ripper.${r}"
+    echo -e "${ht}Berhasil mempersiapkan lingkungan kompilasi John The Ripper.${r}"
     sleep 1.5
 else
-    echo -e "${mt} Gagal mempersiapkan lingkungan kompilasi John The Ripper.${r}"
+    echo -e "${mt}Gagal mempersiapkan lingkungan kompilasi John The Ripper.${r}"
     sleep 1.5
 fi
 
 # mengkompilasi john the ripper 
-echo -e "${kt} Mengkompilasi John The Ripper...${r}"
+echo -e "${kt}Mengkompilasi John The Ripper...${r}"
 sleep 3
 make -s clean && make -sj4 
 if [[ $? -eq 0 ]]; then
-    echo -e "${ht} Berhasil mengkompilasi John The Ripper.${r}"
+    echo -e "${ht}Berhasil mengkompilasi John The Ripper.${r}"
     sleep 1.5
 else
-    echo -e "${mt} Gagal mengkompilasi John The Ripper.${r}"
+    echo -e "${mt}Gagal mengkompilasi John The Ripper.${r}"
     sleep 1.5
 fi
 
@@ -152,7 +152,7 @@ echo -e "${kt}Mengkloning Hashcat...${r}"
 sleep 3
 git clone "${url_hashcat}"
 if [[ $? -eq 0 ]]; then
-    echo -e "${ht} Berhasil mengkloning Hashcat.${r}"
+    echo -e "${ht}Berhasil mengkloning Hashcat.${r}"
     sleep 1.5
 else
     echo -e "${mt}Gagal mengkloning Hashcat.${r}"
@@ -166,14 +166,14 @@ hashcat="hashcat"
 cd "${hashcat}"
 
 # mengkompilasi hashcat 
-echo -e "${kt} Mengkompilasi Hashcat...${r}"
+echo -e "${kt}Mengkompilasi Hashcat...${r}"
 sleep 3
 make
 if [[ $? -eq 0 ]]; then
-    echo -e "${ht} Berhasil mengkompilasi Hashcat.${r}"
+    echo -e "${ht}Berhasil mengkompilasi Hashcat.${r}"
     sleep 1.5
 else
-    echo -e "${mt} Gagal mengkompilasi Hashcat.${r}"
+    echo -e "${mt}Gagal mengkompilasi Hashcat.${r}"
     sleep 1.5
 fi
 
