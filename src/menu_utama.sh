@@ -33,7 +33,7 @@ while true; do
                 ((c++))
         done
         echo ""
-        read -p "Menu: " mu
+        read -p $'\e[1;37mMenu: \e[0m' mu
         case "${mu}" in
                 1)
                         mehf="src/menu_ekstrak_hash_file.sh"
