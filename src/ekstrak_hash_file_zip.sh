@@ -42,6 +42,7 @@ while true; do
                 echo -e "${kt}Nama file hash tidak boleh kosong.${r}"
                 continue
         fi
+done
 echo ""
 echo -e "${bt}Mengekstrak hash dari file ZIP '${fz}'...${r}"
 sleep 3
