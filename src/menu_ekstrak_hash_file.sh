@@ -37,7 +37,7 @@ while true; do
         done
         # menu ekstrak hash
         echo ""
-        read -p $'\e[1;37mMenu: \e[0m' mu
+        read -p $'\e[1;37mMenu: \e[0m' mehf
         case "${mehf}" in
                 1)
                         echo ""
