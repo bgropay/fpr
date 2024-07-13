@@ -27,7 +27,7 @@ w=$(date "+%d-%m-%Y %H:%M:%S")
 while true; do
         c=1
         clear
-        echo -e "${pt}[ ${hm}Menu utama FPR ${pt}] [${mt}${w}${pt}]${r}"
+        echo -e "${pt}[ ${hm}Menu utama FPR${pt} ] [ ${mt}${w}${pt} ]${r}"
         echo ""
         echo -e "${ht}Silahkan pilih menu dibawah ini:${r}"
         echo ""
