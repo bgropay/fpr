@@ -36,11 +36,17 @@ while true; do
 done
 
 while true; do
-        echo ""
         read -p "Masukkan nama file untuk menyimpan hash file ZIP: " nama_file_hash
         if [[ -z "${nama_file_hash}" ]]; then
                 echo -e "${kt}Nama file hash tidak boleh kosong.${r}"
                 continue
+        else
+                if [[ -f "${nama_file_hash}" ]]; then
+                        read -p "File hash dengan nama '${nama_file_hash}' sudah ada. Apakah Anda ingin menimpanya (iya/tidak): .${r}"
+                        continue
+                else
+                        break
+                fi
         fi
 done
 echo ""
