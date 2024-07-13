@@ -100,7 +100,7 @@ if [[ "${#depedensi_hashcat_gagal[@]}" -eq 0 ]]; then
 fi
 
 # pindah ke direktori untuk menyimpan john the ripper dan hashcat '/opt'
-# cd "${path}"
+cd "${path}"
 
 # mengkloning john the ripper 
 echo -e "${kt}Mengkloning John The Ripper...${r}"
