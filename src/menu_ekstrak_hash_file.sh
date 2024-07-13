@@ -22,26 +22,22 @@ daftar_menu=(
         "Kembali ke menu utama"
 )
 
-c=1
+w=$(date "+%d-%m-%Y %H:%M:%S")
 
 while true; do
         c=1
         clear
-        echo -e "[ Menu Ekstrak Hash File ] "
+        echo -e "${pt}[ ${hm}Menu Ekstrak Hash File ${pt}] [ ${mt}${w} ${pt}]${r}"
         echo ""
-        echo -e "${ht}Pilih opsi dari menu:${r}"
-        echo -e "${bt}----------${r}"
+        echo -e "${ht}Silahkan pilih menu dibawah ini:${r}"
+        echo ""
         for menu in "${daftar_menu[@]}"; do
-                echo "${c}. ${menu}"
-                if [[ "${c}" -eq 5 ]]; then
-                        echo -e "${bt}----------${r}"
-                elif [[ "${c}" -eq 6 ]]; then
-                        echo -e "${bt}----------${r}" 
-                fi
+                echo -e "${kt}[${c}] ${pt}${menu}${r}"
                 ((c++))
         done
         # menu ekstrak hash
-        read -p "" mehf
+        echo ""
+        read -p $'\e[1;37mMenu: \e[0m' mu
         case "${mehf}" in
                 1)
                         echo ""
