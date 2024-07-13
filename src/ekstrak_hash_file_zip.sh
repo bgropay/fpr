@@ -30,6 +30,7 @@ while true; do
                         continue
                 else
                         echo -e "${ht}File ZIP '${fz}' ditemukan.${r}"
+                        echo ""
                         break
                 fi
         fi
