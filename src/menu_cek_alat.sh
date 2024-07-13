@@ -71,37 +71,37 @@ echo -e "${bt}Alat opsional: memeriksa...${r}"
 for ao in "${dao[@]}"; do
         sleep 0.1
         if [[ ! -f "${ao}" ]]; then
-            if [[ "${ao}" == "/usr/share/JohnTheRipper/run/zip2john" ]]; then
+            if [[ "${ao}" == "/opt/JohnTheRipper/run/zip2john" ]]; then
                 echo -e "${r}zip2john ... ${mt}Error${r}"
                 aobt+=("${ao}")
-            elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/rar2john" ]]; then
+            elif [[ "${ao}" == "/opt/JohnTheRipper/run/rar2john" ]]; then
                 echo -e "${r}rar2john ... ${mt}Error${r}"
                 aobt+=("${ao}")
-            elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/7z2john.pl" ]]; then
+            elif [[ "${ao}" == "/opt/JohnTheRipper/run/7z2john.pl" ]]; then
                 echo -e "${r}7z2john ... ${mt}Error${r}"
                 aobt+=("${ao}")
-            elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/pdf2john.pl" ]]; then
+            elif [[ "${ao}" == "/opt/JohnTheRipper/run/pdf2john.pl" ]]; then
                 echo -e "${r}pdf2john ... ${mt}Error${r}"
                 aobt+=("${ao}")
-            elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/office2john.py" ]]; then
+            elif [[ "${ao}" == "/opt/JohnTheRipper/run/office2john.py" ]]; then
                 echo -e "${r}office2john ... ${mt}Error${r}"
                 aobt+=("${ao}")
-            elif [[ "${ao}" == "/usr/share/cupp/cupp.py" ]]; then
+            elif [[ "${ao}" == "/opt/cupp/cupp.py" ]]; then
                 echo -e "${r}cupp ... ${mt}Error${r}"
                 aobt+=("${ao}")
             fi
         else
-            if [[ "${ao}" == "/usr/share/JohnTheRipper/run/zip2john" ]]; then
+            if [[ "${ao}" == "/opt/JohnTheRipper/run/zip2john" ]]; then
                 echo -e "${r}zip2john ... ${ht}Ok${r}"
-            elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/rar2john" ]]; then
+            elif [[ "${ao}" == "/opt/JohnTheRipper/run/rar2john" ]]; then
                 echo -e "${r}rar2john ... ${ht}OK${r}"
-            elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/7z2john.pl" ]]; then
+            elif [[ "${ao}" == "/opt/JohnTheRipper/run/7z2john.pl" ]]; then
                 echo -e "${r}7z2john ... ${ht}OK${r}"
-            elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/pdf2john.pl" ]]; then
+            elif [[ "${ao}" == "/opt/JohnTheRipper/run/pdf2john.pl" ]]; then
                 echo -e "${r}pdf2john ... ${ht}OK${r}"
-            elif [[ "${ao}" == "/usr/share/JohnTheRipper/run/office2john.py" ]]; then
+            elif [[ "${ao}" == "/opt/JohnTheRipper/run/office2john.py" ]]; then
                 echo -e "${r}office2john ... ${ht}OK${r}"
-            elif [[ "${ao}" == "/usr/share/cupp/cupp.py" ]]; then
+            elif [[ "${ao}" == "/opt/cupp/cupp.py" ]]; then
                 echo -e "${r}cupp ... ${ht}OK${r}"
             fi
         fi
