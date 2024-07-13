@@ -41,7 +41,7 @@ while true; do
                 1)
                         mehf="src/menu_ekstrak_hash_file.sh"
                         if [[ ! -f "${mehf}" ]]; then
-                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mehf}' tidak ditemukan.${r}"
+                                echo -e "${mt}Script ini tidak bisa dijalankan karena file '${mehf}' tidak ditemukan.${r}"
                                 echo ""
                                 read -p $'\e[1;37mTekan [\e[1;32mEnter\e[1;37m] untuk keluar...\e[0m' 
                                 exit 1
@@ -52,7 +52,7 @@ while true; do
                 2)
                         mbdks="src/menu_buat_daftar_kata_sandi.sh"
                         if [[ ! -f "${mbdks}" ]]; then
-                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mbdks}' tidak ditemukan.${r}"
+                                echo -e "${mt}Script ini tidak bisa dijalankan karena file '${mbdks}' tidak ditemukan.${r}"
                                 echo ""
                                 read -p $'\e[1;37mTekan [\e[1;32mEnter\e[1;37m] untuk keluar...\e[0m' 
                                 exit 1
@@ -63,7 +63,7 @@ while true; do
                 3)
                         mdw="src/menu_download_wordlist.sh"
                         if [[ ! -f "${mdw}" ]]; then
-                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mdw}' tidak ditemukan.${r}"
+                                echo -e "${mt}Script ini tidak bisa dijalankan karena file '${mdw}' tidak ditemukan.${r}"
                                 echo ""
                                 read -p $'\e[1;37mTekan [\e[1;32mEnter\e[1;37m] untuk keluar...\e[0m' 
                                 exit 1
@@ -75,7 +75,7 @@ while true; do
                         # menu pulihkan kata sandi file
                         mpksf="src/menu_pulihkan_kata_sandi_file.sh"
                         if [[ ! -f "${mpksf}" ]]; then
-                                echo -e "${kt}Script ini tidak bisa dijalankan karena file '${mpksf}' tidak ditemukan.${r}"
+                                echo -e "${mt}Script ini tidak bisa dijalankan karena file '${mpksf}' tidak ditemukan.${r}"
                                 echo ""
                                 read -p $'\e[1;37mTekan [\e[1;32mEnter\e[1;37m] untuk keluar...\e[0m' 
                                 exit 1
