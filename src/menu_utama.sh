@@ -93,7 +93,7 @@ while true; do
                 *)
                         echo -e "${mt}Menu '${mu}' tidak tersedia. Silahkan pilih menu yang tersedia.${r}"
                         echo ""
-                        read -p "Tekan [Enter] untuk melanjutkan..."
+                        read -p $'\e[1;37mTekan [\e[1;32mEnter\e[1;37m] untuk melanjutkan...\e[0m'
                         continue 
                         ;;
                  
