@@ -85,8 +85,13 @@ while true; do
                         clear
                         echo -e "${hm}******************** Pulihkan Kata Sandi File ZIP ********************${r}"
                         echo ""
-                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fhz}"
-                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --pot="${pot}" "${fhz}")
+                        if grep -i "pkzip" "${fhz}" >> /dev/null 2>&1; then
+                            format="PKZIP"
+                        elif grep -i "zip" "${fhz}" >> /dev/null 2>&1; then
+                            format="ZIP"
+                        fi
+                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --format="${format}" --pot="${pot}" "${fhz}"
+                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --format="${format}" --pot="${pot}" "${fhz}")
                         if [ $? -eq 0 ]; then
                                 echo "${kata_sandi}"
                                 # Mengambil baris pertama dari output
