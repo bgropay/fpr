@@ -22,7 +22,8 @@ path="/opt"
 url_john="https://github.com/magnumripper/JohnTheRipper"
 # url hashcat
 url_hashcat="https://github.com/hashcat/hashcat"
-
+# url cup
+url_cup="https://github.com/Mebus/cupp"
 depedensi_john_gagal=()
 depedensi_hashcat_gagal=()
 
@@ -178,4 +179,18 @@ else
 fi
 
 cd ../
+
+# mengkloning cupp 
+echo -e "${kt}Mengkloning Cupp...${r}"
+sleep 3
+git clone "${url_cupp}"
+if [[ $? -eq 0 ]]; then
+    echo -e "${ht}Berhasil mengkloning Cupp.${r}"
+    sleep 1.5
+else
+    echo -e "${mt}Gagal mengkloning Cupp.${r}"
+    sleep 1.5
+fi
+
+cd ..
 cd -
