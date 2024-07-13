@@ -42,7 +42,7 @@ while true; do
                 continue
         else
                 if [[ -f "${nama_file_hash}" ]]; then
-                        read -p "File hash dengan nama '${nama_file_hash}' sudah ada. Apakah Anda ingin menimpanya (iya/tidak): .${r}"
+                        read -p $'\e[1;33mFile hash sudah ada. Apakah Anda ingin menimpanya (iya/tidak): '
                         continue
                 else
                         break
