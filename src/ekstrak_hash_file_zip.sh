@@ -15,6 +15,7 @@ r="\e[0m"
 w=$(date "+%d-%m-%Y %H:%M:%S")
 
 while true; do
+        clear
         echo -e "${pt}[ ${hm}Ekstrak Hash File Zip ${pt}] [ ${mt}${w} ${pt}]${r}"
         echo ""
         read -p "Masukkan nama file ZIP: " fz
