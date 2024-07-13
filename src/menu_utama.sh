@@ -8,6 +8,7 @@ ht="\e[1;32m" # hijau terang
 ct="\e[1;36m" # cyan terang 
 mt="\e[1;31m" # merah terang
 kt="\e[1;33m" # kuning terang 
+pt="\e[1;37m" # putih terang 
 bt="\e[0;34m" # biru terang 
 r="\e[0m"
 
@@ -21,10 +22,12 @@ daftar_menu=(
 
 c=1
 
+w=$(date "+%d-%m-%Y %H:%M:%S")
+
 while true; do
         c=1
         clear
-        echo -e "${hm}[ Menu utama FPR ]${r}"
+        echo -e "${pt}[ ${hm}Menu utama FPR ${pt}] [${mt}${w}${pt}]${r}"
         echo ""
         echo -e "${ht}Silahkan pilih menu dibawah ini:${r}"
         echo ""
