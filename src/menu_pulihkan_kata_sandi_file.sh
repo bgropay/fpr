@@ -90,8 +90,8 @@ while true; do
                         clear
                         echo -e "${hm}******************** Pulihkan Kata Sandi File ZIP ********************${r}"
                         echo ""
-                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --format="${format}" --pot="${pot}" "${fhz}"
-                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --format="${format}" --pot="${pot}" "${fhz}")
+                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --format="${format}" --pot="${pot}" --verbosity=6 "${fhz}"
+                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --format="${format}" --pot="${pot}" --verbosity=6 "${fhz}")
                         if [ $? -eq 0 ]; then
                                 echo "${kata_sandi}"
                                 # Mengambil baris pertama dari output
@@ -146,8 +146,8 @@ while true; do
                         clear
                         echo -e "${hm}******************** Pulihkan Kata Sandi File RAR ********************${r}"
                         echo ""
-                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --format="${format}" --pot="${pot}" "${fhr}"
-                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --format="${format}" --pot="${pot}" "${fhr}")
+                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --format="${format}" --pot="${pot}" --verbosity=6 "${fhr}"
+                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --format="${format}" --pot="${pot}" --verbosity=6 "${fhr}")
                         if [ $? -eq 0 ]; then
                                 echo "${kata_sandi}"
                                 # Mengambil baris pertama dari output
@@ -202,8 +202,8 @@ while true; do
                         clear
                         echo -e "${hm}******************** Pulihkan Kata Sandi File 7z ********************${r}"
                         echo ""
-                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --format="${format}" --pot="${pot}" "${fh7}"
-                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --format="${format}" --pot="${pot}" "${fh7}")
+                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --format="${format}" --pot="${pot}" --verbosity=6 "${fh7}"
+                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --format="${format}" --pot="${pot}" --verbosity=6 "${fh7}")
                         if [ $? -eq 0 ]; then
                                 echo "${kata_sandi}"
                                 # Mengambil baris pertama dari output
@@ -258,8 +258,8 @@ while true; do
                         clear
                         echo -e "${hm}******************** Pulihkan Kata Sandi File PDF ********************${r}"
                         echo ""
-                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --format="${format}" --pot="${pot}" "${fhp}"
-                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --format="${format}" --pot="${pot}" "${fhp}")
+                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --format="${format}" --pot="${pot}" --verbosity=6 "${fhp}"
+                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --format="${format}" --pot="${pot}" --verbosity=6 "${fhp}")
                         if [ $? -eq 0 ]; then
                                 echo "${kata_sandi}"
                                 # Mengambil baris pertama dari output
@@ -314,8 +314,8 @@ while true; do
                         clear
                         echo -e "${hm}******************** Pulihkan Kata Sandi File Office (docx, xlsx, pptx) ********************${r}"
                         echo ""
-                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --format="${format}" --pot="${pot}" "${fho}"
-                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --format="${format}" --pot="${pot}" "${fho}")
+                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --format="${format}" --pot="${pot}" --verbosity=6 "${fho}"
+                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --format="${format}" --pot="${pot}" --verbosity=6 "${fho}")
                         if [ $? -eq 0 ]; then
                                 echo "${kata_sandi}"
                                 # Mengambil baris pertama dari output
