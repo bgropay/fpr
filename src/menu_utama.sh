@@ -5,6 +5,7 @@
 # variabel warna 
 hm="\e[0;32m" # hijau muda
 ht="\e[1;32m" # hijau terang 
+ct="\e[1;36m" # cyan terang 
 mt="\e[1;31m" # merah terang
 kt="\e[1;33m" # kuning terang 
 bt="\e[0;34m" # biru terang 
@@ -28,7 +29,7 @@ while true; do
         echo -e "${ht}Silahkan pilih menu dibawah ini:${r}"
         echo ""
         for menu in "${daftar_menu[@]}"; do
-                echo -e "${kt}[${c}] ${r}${menu}"
+                echo -e "${kt}[${c}] ${ct}${menu}${r}"
                 ((c++))
         done
         echo ""
