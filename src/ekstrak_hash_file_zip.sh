@@ -35,8 +35,13 @@ while true; do
         fi
 done
 
-echo ""
-read -p "Masukkan nama file untuk menyimpan hash file ZIP: " nama_file_hash
+while true; do
+        echo ""
+        read -p "Masukkan nama file untuk menyimpan hash file ZIP: " nama_file_hash
+        if [[ -z "${nama_file_hash}" ]]; then
+                echo -e "${kt}Nama file hash tidak boleh kosong.${r}"
+                continue
+        fi
 echo ""
 echo -e "${bt}Mengekstrak hash dari file ZIP '${fz}'...${r}"
 sleep 3
