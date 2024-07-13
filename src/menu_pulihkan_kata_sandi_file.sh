@@ -86,7 +86,7 @@ while true; do
                         echo -e "${hm}******************** Pulihkan Kata Sandi File ZIP ********************${r}"
                         echo ""
                         /opt/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fhz}"
-                        kata_sandi=$(/usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fhz}")
+                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --pot="${pot}" "${fhz}")
                         if [ $? -eq 0 ]; then
                                 echo "${kata_sandi}"
                                 # Mengambil baris pertama dari output
@@ -141,7 +141,7 @@ while true; do
                         echo -e "${hm}******************** Pulihkan Kata Sandi File RAR ********************${r}"
                         echo ""
                         /opt/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fhr}"
-                        kata_sandi=$(/usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fhr}")
+                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --pot="${pot}" "${fhr}")
                         if [ $? -eq 0 ]; then
                                 echo "${kata_sandi}"
                                 # Mengambil baris pertama dari output
@@ -196,7 +196,7 @@ while true; do
                         echo -e "${hm}******************** Pulihkan Kata Sandi File 7z ********************${r}"
                         echo ""
                         /opt/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fh7}"
-                        kata_sandi=$(/usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fh7}")
+                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --pot="${pot}" "${fh7}")
                         if [ $? -eq 0 ]; then
                                 echo "${kata_sandi}"
                                 # Mengambil baris pertama dari output
@@ -251,7 +251,7 @@ while true; do
                         echo -e "${hm}******************** Pulihkan Kata Sandi File PDF ********************${r}"
                         echo ""
                         /opt/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fhp}"
-                        kata_sandi=$(/usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fhp}")
+                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --pot="${pot}" "${fhp}")
                         if [ $? -eq 0 ]; then
                                 echo "${kata_sandi}"
                                 # Mengambil baris pertama dari output
@@ -306,7 +306,7 @@ while true; do
                         echo -e "${hm}******************** Pulihkan Kata Sandi File Office (docx, xlsx, pptx) ********************${r}"
                         echo ""
                         /opt/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fho}"
-                        kata_sandi=$(/usr/share/JohnTheRipper/run/./john --show --pot="${pot}" "${fho}")
+                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --pot="${pot}" "${fho}")
                         if [ $? -eq 0 ]; then
                                 echo "${kata_sandi}"
                                 # Mengambil baris pertama dari output
