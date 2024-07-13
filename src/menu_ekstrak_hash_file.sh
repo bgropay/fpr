@@ -64,7 +64,7 @@ while true; do
                         echo ""
                         echo -e "${bt}Mengekstrak hash dari file ZIP '${fz}'...${r}"
                         sleep 3
-                        hash=$(/usr/share/JohnTheRipper/run/./zip2john "${fz}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
+                        hash=$(/opt/JohnTheRipper/run/./zip2john "${fz}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
                         echo "${hash}" > "${nama_file_hash}"
                         # Memeriksa apakah hash berhasil dibuat
                         if [[ -z "${nama_file_hash}" ]]; then
@@ -101,7 +101,7 @@ while true; do
                         echo ""
                         echo -e "${bt}Mengekstrak hash dari file RAR '${fr}'...${r}"
                         sleep 3
-                        hash=$(/usr/share/JohnTheRipper/run/./rar2john "${fr}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
+                        hash=$(/opt/JohnTheRipper/run/./rar2john "${fr}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
                         echo "${hash}" > "${nama_file_hash}"
                         # Memeriksa apakah hash berhasil dibuat
                         if [[ -z "${nama_file_hash}" ]]; then
@@ -138,7 +138,7 @@ while true; do
                         echo ""
                         echo -e "${bt}Mengekstrak hash dari file 7z '${f7}'...${r}"
                         sleep 3
-                        hash=$(/usr/share/JohnTheRipper/run/./7z2john.pl "${f7}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
+                        hash=$(/opt/JohnTheRipper/run/./7z2john.pl "${f7}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
                         echo "${hash}" > "${nama_file_hash}"
                         # Memeriksa apakah hash berhasil dibuat
                         if [[ -z "${nama_file_hash}" ]]; then
@@ -175,7 +175,7 @@ while true; do
                         echo ""
                         echo -e "${bt}Mengekstrak hash dari file PDF '${fp}'...${r}"
                         sleep 3
-                        hash=$(/usr/share/JohnTheRipper/run/./pdf2john.pl "${fp}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
+                        hash=$(/opt/JohnTheRipper/run/./pdf2john.pl "${fp}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
                         echo "${hash}" > "${nama_file_hash}"
                         # Memeriksa apakah hash berhasil dibuat
                         if [[ -z "${nama_file_hash}" ]]; then
@@ -212,7 +212,7 @@ while true; do
                         echo ""
                         echo -e "${bt}Mengekstrak hash dari file Office '${fo}'...${r}"
                         sleep 3
-                        hash=$(/usr/share/JohnTheRipper/run/./office2john.py "${fo}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
+                        hash=$(/opt/JohnTheRipper/run/./office2john.py "${fo}" 2>/dev/null | cut -d ':' -f 2 | tr -d '[:space:]')
                         echo "${hash}" > "${nama_file_hash}"
                         # Memeriksa apakah hash berhasil dibuat
                         if [[ -z "${nama_file_hash}" ]]; then
