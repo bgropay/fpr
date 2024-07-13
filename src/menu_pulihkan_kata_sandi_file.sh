@@ -178,6 +178,7 @@ while true; do
                                         continue
                                 else
                                         if grep -i "7z" "${fh7}" >> /dev/null 2>&1; then
+                                                format="7z"
                                                 echo -e "${ht}File hash '${fh7}' ditemukan.${r}"
                                                 break
                                         else
@@ -201,8 +202,8 @@ while true; do
                         clear
                         echo -e "${hm}******************** Pulihkan Kata Sandi File 7z ********************${r}"
                         echo ""
-                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fh7}"
-                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --pot="${pot}" "${fh7}")
+                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --format="${format}" --pot="${pot}" "${fh7}"
+                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --format="${format}" --pot="${pot}" "${fh7}")
                         if [ $? -eq 0 ]; then
                                 echo "${kata_sandi}"
                                 # Mengambil baris pertama dari output
