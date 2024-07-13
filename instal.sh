@@ -20,12 +20,10 @@ path="/opt"
 
 # url john the ripper 
 url_john="https://github.com/magnumripper/JohnTheRipper"
-# url hashcat
-url_hashcat="https://github.com/hashcat/hashcat"
 # url cup
 url_cup="https://github.com/Mebus/cupp"
+
 depedensi_john_gagal=()
-depedensi_hashcat_gagal=()
 
 # dependensi yang diperlukan oleh john the ripper 
 dependensi_john=(
@@ -50,13 +48,6 @@ dependensi_john=(
     "python3-pip"
 )
 
-# dependensi yang diperlukan oleh hashcat
-dependensi_hashcat=(
-    "build-essential"
-    "libssl-dev"
-    "zlib1g-dev"
-)
-
 # menginstal seluruh depan yang diperlukan oleh john the ripper 
 echo -e "${kt}Menginstal seluruh dependensi yang diperlukan oleh John The Ripper.${r}"
 sleep 3
@@ -76,27 +67,6 @@ done
 
 if [[ "${#depedensi_john_gagal[@]}" -eq 0 ]]; then
     echo -e "${ct}Seluruh dependensi yang diperlukan oleh John The Ripper berhasil diinstal.${r}"
-    sleep 1.5
-fi
-
-# menginstal seluruh dependensi yang diperlukan oleh hashcat 
-echo -e "${kt}Menginstal seluruh dependensi yang diperlukan oleh Hashcat.${r}"
-sleep 3
-for instal_dependensi_hashcat in "${dependensi_hashcat[@]}"; do
-    apt-get install "${instal_dependensi_hashcat}" -y
-    echo -e "${bt}Menginstal dependensi '${instal_dependensi_hashcat}'...${r}"
-    sleep 1.5
-    if [[ $? -eq 0 ]]; then
-        echo -e "${ht}Dependensi '${instal_dependensi_hashcat}' berhasil diinstal.${r}"
-        sleep 1.5
-    else
-        echo -e "${mt}Dependensi '${instal_dependensi_hashcat}' gagal diinstal.${r}"
-        sleep 1.5
-    fi
-done
-
-if [[ "${#depedensi_hashcat_gagal[@]}" -eq 0 ]]; then
-    echo -e "${ct}Seluruh dependensi yang diperlukan oleh Hashcat berhasil diinstal.${r}"
     sleep 1.5
 fi
 
@@ -147,38 +117,6 @@ fi
 
 # pondok ke direktori '/opt'
 cd ../../
-
-# mengkloning hashcat 
-echo -e "${kt}Mengkloning Hashcat...${r}"
-sleep 3
-git clone "${url_hashcat}"
-if [[ $? -eq 0 ]]; then
-    echo -e "${ht}Berhasil mengkloning Hashcat.${r}"
-    sleep 1.5
-else
-    echo -e "${mt}Gagal mengkloning Hashcat.${r}"
-    sleep 1.5
-fi
-
-# nama folder hasil kloning hashcat
-hashcat="hashcat"
-
-# pindah ke direktori hashcat 
-cd "${hashcat}"
-
-# mengkompilasi hashcat 
-echo -e "${kt}Mengkompilasi Hashcat...${r}"
-sleep 3
-make
-if [[ $? -eq 0 ]]; then
-    echo -e "${ht}Berhasil mengkompilasi Hashcat.${r}"
-    sleep 1.5
-else
-    echo -e "${mt}Gagal mengkompilasi Hashcat.${r}"
-    sleep 1.5
-fi
-
-cd ../
 
 # mengkloning cupp 
 echo -e "${kt}Mengkloning Cupp...${r}"
