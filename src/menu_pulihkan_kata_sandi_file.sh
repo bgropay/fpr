@@ -234,6 +234,7 @@ while true; do
                                         continue
                                 else
                                         if grep -i "pdf" "${fhp}" >> /dev/null 2>&1; then
+                                                format="PDF"
                                                 echo -e "${ht}File hash '${fhp}' ditemukan.${r}"
                                                 break
                                         else
@@ -257,8 +258,8 @@ while true; do
                         clear
                         echo -e "${hm}******************** Pulihkan Kata Sandi File PDF ********************${r}"
                         echo ""
-                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fhp}"
-                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --pot="${pot}" "${fhp}")
+                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --format="${format}" --pot="${pot}" "${fhp}"
+                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --format="${format}" --pot="${pot}" "${fhp}")
                         if [ $? -eq 0 ]; then
                                 echo "${kata_sandi}"
                                 # Mengambil baris pertama dari output
@@ -290,6 +291,7 @@ while true; do
                                 else
                                         if grep -i "office" "${fho}" >> /dev/null 2>&1; then
                                                 echo -e "${ht}File hash '${fho}' ditemukan.${r}"
+                                                format="Office"
                                                 break
                                         else
                                                 echo -e "${kt}Format hash yang ada didalam file hash '${fho}' tidak valid.${r}"
@@ -312,8 +314,8 @@ while true; do
                         clear
                         echo -e "${hm}******************** Pulihkan Kata Sandi File Office (docx, xlsx, pptx) ********************${r}"
                         echo ""
-                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --pot="${pot}" "${fho}"
-                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --pot="${pot}" "${fho}")
+                        /opt/JohnTheRipper/run/./john --wordlist="${fw}" --format="${format}" --pot="${pot}" "${fho}"
+                        kata_sandi=$(/opt/JohnTheRipper/run/./john --show --format="${format}" --pot="${pot}" "${fho}")
                         if [ $? -eq 0 ]; then
                                 echo "${kata_sandi}"
                                 # Mengambil baris pertama dari output
