@@ -25,7 +25,7 @@ while true; do
         clear
         echo -e "${hm}[ Menu utama FPR ]${r}"
         echo ""
-        echo -e "${ht} Silahkan pilih menu dibawah ini:${r}"
+        echo -e "${ht}Silahkan pilih menu dibawah ini:${r}"
         echo ""
         for menu in "${daftar_menu[@]}"; do
                 echo "[${c}] ${menu}"
