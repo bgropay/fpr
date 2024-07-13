@@ -23,7 +23,7 @@ c=1
 while true; do
         c=1
         clear
-        echo -e "${hm}******************** Menu utama FPR ********************${r}"
+        echo -e "${hm}[ Menu utama FPR ]${r}"
         echo ""
         echo -e "${ht}Pilih opsi dari menu:${r}"
         echo ""
@@ -31,7 +31,8 @@ while true; do
                 echo "${c}. ${menu}"
                 ((c++))
         done
-        read -p "" mu
+        echo ""
+        read -p "Opsi->" mu
         case "${mu}" in
                 1)
                         mehf="src/menu_ekstrak_hash_file.sh"
