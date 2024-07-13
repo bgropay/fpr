@@ -28,7 +28,7 @@ while true; do
         echo -e "${ht}Silahkan pilih menu dibawah ini:${r}"
         echo ""
         for menu in "${daftar_menu[@]}"; do
-                echo "[${c}] ${menu}"
+                echo -e "${kt}[${c}] ${r}${menu}"
                 ((c++))
         done
         echo ""
