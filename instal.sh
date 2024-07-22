@@ -115,20 +115,4 @@ else
     sleep 1.5
 fi
 
-# pondok ke direktori '/opt'
-cd ../../
-
-# mengkloning cupp 
-echo -e "${kt}Mengkloning Cupp...${r}"
-sleep 3
-git clone "${url_cupp}"
-if [[ $? -eq 0 ]]; then
-    echo -e "${ht}Berhasil mengkloning Cupp.${r}"
-    sleep 1.5
-else
-    echo -e "${mt}Gagal mengkloning Cupp.${r}"
-    sleep 1.5
-fi
-
-cd ..
 cd -
